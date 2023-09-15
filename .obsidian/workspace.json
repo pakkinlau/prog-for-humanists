@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "eca86e18684923b9",
+            "id": "18835555cdfa9d0b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/Project breakdown.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,17 +158,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bdd8f96ce295b200",
+  "active": "18835555cdfa9d0b",
   "lastOpenFiles": [
-    "Meta/pipeline.md",
     "Meta/Project breakdown.md",
+    "README.md",
+    "Meta/pipeline.md",
     "Meta/Log.md",
     "$Final products/course structure.md",
     "$Final products/course objectives and learning outcomes.md",
     "Final products/Untitled",
     "$Final products/All teaching materials.md",
     "$Final products",
-    "README.md",
     "Research sprints/$Research reading sprints.md",
     "Research sprints/Week 1 -- Possible related materials.md",
     "Research sprints/Week 0 -- materials provided by prof McManus.md",
