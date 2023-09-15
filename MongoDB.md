@@ -1,0 +1,21 @@
+- MongoDB (that can incorporate with embeddings)
+	- Associations:
+		- Github campus "machine learning" session only mention that item.
+		- ..
+		- ...
+	- Features: 
+		- Ability of maintaining a collections of images / videos
+		- Store metadata alongside images. 
+			- Metadata could be geo-spatial data, Embedding
+		- Performance
+		- GridFS
+	- Alternatives of MongoDB:
+		- File systems
+		- Cloud storage
+		- Document stores
+	- What we need:
+		- Know python
+		- Know the python mongoDB driver, `PyMongo`
+	- Resource:
+		- MongoDB University
+		- https://learn.mongodb.com/learning-paths/mongodb-python-developer-path

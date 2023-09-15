@@ -1,0 +1,81 @@
+- Python in the workflow:
+	- Get python involved early
+	- Use python and connected tools to clean and manage data
+	- Send to specialized tools as needed 
+
+- prompt: `I am a research assistant that working as the main contributor of creating the content of a new undergraduate subject for humanity students. Give me some feedback: `
+
+- Course: Programming for humanists
+	- Introduction (Lecture 1) 
+		- Data
+			- Types of data
+				- Unstructured data
+					- Images
+					- Articles
+				- Structured Data
+					- Geo-spatial data
+					- Time series data
+			- Source of data
+				- Online databases
+				- Digital archives with curated historical documents
+		- Introducing components of a digital humanity project
+			- "Front-end / presentations" components (most of the content in the course 1, HIST4702)
+				- Websites
+				- Charting, visualization
+			- "Back-end / analytics"  components (The focus of this subject)
+				- NoSQL Database
+				- Programming scripts 
+				- Machine learning tools 
+					- Embeddings
+					- Transformers
+		- Installations and registrations of accounts
+			- Github:
+				- Register Github student developer pack and getting free github copilot
+			- Huggingface
+		- Toolkit discovery as a programmer
+			- Ways of using github, huggingface, stackshare to explore suitable tools for the digital humanity project
+
+	- Programming as a "Back-end" knowledge of a digital humanity (DH) projects 
+		- 1. Getting / accessing / populating data (Should be remove old technology pipelines)
+			- Introduce:
+				- script packages such as beautiful-soup, selenium
+				- knowing how to work with external data, such as HTML, XML, JSON
+				- pre-built scraping software such as octoparse
+			- REST API of websites, such as twitter
+			- Understanding principles of organizing a corpus / unified dataset
+			- Understanding structure of database
+
+		- 2. Managing data with MongoDB 
+			- Read: Data querying and searching
+			- Write: Host and curate collections of historical documents
+				- NoSQL database (mongoDB)
+				- (digital archives and repositories)
+			- Clean: Data cleaning packages 
+			- Discuss effective task separation before start working the programming. Github copilot prompting and Coding regarding to mongoDB
+
+		- 3. Data parsing and transformation (preprocessing, labelling)
+			- Creating labels
+				- NLP preprocessing with spaCy etc
+				- Named-entity recognition 
+			- Machine translation
+
+		- 4. Analysis from data
+			- Existing embeddings
+				- OpenAI embeddings
+				- Open-source embeddings from hugging-face
+				- HistWords: word embeddings for historical text
+					- https://nlp.stanford.edu/projects/histwords/
+					- It is an open-sourced package
+			- Fundamental tasks
+				- Topic modeling (introducing clustering, LDA)
+				- Text analysis (with established packages such as BookNLP)
+				- Sentiment analysis
+				- KNN for clustering 
+			- Application level tasks:
+				- https://huggingface.co/tasks
+
+		- 5. (Self-teaching / part of assignment) Publishing scripts, data into the internet
+			- Github, huggingface
+				- Documentation, version control skills with github functionalties
+				- Knowing the specifications and demands from "front-end" part of DH projects
+			- Other website that hosting digital humanities data

@@ -1,1 +1,0 @@
-# prog-for-humanists

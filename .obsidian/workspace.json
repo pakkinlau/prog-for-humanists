@@ -1,0 +1,212 @@
+{
+  "main": {
+    "id": "d29e4696d9261902",
+    "type": "split",
+    "children": [
+      {
+        "id": "2a534754380efc97",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eca86e18684923b9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "82e06fe8c6b72ae2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pipeline.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2d2b34d3eb9d5aec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HIST4702.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "319edb5ccfeb5845",
+    "type": "split",
+    "children": [
+      {
+        "id": "3034c044675283e9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bdd8f96ce295b200",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f6ba8ae153739731",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0769cacb605e80d9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3d23fea3cb902be7",
+    "type": "split",
+    "children": [
+      {
+        "id": "4583530b5d88d1bd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5b2f87d5b78d7725",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "HIST4702.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6f8bddafe8d538ea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "HIST4702.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1f538e864e168baa",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "3024e9a8c8ea05b1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "HIST4702.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "2d2b34d3eb9d5aec",
+  "lastOpenFiles": [
+    "pipeline.md",
+    "HIST4702.md",
+    "Project breakdown.md",
+    "README.md",
+    "Research reading sprints.md",
+    "course objectives and learning outcomes.md",
+    "course structure.md",
+    "MongoDB.md",
+    "Log.md",
+    "pedagogy.md",
+    "Week 1 -- Possible related materials.md",
+    "Spark.md",
+    "teaching materials.md",
+    "style and tone for the course materials.md",
+    "Week 0 -- materials provided by prof McManus.md",
+    "desired qualities the making good output of this job position.md",
+    "Images/Pasted image 20230909143831.png.md",
+    "Images/Pasted image 20230915161644.png",
+    "Images",
+    "Images/Pasted image 20230915162930.png",
+    "Images/Pasted image 20230915162853.png",
+    "Images/Pasted image 20230915162814.png",
+    "Images/Pasted image 20230915162556.png",
+    "Images/Pasted image 20230915162522.png",
+    "Images/Pasted image 20230915162405.png",
+    "target audience and their skill levels.md",
+    "Resources/from prof. Mcmanus/Statistical Learning with Python.pdf",
+    "Resources/from prof. Mcmanus/Python for Humanists textbook_essential.pdf",
+    "Resources/from prof. Mcmanus",
+    "Resources/from internet/studying how the past is remembered.pdf",
+    "Resources/from internet/introducing-data-science-machine-learning-python.pdf",
+    "Resources/from internet/RA - digital history - online resources.md",
+    "Resources/from internet",
+    "Resources",
+    "Pages"
+  ]
+}

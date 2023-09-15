@@ -1,0 +1,5 @@
+- 1. Helping the PI to understand my progress
+	- Write a weekly summary of my work in every Friday
+	- Use github "2-dot diff" to see the difference of this working database over a week 
+- 2. Breakdown the tasks, and ,easure my status of work progress with time estimation charts
+- 3. Maintain my working database effectively 
