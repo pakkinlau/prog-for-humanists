@@ -2,7 +2,7 @@
 
 ---
 ### Research reading 
-- 1. Establish a page for that "sprint" on [[Research reading sprints]]
+- 1. Establish a page for that "sprint" on [[$Research reading sprints]]
 	- 1. On the page, make a list of books / papers / website that has read during that period of time.
 		- For each item, create a sub-page and document the key-points of that document.
 	- 2. Recognize a list of objects from those readings that is worth studying it individually. 

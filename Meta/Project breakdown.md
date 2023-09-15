@@ -15,7 +15,7 @@ gantt
 		- define and document the [[desired qualities the making good output of this job position]]
 		- discuss, define and document the [[course objectives and learning outcomes]]
 		- begin preliminary research on the intersection of programming and humanities. 
-			- [[Research reading sprints]]
+			- [[$Research reading sprints]]
 		- Identify key concepts and resources.
 			- Research similar courses and teaching materials for inspiration.
 		- Identify the [[pedagogy#^7d354f|Target audience and their skill levels]].
@@ -25,14 +25,14 @@ gantt
 		- Begin drafting the syllabus
 		- Develop the [[course structure]] and lesson plans.
 			- Create a detailed outline of the course structure, including topics, modules, and learning objectives.
-		- Create or gather [[teaching materials]] (slides, handouts, exercises).
+		- Create or gather [[All teaching materials]] (slides, handouts, exercises).
 		- Develop course materials, including lecture notes, assignments, and reading lists.
 			- Begin developing course assignments and assessments.
-			- Define the [[style and tone for the course materials]], and enforce them on the [[teaching materials]]
+			- Define the [[style and tone for the course materials]], and enforce them on the [[All teaching materials]]
 	- Course Testing and Revision
-		- Pilot test the [[teaching materials]] with a small group of students or colleagues for feedback.
+		- Pilot test the [[All teaching materials]] with a small group of students or colleagues for feedback.
 		- Analyze feedback and make necessary revisions to improve the course.
-		- Finalize the [[course structure]]and [[teaching materials]].
+		- Finalize the [[course structure]]and [[All teaching materials]].
 	- Administrative Tasks and Documentation
 		- Prepare administrative documents, including grading rubrics, course policies, and evaluation methods.
 		- Develop a course website or online platform for resources and communication.

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Meta/Project breakdown.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,26 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pipeline.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2d2b34d3eb9d5aec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HIST4702.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HIST4702.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HIST4702.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HIST4702.md"
+                "file": "README.md"
               }
             }
           }
@@ -171,24 +159,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2d2b34d3eb9d5aec",
+  "active": "bdd8f96ce295b200",
   "lastOpenFiles": [
-    "pipeline.md",
-    "HIST4702.md",
-    "Project breakdown.md",
+    "Meta/pipeline.md",
+    "Meta/Project breakdown.md",
+    "Meta/Log.md",
+    "$Final products/course structure.md",
+    "$Final products/course objectives and learning outcomes.md",
+    "Final products/Untitled",
+    "$Final products/All teaching materials.md",
+    "$Final products",
     "README.md",
-    "Research reading sprints.md",
-    "course objectives and learning outcomes.md",
-    "course structure.md",
-    "MongoDB.md",
-    "Log.md",
-    "pedagogy.md",
-    "Week 1 -- Possible related materials.md",
-    "Spark.md",
-    "teaching materials.md",
-    "style and tone for the course materials.md",
-    "Week 0 -- materials provided by prof McManus.md",
-    "desired qualities the making good output of this job position.md",
+    "Research sprints/$Research reading sprints.md",
+    "Research sprints/Week 1 -- Possible related materials.md",
+    "Research sprints/Week 0 -- materials provided by prof McManus.md",
+    "Research sprints",
+    "Concepts or assets/MongoDB.md",
+    "Concepts or assets",
+    "Meta/desired qualities the making good output of this job position.md",
+    "Resources/HIST4702.md",
+    "Meta/pedagogy.md",
+    "Meta",
+    "Concepts or assets/Spark.md",
+    "Meta/style and tone for the course materials.md",
     "Images/Pasted image 20230909143831.png.md",
     "Images/Pasted image 20230915161644.png",
     "Images",
@@ -203,10 +196,6 @@
     "Resources/from prof. Mcmanus/Python for Humanists textbook_essential.pdf",
     "Resources/from prof. Mcmanus",
     "Resources/from internet/studying how the past is remembered.pdf",
-    "Resources/from internet/introducing-data-science-machine-learning-python.pdf",
-    "Resources/from internet/RA - digital history - online resources.md",
-    "Resources/from internet",
-    "Resources",
-    "Pages"
+    "Resources/from internet/RA - digital history - online resources.md"
   ]
 }
