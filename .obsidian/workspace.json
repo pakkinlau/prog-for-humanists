@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -158,10 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "18835555cdfa9d0b",
+  "active": "82e06fe8c6b72ae2",
   "lastOpenFiles": [
-    "Meta/Project breakdown.md",
+    "Concepts/MongoDB.md",
     "README.md",
+    "Meta/Project breakdown.md",
     "Meta/pipeline.md",
     "Meta/Log.md",
     "$Final products/course structure.md",
@@ -173,13 +175,12 @@
     "Research sprints/Week 1 -- Possible related materials.md",
     "Research sprints/Week 0 -- materials provided by prof McManus.md",
     "Research sprints",
-    "Concepts or assets/MongoDB.md",
-    "Concepts or assets",
+    "Concepts",
     "Meta/desired qualities the making good output of this job position.md",
     "Resources/HIST4702.md",
     "Meta/pedagogy.md",
     "Meta",
-    "Concepts or assets/Spark.md",
+    "Concepts/Spark.md",
     "Meta/style and tone for the course materials.md",
     "Images/Pasted image 20230909143831.png.md",
     "Images/Pasted image 20230915161644.png",

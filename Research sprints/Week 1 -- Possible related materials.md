@@ -6,8 +6,8 @@
 		- source: scikit-learn algorithm cheat-sheet
 		- ![[Pasted image 20230915162556.png|100]]
 		- source: a complete chart of neural network (2016 medium post)
-	- [[Spark]]
-	- [[MongoDB]]
+	- [[../Concepts/Spark]]
+	- [[../Concepts/MongoDB]]
 
 - Skill-set:
 	- How to host a dataset with github?
