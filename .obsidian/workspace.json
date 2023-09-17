@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Resources/from internet/RA - digital history - online resources.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Meta/Project breakdown.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "introduct",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +77,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Resources/from internet/RA - digital history - online resources.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Resources/from internet/RA - digital history - online resources.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Resources/from internet/RA - digital history - online resources.md"
               }
             }
           }
@@ -159,11 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "82e06fe8c6b72ae2",
+  "active": "18835555cdfa9d0b",
   "lastOpenFiles": [
-    "Concepts/MongoDB.md",
     "README.md",
     "Meta/Project breakdown.md",
+    "Concepts/MongoDB.md",
     "Meta/pipeline.md",
     "Meta/Log.md",
     "$Final products/course structure.md",

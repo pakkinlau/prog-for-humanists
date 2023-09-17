@@ -25,5 +25,3 @@
 - /Concepts or assets: A collection of notes will be stored here. 
 	- Notes will be entity-based. Such as MongoDB will only focus on "MongoDB"
 - /Research sprints: A list of pages that listing the reading list and the learning result, will be put in that folder. 
-
-[MongoDB](Concepts/MongoDB.md)
