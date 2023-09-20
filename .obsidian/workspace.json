@@ -13,14 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/weekly reporting template.md",
+                "file": "Research sprints/Week 2 - The scope of the course.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "82e06fe8c6b72ae2",
+            "id": "defd9c3ae5c357e2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Book review - Introducing data science.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4797c0672bbd16cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "$Final products/course structure.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fc7bce3b1b4c2228",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Meta/weekly reporting template.md",
+                "file": "$Final products/course structure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Meta/weekly reporting template.md",
+                "file": "$Final products/course structure.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Meta/weekly reporting template.md"
+                "file": "$Final products/course structure.md"
               }
             }
           }
@@ -158,25 +183,69 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "18835555cdfa9d0b",
+  "floating": {
+    "id": "6a44c5847a352b23",
+    "type": "floating",
+    "children": [
+      {
+        "id": "8bd64b39ce3bfb7a",
+        "type": "window",
+        "children": [
+          {
+            "id": "9c0fc569a1c73ff6",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "c21398f69f3581c1",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "$Final products/course structure.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 604,
+        "y": -1440,
+        "width": 1280,
+        "height": 1400,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "c21398f69f3581c1",
   "lastOpenFiles": [
+    "Book review - Introducing data science.md",
+    "$Final products/course structure.md",
     "Meta/Project breakdown.md",
+    "Research sprints/Week 2 - The scope of the course.md",
+    "Resources/from internet/introducing-data-science-machine-learning-python.pdf",
+    "README.md",
+    "$Final products/course objectives and learning outcomes.md",
+    "Pasted image 20230920022803.png",
+    "Pasted image 20230920022658.png",
+    "Resources/from cuhk/a list of resources from cuhk.md",
+    "Resources/from cuhk",
+    "Research sprints/Week 1 -- Possible related materials.md",
+    "Resources/from internet/RA - digital history - online resources.md",
     "Meta/weekly reporting template.md",
     "Meta/style and tone for the course materials.md",
     "Meta/desired qualities the making good output of this job position.md",
-    "README.md",
     "Research sprints/Week 0 -- materials provided by prof McManus.md",
-    "Research sprints/Week 1 -- Possible related materials.md",
     "Research sprints/$Research reading sprints.md",
     "Meta/Log.md",
     "Meta/pedagogy.md",
     "Images/Pasted image 20230915161644.png",
     "Images/Pasted image 20230909143831.png.md",
-    "$Final products/course structure.md",
-    "$Final products/course objectives and learning outcomes.md",
     "$Final products/All teaching materials.md",
     "Meta/pipeline.md",
-    "Resources/from internet/RA - digital history - online resources.md",
     "Concepts/MongoDB.md",
     "Final products/Untitled",
     "$Final products",
@@ -194,8 +263,6 @@
     "Images/Pasted image 20230915162405.png",
     "target audience and their skill levels.md",
     "Resources/from prof. Mcmanus/Statistical Learning with Python.pdf",
-    "Resources/from prof. Mcmanus/Python for Humanists textbook_essential.pdf",
-    "Resources/from prof. Mcmanus",
-    "Resources/from internet/studying how the past is remembered.pdf"
+    "Resources/from prof. Mcmanus/Python for Humanists textbook_essential.pdf"
   ]
 }
