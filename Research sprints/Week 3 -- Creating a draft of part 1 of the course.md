@@ -1,0 +1,3 @@
+- Breaking down tasks
+	- Creating a website / google colab that can runs python code. 
+	- Sort out the tasks for illustration

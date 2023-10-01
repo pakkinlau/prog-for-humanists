@@ -1,6 +1,7 @@
 
 Updated: Outline of the course
 
+### Course: Programming for humanist
 ### Brief breakdown of the course
 
 - Introduction (week 1, 0% in the group project)
@@ -10,43 +11,200 @@ Updated: Outline of the course
 - Analysis and visualization from data (25% of the content)
 
 ---
-### A more detailed syllabus
+
+### Possible digital humanities projects that students can work on:
+
+|            | Digitizing Historical Artifacts | Literature Text Analysis | Art History Image Classification | Cultural Heritage Text Translation |
+|------------|---------------------------------|-------------------------|---------------------------------|------------------------------------|
+| Part 1     | Collect historical documents, digitize them using OCR tools, and organize them in digital formats. | Scrape literary texts from public domain sources, clean and preprocess the text data. | Collect a dataset of art images from various time periods and artists. | Collect multilingual historical texts related to cultural heritage. |
+| Part 2     | Create a NoSQL database to store the digitized artifacts, including metadata like date, artist, and location. | Create a NoSQL database to store the literary texts and their metadata, allowing for efficient retrieval and analysis. | Create a NoSQL database to store art images and associated metadata, such as artist, style, and location. | Create a NoSQL database to store multilingual texts and their translations. |
+| Part 3     | Implement machine learning models to categorize and tag images of the artifacts based on their style and content. | Apply sentiment analysis and topic modeling to the literature texts to uncover themes and sentiments within different works. | Implement image classification using neural networks to categorize art pieces by style and artist. | Utilize transformer models (e.g., Hugging Face) to perform automated translation of historical texts between languages. |
+| Part 4     | Develop interactive visualizations showcasing the historical artifacts' evolution over time and artists' styles. | Develop a web application using Streamlit to visualize the evolution of literary themes and sentiment over time. | Develop a machine learning dashboard using Streamlit to allow users to explore and classify art images interactively. | Develop a tool to visualize and compare translations, allowing users to explore the cultural context of the texts. |
+
+This table format provides a clear overview of the different projects and their respective project parts.
+
+---
+
+# A more detailed syllabus
 
 - Introduction (week 1)
 	- Overview of the course, Breaking down some example digital humanities projects 
-	- Creation of github package
+	- Creation of Github package
+
+
 	- Writing and reading object-oriented programming with python
 		- Purpose: student can get familiar with the style of programming that hiding detail
 		- Briefly discuss some principles of writing effective code, such as modularity, information hiding. 
-	 - Self-learning package:
-			- Overview of the tools will be used throughout the course (vs code, database, Github, huggingface)
-			- Discovering available solutions from github
-			- Getting free github copilot with CUHK email
 
-- Part I: Accessing, mining, handling and transformation of data
-	- Historical documents: 
-		- OCR tools
-	- Data formats and structures in the humanities (CSV, JSON, XML)
-	- Data acquisition: web scraping with scripts / scraping software, APIs, archives
-	- Data cleaning and preprocessing (missing values, outliers and inconsistencies)
+	 - Self-learning package:
+		- Overview of the tools will be used throughout the course (vs code, database, Github, huggingface)
+		- Discovering available solutions from github
+		- Getting free github copilot with CUHK email
+
+## Reference
+- Pair programming with github copilot
+	- Register github student package and installing it
+	- Should be included in the self-learning pack
+- Pair programming inside google colab:
+	- https://blog.google/technology/developers/google-colab-ai-coding-features/
+- Revision of python basics:
+	- Video 3 to 6
+	- https://www.youtube.com/watch?v=BBSZWHNXUGE&list=PLBtyBPTlyC7tnpPDkp_E2JgIgIQSbugJL&index=3
+- Github
+	- Create a github student account
+	- Learn "explore GitHub" and complete action: https://education.github.com/experiences/primer_explore_github
+	- Learn "Profile README" and complete action: https://education.github.com/experiences/launchpad_profile_readme
+	- Student events:
+		- Hactoberfest: 
+			- Hacktoberfest is an annual event that takes place every October, organized by DigitalOcean in partnership with GitHub and other companies. It encourages participation in open-source projects and promotes the open-source community.
+		- Kaggle:
+			- Data science competition with prize
+
+
+- List of Digital humanities projects:
+	- https://libguides.lib.miamioh.edu/c.php?g=957684&p=6913753
+---
+
+### Part I: Accessing, mining, handling and transformation of data
+
+- Introduction to digital historical artifacts and cultural heritages
+	- Definition and significance of historical artifacts in preserving cultural heritage.
+	- Overview of different types of artifacts: 
+		- manuscripts, letters
+		- artworks, photographs
+		- Text database (such as cuhk's ctext website)
+
+
+- Digitisation techniques
+	- Manuscripts, letter images: OCR
+	- Text: NLTK, regex
+	- Webpage: web scraping software, such as octoparse
+- Accessing online resources with programming
+	- Introduction of API
+		- Motivation: Government API, worldbank API etc
+	- Case study: Accessing Artworks: 
+		- Metmuseum (https://www.metmuseum.org/art/collection/search/53222)
+		- Requesting metadata, and the actual images of the artwork from Metmuseum API.
+- Introduction to data format
+	- JSON (while downloading the data from online resources)
+	- CSV 
+- Data cleaning and preprocessing 
+	- Dealing with missing values
+	- Enforcing attribute types to columns of CSV, and check the validity of cell values. 
+- Get to know the data quality standard 
+	- Art images
+		- Uniform resolution? Resizing and standardizing the resolution
+		- Ensure all images are in a consistant format (jpeg, png) for ease of processing
+		- Folder structure 
+			- (will be used in machine learning and database)
+			- organization of your data will significantly impact the workflow
+
+## References of each project
+
+### Digital humanities data source
+- Datasets 
+	- ([UCI Machine Learning Respository](https://archive.ics.uci.edu/ml/index.php))
+		- The University of California at Irving Machine Learning Repository is a collection of databases, domain theories, and data generators that are used by the machine learning community for the empirical analysis of machine learning algorithms.
+	- [Google Public Data Explorer](https://www.google.com/publicdata/)
+		- The Google Public Data Explorer makes large datasets easy to explore, visualize and communicate.
+	- [Kaggle Datasets](https://www.kaggle.com/datasets)
+		- Google's Kaggle platform allows users to explore, analyze, and share quality data.  
+		- Types of Datasets. Kaggle supports a variety of dataset publication formats, but we strongly encourage dataset publishers to share their data in an accessible, non-proprietary format if possible.
+	- Data.gov.hk (https://data.gov.hk/en/)
+		- The home of the Hong Kong Government’s open data
+	- [Statista](https://libguides.lib.miamioh.edu/statista)
+		- Statista provides users with an innovative and intuitive tool for researching quantitative data, statistics and related information. The database integrates data on over 80,000 topics from over 18,000 sources on a single platform.
+- Textual corpora
+	- [Oxford Text Archive](https://ota.bodleian.ox.ac.uk/repository/xmlui/)
+	- [VEP TCP Collection](http://graphics.cs.wisc.edu/WP/vep/vep-tcp-collection/)
+	- [Corpus Molinero (Spanish)](http://www.molinolabs.com/corpus.html)
+	- [Googlebook N-gram corpus](http://storage.googleapis.com/books/ngrams/books/datasetsv2.html)
+- Digital library based tools
+	- [HathiTrust Research Center](https://www.hathitrust.org/htrc)
+		- The HathiTrust Research Center makes available a toolkit of services for text data mining.
+	- [Constellate](http://labs.jstor.org/projects/text-mining/)
+		- A text analytics platform aimed at teaching and enabling a generation of researchers to text mine. Two of ITHAKA’s services, JSTOR and Portico, are the initial sources of content for the new platform.
+	- [The Intertextual Hub](https://intertextual-hub.uchicago.edu/)
+		- The Intertextual Hub is an experimental digital humanities reading environment that aims to situate specific documents in their broader context of intertextual relations, whether in the form of direct or indirect borrowings, shared topics with other texts or parts of texts, or other kinds of lexical similarity.
+
+## Art history image classification / Digitizing historical artifacts 
+- Dataset and packages that built upon that dataset: 
+	- Wikiart: https://www.wikiart.org/en/leonardo-da-vinci/mona-lisa
+	- Wikiart retriever: https://github.com/lucasdavid/wikiart
+	- Wikiart classifier: https://github.com/mbellitti/wikiart-classifier
+	- Wikiart GAN: https://github.com/cs-chan/ArtGAN
+- API education:
+	- Understanding API's documentation to learn how to access the data
+	- Understand the endpoints available and the data format they provide. 
+- Packages:
+	- Hugging face Image captioning, OCR, and Pix2struct (visual questioning info-graphics, charts, scientific diagrams)
+		- https://huggingface.co/tasks/image-to-text
+		- Demo section included in that webpage. 
+
+## Literature Text/Audio Analysis /  heritage text translation 
+- Dataset: 
+	- Project Gutenberg (A project that digitize classical books): https://www.gutenberg.org/
+- API education:
+	- Understanding project Gutenberg's API documentation to learn how to access the data. 
+	- Understand the endpoints available and the data format they provide. 
+
+### Data quality requirements
+- Images
+- Text / corpus
+	- NLP preprocessing with NLTK
+		- Teaching resource: https://realpython.com/nltk-nlp-python/
+
+### Data cleaning 
+- OpenRefine
+	- Resource: https://openrefine.org/
+	- A free, open source, powerful tool for working with messy data.
+- Alternative tools trend comparison: 
+![400](../Pasted%20image%2020231001221756.png)
+
+---
 
 - Part II: Populating and managing data with some database schemas
 	- Introduce the advantages of NoSQL on digital humanities projects
 		- Flexibility and schema-less design
 		- Ability to handle numerical metadata for data, such as location values for geo-spatial data, embedding values for data that was processed by machine learning 
-	- MongoDB basics:
+	- Why MongoDB?
+		- In digital humanity projects, 
+		- MongoDB allowed us to save our incremental results for later processing and modeling, which collectively saved us hours of waiting for code to re-run.
+	 - MongoDB basics:
 		- Creation and maintenance of database
 		- CRUD operations in MongoDB
 	- Database integration:
 		- Establishing pipelines/interface of the database so that the database can be integrated to the workflow of other groupmates .
 
+## Reference
+
+- MongoDB and Tensorboard (a visualization framework) applying on machine learning projects:
+	- Example: https://www.mongodb.com/developer/code-examples/python/song-recommendations-example-app/#data-visualizations-with-tensorflow-and-mongodb
+
+
+---
+
 - Part III: Machine learning 
 	- Introduction to machine learning concepts
-		- Supervised / unsupervised learning
-		- (Text / image /music) encoding / decoding
-		- Types of neural networks 
-		- Code exercises using popular machine learning libraries
-	- Embeddings as the final product of machine learning
+		- What is learning
+			- Neurons
+			- (Text / image /music) Encoding and decoding 
+			- Gradient descent
+			- Predictions 
+			- Dimensionality
+			- Embedding
+		- How unsupervised learning works
+			- Clustering
+			- Dimensionality reduction
+		- Nice unsupervised learning 
+			- Hierarchical clustering and Dendrograms
+		- Neural network types
+			- RNN and LSTM for text
+			- CNN for images
+		- Embeddings (https://learn.deeplearning.ai/google-cloud-vertex-ai/lesson/3/understanding-text-embeddings)
+			- Visualizing embeddings (https://learn.deeplearning.ai/google-cloud-vertex-ai/lesson/4/visualizing-embeddings)
+	- Code exercises using popular machine learning libraries
+	- Embedding as the final product of machine learning
 		- Class activities:
 			- Display text, images embeddings from model
 			- Calculate similarity score with embedding values 
@@ -63,6 +221,52 @@ Updated: Outline of the course
 		- Style analysis
 		- KNN for clustering
 
+- Lesson 1:
+	- Basic understanding of neural networks
+		- Tensorflow playground
+		- Teaching resource: 
+			- Deep Learning: A Free Mini-Course
+- Lesson 2:
+	- Creating embeddings / feature vectors 
+		- https://github.com/mbellitti/wikiart-classifier/blob/master/src/Create_Featurevectors.ipynb
+- Lesson 3:
+	- Classify and evaluate results
+		- https://github.com/mbellitti/wikiart-classifier/blob/master/src/keras_classify_evaluate.ipynb
+		- 
+
+## Resource:
+
+### Basics of machine learning 
+- Resource: 
+	- coursera (Andrew Ng's machine learning for everyoen )
+	- databookuw (https://databookuw.com/page/page-9/)
+- Project: 
+	- a) Applying embeddings of text, to build a question answering machine to our database
+		- Resource:
+			- DeeplearningAI (Understanding and Applying Text Embeddings)
+				- Understanding text embeddings
+				- Visualizing embeddings
+				- Text generation
+				- Building Q&A systems using semantic search
+	### Feature extraction
+- Packages:
+	- Microsoft's synapseML (open-source librAccess the Webpageary)
+		- Gutenberg project is officially linked with synapaseML (https://marhamilresearch4.blob.core.windows.net/gutenberg-public/Website/index.html#Code). SynapseML is a modern software for analyzing literature, but it is too complicated for putting into a humanity course.
+	- Hugging face 
+
+### Model selection
+- Image
+	- CNN
+- Text
+	- RNN
+	- LSTM
+	- GPT
+
+
+
+
+---
+
 - Part IV: Analysis from data
 	- Exploratory data analysis:
 		- Retrieving data from MongoDB and perform exploratory data analysis for uncovering patterns and insights.
@@ -74,18 +278,31 @@ Updated: Outline of the course
 	- Communicating research findings through compelling visual narratives.
 	- Final project presentations: Students demonstrate their skills by presenting their group projects, incorporating MongoDB data, machine learning insights, and effective data visualizations.
 
+## Reference
+
+### Deployment
+- Tensorflow embedding projector (online tool to play with):
+	- https://projector.tensorflow.org/
+- Tensorboard
+	- Images during training (for )
+	- Audio (for speech recognition)
+	- Textual summaries (model summaries, explanations)
+	- Profile data
+	- Computational graphs of your tensorflow model
+- Would PyTorch support these functionalities?
+	- Yes. `torch.utils.tensorboard` allow PyTorch user to use Tensorboard to visualize PyTorch models and training processes. 
+		- Install tensorboardX: `pip install tensorboardX`
+		- Import and Use TensorBoardX: `from torch.utils.tensorboard import SummaryWriter`
+		- Run tensor-board: `tensorboard --logdir=path/to/logs`
+- Publication:
+	- 1. Export TensorBoard Logs
+	- 2. Configure TensorBoard for External Access:
+	- 3. Embed TensorBoard in a Webpage
+	- 4. Host the Webpage
+	- 5. Access the Webpage
+
 ---
-### Possible digital humanities projects that students can work on:
 
-
-|            | Digitizing Historical Artifacts | Literature Text Analysis | Art History Image Classification | Cultural Heritage Text Translation |
-|------------|---------------------------------|-------------------------|---------------------------------|------------------------------------|
-| Part 1     | Collect historical documents, digitize them using OCR tools, and organize them in digital formats. | Scrape literary texts from public domain sources, clean and preprocess the text data. | Collect a dataset of art images from various time periods and artists. | Collect multilingual historical texts related to cultural heritage. |
-| Part 2     | Create a NoSQL database to store the digitized artifacts, including metadata like date, artist, and location. | Create a NoSQL database to store the literary texts and their metadata, allowing for efficient retrieval and analysis. | Create a NoSQL database to store art images and associated metadata, such as artist, style, and location. | Create a NoSQL database to store multilingual texts and their translations. |
-| Part 3     | Implement machine learning models to categorize and tag images of the artifacts based on their style and content. | Apply sentiment analysis and topic modeling to the literature texts to uncover themes and sentiments within different works. | Implement image classification using neural networks to categorize art pieces by style and artist. | Utilize transformer models (e.g., Hugging Face) to perform automated translation of historical texts between languages. |
-| Part 4     | Develop interactive visualizations showcasing the historical artifacts' evolution over time and artists' styles. | Develop a web application using Streamlit to visualize the evolution of literary themes and sentiment over time. | Develop a machine learning dashboard using Streamlit to allow users to explore and classify art images interactively. | Develop a tool to visualize and compare translations, allowing users to explore the cultural context of the texts. |
-
-This table format provides a clear overview of the different projects and their respective project parts.
 
 ---
 - reference book:

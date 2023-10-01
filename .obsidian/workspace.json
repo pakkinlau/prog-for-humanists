@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Research sprints/Week 2 - The scope of the course.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "defd9c3ae5c357e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Book review - Introducing data science.md",
+                "file": "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
                 "mode": "source",
                 "source": false
               }
@@ -38,18 +26,6 @@
               "type": "markdown",
               "state": {
                 "file": "$Final products/course structure.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fc7bce3b1b4c2228",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Project breakdown.md",
                 "mode": "source",
                 "source": false
               }
@@ -183,49 +159,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "floating": {
-    "id": "6a44c5847a352b23",
-    "type": "floating",
-    "children": [
-      {
-        "id": "8bd64b39ce3bfb7a",
-        "type": "window",
-        "children": [
-          {
-            "id": "9c0fc569a1c73ff6",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "c21398f69f3581c1",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "$Final products/course structure.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 604,
-        "y": -1440,
-        "width": 1280,
-        "height": 1400,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "c21398f69f3581c1",
+  "active": "4797c0672bbd16cc",
   "lastOpenFiles": [
-    "Book review - Introducing data science.md",
+    "colabs/Table of content.ipynb",
+    "colabs/Unit 0R1.ipynb",
+    "colabs/Unit 0.ipynb",
+    "colabs",
+    "Pasted image 20231001221756.png",
+    "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
+    "Research sprints/Week 2 - The scope of the course.md",
     "$Final products/course structure.md",
     "Meta/Project breakdown.md",
-    "Research sprints/Week 2 - The scope of the course.md",
+    "Book review - Introducing data science.md",
     "Resources/from internet/introducing-data-science-machine-learning-python.pdf",
     "README.md",
     "$Final products/course objectives and learning outcomes.md",
@@ -254,15 +199,12 @@
     "Resources/HIST4702.md",
     "Meta",
     "Concepts/Spark.md",
-    "Images",
     "Images/Pasted image 20230915162930.png",
     "Images/Pasted image 20230915162853.png",
     "Images/Pasted image 20230915162814.png",
     "Images/Pasted image 20230915162556.png",
     "Images/Pasted image 20230915162522.png",
     "Images/Pasted image 20230915162405.png",
-    "target audience and their skill levels.md",
-    "Resources/from prof. Mcmanus/Statistical Learning with Python.pdf",
-    "Resources/from prof. Mcmanus/Python for Humanists textbook_essential.pdf"
+    "target audience and their skill levels.md"
   ]
 }
