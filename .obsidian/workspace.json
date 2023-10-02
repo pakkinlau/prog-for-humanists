@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
+                "file": "$Final products/course structure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
+                "file": "$Final products/course structure.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md"
+                "file": "$Final products/course structure.md"
               }
             }
           }
@@ -158,30 +159,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "18835555cdfa9d0b",
+  "active": "4797c0672bbd16cc",
   "lastOpenFiles": [
-    "$Final products/course structure.md",
     "colabs/image.png",
-    "colabs/Unit0R3.ipynb",
-    "colabs/Unit0R2.ipynb",
-    "colabs/Unit0R1.ipynb",
-    "colabs/Unit0.ipynb",
-    "colabs/convert_all_notebook_images.py",
-    "colabs/convert_image.py",
-    "colabs/image-8.png",
-    "colabs/Unit2a.ipynb",
-    "Pasted image 20231002201137.png",
-    "Pasted image 20231002201057.png",
-    "colabs/image-7.png",
-    "colabs/runs/Oct02_19-22-34_KinPC/events.out.tfevents.1696245754.KinPC",
-    "colabs/runs/Oct02_19-22-34_KinPC",
-    "colabs/runs/Oct02_19-20-54_KinPC/events.out.tfevents.1696245654.KinPC",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/symbolism.txt",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/symbolism.py",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/surrealism.txt",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/surrealism.py",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/romanticism.txt",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/romanticism.py",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/rococo.txt",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/rococo.py",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/realism.txt",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/realism.py",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/tests/test_images_processed/madame-cezanne-in-blue-1890.portrait.pre_isr.jpg",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/tests/test_images_processed/madame-cezanne-in-blue-1890.portrait.jpg",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/tests/test_images_processed/madame-cezanne-in-blue-1890.portrait.debug_4.jpg",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/tests/test_images_processed/madame-cezanne-in-blue-1890.portrait.debug_3.jpg",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/tests/test_images_processed/madame-cezanne-in-blue-1890.portrait.debug_2.jpg",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/tests/test_images_processed/madame-cezanne-in-blue-1890.portrait.debug_1.jpg",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/tests/test_images_processed/madame-cezanne-in-blue-1890.portrait.debug_0.jpg",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/tests/test_images_processed/head-of-an-old-man.portrait.jpg",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/tests/test_images_processed/head-of-an-old-man.portrait.debug_4.jpg",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/tests/test_images_processed/head-of-an-old-man.portrait.debug_3.jpg",
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/README.md",
+    "colabs/wikiart-image-dataset/README.md",
     "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
-    "colabs/image-6.png",
-    "colabs/image-5.png",
-    "colabs/image-4.png",
-    "colabs/image-3.png",
-    "colabs/image-2.png",
+    "$Final products/course structure.md",
     "Research sprints/Week 2 - The scope of the course.md",
     "Meta/Project breakdown.md",
     "Book review - Introducing data science.md",
@@ -202,7 +206,6 @@
     "Meta/pipeline.md",
     "Concepts/MongoDB.md",
     "Resources/HIST4702.md",
-    "Concepts/Spark.md",
-    "target audience and their skill levels.md"
+    "Concepts/Spark.md"
   ]
 }
