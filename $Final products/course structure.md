@@ -23,6 +23,28 @@ Updated: Outline of the course
 
 This table format provides a clear overview of the different projects and their respective project parts.
 
+- Overall framework for this course: 
+
+```mermaid
+graph TB;
+    A["Data from Web"] -->|Raw Data| B["Processing & Cleaning"]
+    style A fill:#8B0000,stroke:#8B0000;
+    style B fill:#8B0000,stroke:#8B0000;
+    B -->|Clean Data| C["MongoDB"]
+    style C fill:#0000FF,stroke:#0000FF;
+    C -->|Structured Data| D["Machine Learning"]
+    style D fill:#8B4513,stroke:#8B4513;
+    D -->|Processed Data| E["Exploratory data analysis"]
+    style E fill:#006400,stroke:#006400;
+    D -->|Embeddings| C
+    C -->|Processed Data| G["Publication Media (GitHub)"]
+    E -->|Data Insights| F["Data Visualization"]
+    style F fill:#006400,stroke:#006400;
+    style G fill:#006400,stroke:#006400;
+    F -->|Insights & Reports| G["Publication Media (GitHub)"]
+
+```
+
 ---
 
 # A more detailed syllabus
@@ -73,7 +95,6 @@ This table format provides a clear overview of the different projects and their 
 		- manuscripts, letters
 		- artworks, photographs
 		- Text database (such as cuhk's ctext website)
-
 
 - Digitisation techniques
 	- Manuscripts, letter images: OCR
@@ -176,15 +197,49 @@ This table format provides a clear overview of the different projects and their 
 	- Database integration:
 		- Establishing pipelines/interface of the database so that the database can be integrated to the workflow of other groupmates .
 
+- What to learn?
+	- Document structure: 
+		- Understanding how data is represented as BSON (Binary JSON) documents in MongoDB.
+		- Designing appropriate document structures for storing digitized artifacts, literary texts, art images, and multilingual texts along with their metadata.
+	- Collections:
+		- Creating and managing collections to organize related documents.
+		- Choosing suitable collection names for storing different types of data (e.g., artifacts, literary texts, art images, multilingual texts).
+	- Indexes:
+		- Creating indexes on fields used for querying (e.g., artist, style, date) to improve query performance.
+		- Understanding the impact of indexing on read and write operations.
+	- NoSQL Database Design:
+		- Designing schema-less databases for literary texts, art images, and multilingual texts.
+		- Embedding related information within documents (e.g., embedding metadata within literary texts or art images documents).
+	- CRUD Operations:
+		- Learning how to perform Create, Read, Update, and Delete operations on MongoDB documents.
+		- Using methods like insertOne(), insertMany(), find(), updateOne(), and deleteOne() to manipulate data.
+
+---
+- From book "data science and machine learning python"
+	- ACID principle versus BASE principle
+	- Four types of NoSQL database
+	- 
+
+![400](../Pasted%20image%2020231002201137.png)
+![400](../Pasted%20image%2020231002201057.png)
+
+
+---
+
 ## Reference
 
 - MongoDB and Tensorboard (a visualization framework) applying on machine learning projects:
 	- Example: https://www.mongodb.com/developer/code-examples/python/song-recommendations-example-app/#data-visualizations-with-tensorflow-and-mongodb
+- Training machine learning models with MongoDB:
+	- https://www.mongodb.com/blog/post/training-machine-learning-models-with-mongodb#:~:text=In%20conclusion%2C%20MongoDB%20provides%20several,than%20with%20traditional%2C%20relational%20databases.
 
 
 ---
 
 - Part III: Machine learning 
+	- Bridging the gap from database to machine learning
+		- "mongoDB deep learning pdf"
+
 	- Introduction to machine learning concepts
 		- What is learning
 			- Neurons

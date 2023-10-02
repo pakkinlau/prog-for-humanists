@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "$Final products/course structure.md",
+                "file": "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "$Final products/course structure.md",
+                "file": "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "$Final products/course structure.md"
+                "file": "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md"
               }
             }
           }
@@ -159,25 +158,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4797c0672bbd16cc",
+  "active": "18835555cdfa9d0b",
   "lastOpenFiles": [
-    "colabs/Table of content.ipynb",
-    "colabs/Unit 0R1.ipynb",
-    "colabs/Unit 0.ipynb",
-    "colabs",
-    "Pasted image 20231001221756.png",
-    "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
-    "Research sprints/Week 2 - The scope of the course.md",
     "$Final products/course structure.md",
+    "colabs/image.png",
+    "colabs/Unit0R3.ipynb",
+    "colabs/Unit0R2.ipynb",
+    "colabs/Unit0R1.ipynb",
+    "colabs/Unit0.ipynb",
+    "colabs/convert_all_notebook_images.py",
+    "colabs/convert_image.py",
+    "colabs/image-8.png",
+    "colabs/Unit2a.ipynb",
+    "Pasted image 20231002201137.png",
+    "Pasted image 20231002201057.png",
+    "colabs/image-7.png",
+    "colabs/runs/Oct02_19-22-34_KinPC/events.out.tfevents.1696245754.KinPC",
+    "colabs/runs/Oct02_19-22-34_KinPC",
+    "colabs/runs/Oct02_19-20-54_KinPC/events.out.tfevents.1696245654.KinPC",
+    "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
+    "colabs/image-6.png",
+    "colabs/image-5.png",
+    "colabs/image-4.png",
+    "colabs/image-3.png",
+    "colabs/image-2.png",
+    "Research sprints/Week 2 - The scope of the course.md",
     "Meta/Project breakdown.md",
     "Book review - Introducing data science.md",
-    "Resources/from internet/introducing-data-science-machine-learning-python.pdf",
     "README.md",
     "$Final products/course objectives and learning outcomes.md",
-    "Pasted image 20230920022803.png",
-    "Pasted image 20230920022658.png",
     "Resources/from cuhk/a list of resources from cuhk.md",
-    "Resources/from cuhk",
     "Research sprints/Week 1 -- Possible related materials.md",
     "Resources/from internet/RA - digital history - online resources.md",
     "Meta/weekly reporting template.md",
@@ -187,24 +197,12 @@
     "Research sprints/$Research reading sprints.md",
     "Meta/Log.md",
     "Meta/pedagogy.md",
-    "Images/Pasted image 20230915161644.png",
     "Images/Pasted image 20230909143831.png.md",
     "$Final products/All teaching materials.md",
     "Meta/pipeline.md",
     "Concepts/MongoDB.md",
-    "Final products/Untitled",
-    "$Final products",
-    "Research sprints",
-    "Concepts",
     "Resources/HIST4702.md",
-    "Meta",
     "Concepts/Spark.md",
-    "Images/Pasted image 20230915162930.png",
-    "Images/Pasted image 20230915162853.png",
-    "Images/Pasted image 20230915162814.png",
-    "Images/Pasted image 20230915162556.png",
-    "Images/Pasted image 20230915162522.png",
-    "Images/Pasted image 20230915162405.png",
     "target audience and their skill levels.md"
   ]
 }
