@@ -182,6 +182,11 @@ graph TB;
 - Alternative tools trend comparison: 
 ![400](../Pasted%20image%2020231001221756.png)
 
+### Course-level reference
+- Datacamp: Building data engineering pipelines in python
+	- https://app.datacamp.com/learn/courses/building-data-engineering-pipelines-in-python
+	- 
+
 ---
 
 - Part II: Populating and managing data with some database schemas
@@ -232,6 +237,18 @@ graph TB;
 	- Example: https://www.mongodb.com/developer/code-examples/python/song-recommendations-example-app/#data-visualizations-with-tensorflow-and-mongodb
 - Training machine learning models with MongoDB:
 	- https://www.mongodb.com/blog/post/training-machine-learning-models-with-mongodb#:~:text=In%20conclusion%2C%20MongoDB%20provides%20several,than%20with%20traditional%2C%20relational%20databases.
+- Vector search in MongoDB
+	- 
+- MongoDB associate developer certification
+	- https://learn.mongodb.com/learn/course/mongodb-associate-developer-exam-study-guide/main/associate-dba-exam-study-guide
+	- This could be treated as the guideline for this unit of the course
+- Associate developer python practice questions
+	- https://learn.mongodb.com/courses/associate-developer-python-practice-questions
+- MongoDB python developer path
+	- https://learn.mongodb.com/learning-paths/mongodb-python-developer-path
+	- This is a course that prepare the learner for the certificate exam
+- Figure
+![](../Pasted%20image%2020231015064800.png)
 
 
 ---
@@ -293,8 +310,11 @@ graph TB;
 
 ### Basics of machine learning 
 - Resource: 
-	- coursera (Andrew Ng's machine learning for everyoen )
+	- coursera (Andrew Ng's machine learning for everyone )
 	- databookuw (https://databookuw.com/page/page-9/)
+	- Pytorch (Deep learning with PyTorch - A 6 0minute biltz) https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html
+	- DeeplearningAI - Understanding and applying text embeddings (https://www.deeplearning.ai/short-courses/google-cloud-vertex-ai/)
+	- First 3 weeks of deeplearning.ai course 1, Natural Language Processing with Classification and Vector Spaces, of NLP specialization (https://www.coursera.org/learn/classification-vector-spaces-in-nlp?specialization=natural-language-processing)
 - Project: 
 	- a) Applying embeddings of text, to build a question answering machine to our database
 		- Resource:
