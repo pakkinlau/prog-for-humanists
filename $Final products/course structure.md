@@ -100,6 +100,17 @@ graph TB;
 	- Manuscripts, letter images: OCR
 	- Text: NLTK, regex
 	- Webpage: web scraping software, such as octoparse
+	- PDF to text
+```python
+import pdfminer
+from pdfminer.high_level import extract_text
+
+def read_pdf(file):
+    text = extract_text(file.name)
+    return text
+```
+
+
 - Accessing online resources with programming
 	- Introduction of API
 		- Motivation: Government API, worldbank API etc
@@ -109,6 +120,9 @@ graph TB;
 - Introduction to data format
 	- JSON (while downloading the data from online resources)
 	- CSV 
+- Document ETL:
+	- Langchain retrieval (document loaders, document transformers)
+		- https://python.langchain.com/docs/modules/data_connection/document_transformers/
 - Data cleaning and preprocessing 
 	- Dealing with missing values
 	- Enforcing attribute types to columns of CSV, and check the validity of cell values. 
@@ -123,6 +137,11 @@ graph TB;
 ## References of each project
 
 ### Digital humanities data source
+- Projects
+	- Datacamp - Project: Word Frequency in Classic Novels(Project Gutenberg)
+		- https://projects.datacamp.com/projects/38
+	- Datacamp - Project: Word Frequency in Moby Dick
+		- https://projects.datacamp.com/projects/1633
 - Datasets 
 	- ([UCI Machine Learning Respository](https://archive.ics.uci.edu/ml/index.php))
 		- The University of California at Irving Machine Learning Repository is a collection of databases, domain theories, and data generators that are used by the machine learning community for the empirical analysis of machine learning algorithms.
@@ -147,7 +166,9 @@ graph TB;
 		- A text analytics platform aimed at teaching and enabling a generation of researchers to text mine. Two of ITHAKA’s services, JSTOR and Portico, are the initial sources of content for the new platform.
 	- [The Intertextual Hub](https://intertextual-hub.uchicago.edu/)
 		- The Intertextual Hub is an experimental digital humanities reading environment that aims to situate specific documents in their broader context of intertextual relations, whether in the form of direct or indirect borrowings, shared topics with other texts or parts of texts, or other kinds of lexical similarity.
-
+	- Project Gutenberg
+		- Project Gutenberg is a volunteer effort to digitize and archive cultural works, as well as to "encourage the creation and distribution of eBooks."
+		- https://www.gutenberg.org/files/2701/2701-h/2701-h.htm
 ## Art history image classification / Digitizing historical artifacts 
 - Dataset and packages that built upon that dataset: 
 	- Wikiart: https://www.wikiart.org/en/leonardo-da-vinci/mona-lisa
@@ -175,7 +196,20 @@ graph TB;
 	- NLP preprocessing with NLTK
 		- Teaching resource: https://realpython.com/nltk-nlp-python/
 
+### ETL process, pandas
+- Datacamp: Data Manipulation with pandas
+	- https://app.datacamp.com/learn/courses/data-manipulation-with-pandas
+- Datacamp: Streamlined Data Ingestion with pandas (Section 1 and 4)
+	- https://app.datacamp.com/learn/courses/streamlined-data-ingestion-with-pandas
+- Pandas User Guide
+	- https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html
+- Pandas cheatsheet
+	- https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
+
 ### Data cleaning 
+- Cleaning data with python pandas
+	- https://github.com/analyticswithadam/Python/blob/main/Pipe.ipynb
+	- 
 - OpenRefine
 	- Resource: https://openrefine.org/
 	- A free, open source, powerful tool for working with messy data.
@@ -315,8 +349,12 @@ graph TB;
 	- Pytorch (Deep learning with PyTorch - A 6 0minute biltz) https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html
 	- DeeplearningAI - Understanding and applying text embeddings (https://www.deeplearning.ai/short-courses/google-cloud-vertex-ai/)
 	- First 3 weeks of deeplearning.ai course 1, Natural Language Processing with Classification and Vector Spaces, of NLP specialization (https://www.coursera.org/learn/classification-vector-spaces-in-nlp?specialization=natural-language-processing)
+	- Datacamp - unsupervised learning in python
+		- https://app.datacamp.com/learn/courses/unsupervised-learning-in-python
 - Project: 
-	- a) Applying embeddings of text, to build a question answering machine to our database
+	- a) Datacamp - find text similarity from plot summaries
+		- https://app.datacamp.com/learn/projects/648
+	- b) Applying embeddings of text, to build a question answering machine to our database
 		- Resource:
 			- DeeplearningAI (Understanding and Applying Text Embeddings)
 				- Understanding text embeddings
@@ -350,6 +388,11 @@ graph TB;
 			- creating machine learning plots, such as confusion matrices, ROC curves 
 		- Streamlit:
 			- Create web applications with interactive visualizations, machine learning dashboard
+		- Gradio:
+			- Create machine learning demo. Easy to code. 
+			- Example:
+				- https://huggingface.co/spaces/sblumenf/PDF-text-extractor/blob/main/app.py
+				- https://huggingface.co/spaces/sblumenf/PDF-text-extractor
 	- Communicating research findings through compelling visual narratives.
 	- Final project presentations: Students demonstrate their skills by presenting their group projects, incorporating MongoDB data, machine learning insights, and effective data visualizations.
 
@@ -369,6 +412,7 @@ graph TB;
 		- Install tensorboardX: `pip install tensorboardX`
 		- Import and Use TensorBoardX: `from torch.utils.tensorboard import SummaryWriter`
 		- Run tensor-board: `tensorboard --logdir=path/to/logs`
+- 
 - Publication:
 	- 1. Export TensorBoard Logs
 	- 2. Configure TensorBoard for External Access:
