@@ -96,6 +96,10 @@ graph TB;
 		- artworks, photographs
 		- Text database (such as cuhk's ctext website)
 
+- Sample Project Gutenberg Corpus
+	- Paper: (A standardized Project Gutenberg corpus for statistical analysis of natural language and quantitative linguistics) https://arxiv.org/pdf/1812.08092v1.pdf
+	- GitHub: follow the instruction of the repository to download the dataset: https://github.com/pgcorpus/gutenberg/tree/master
+
 - Digitisation techniques
 	- Manuscripts, letter images: OCR
 	- Text: NLTK, regex
@@ -133,7 +137,11 @@ def read_pdf(file):
 		- Folder structure 
 			- (will be used in machine learning and database)
 			- organization of your data will significantly impact the workflow
-
+- Huggingface datasets
+	- Project gutenberg:  https://huggingface.co/datasets/alturing/gutenberg-texts
+- Apache arrow
+	- Get started article: https://medium.com/@ctagard19/pandas-meets-pyarrow-a-data-scientists-dream-come-true-dff849d61db5
+	- Documentation: https://arrow.apache.org/docs/python/compute.html
 ## References of each project
 
 ### Digital humanities data source
