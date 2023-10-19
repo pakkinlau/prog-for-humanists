@@ -130,7 +130,7 @@ def read_pdf(file):
 - Data cleaning and preprocessing 
 	- Dealing with missing values
 	- Enforcing attribute types to columns of CSV, and check the validity of cell values. 
-- Get to know the data quality standard 
+- Get to know the data quality standard 00
 	- Art images
 		- Uniform resolution? Resizing and standardizing the resolution
 		- Ensure all images are in a consistant format (jpeg, png) for ease of processing
