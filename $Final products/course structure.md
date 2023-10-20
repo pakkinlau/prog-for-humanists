@@ -26,38 +26,10 @@ This table format provides a clear overview of the different projects and their 
 - Overall framework for this course: 
 ```mermaid
 graph TB;
-    A["Raw data from Web"] -->|Processing & Cleaning| B["Clean data"]
+    A["Unstructured data \n  (pdf / images/  websites / text documents)"] -->|Processing & Cleaning| B[" Structured data \n (JSON / CSV / parquet / Arrow / SQL / dataframes)"]
     style A fill:#8B0000,stroke:#8B0000;
     style B fill:#8B0000,stroke:#8B0000;
-    B -->|Load clean Data| C["MongoDB"]
-    style C fill:#0000FF,stroke:#0000FF;
-    C -->|Structured Data| D["Machine Learning"]
-    style D fill:#8B4513,stroke:#8B4513;
-    D -->|Processed Data| F["Data Visualization"]
-    D -->|Embeddings| C
-    C -->|Processed Data| G["Publication Media (GitHub)"]
-    style F fill:#006400,stroke:#006400;
-    style G fill:#006400,stroke:#006400;
-    F -->|Insights & Reports| G["Publication Media (GitHub)"]
-
-	E["Exploratory data analysis"]
-
-	C["MongoDB"] -->|Create dataset| H["Publication Media (Hugging face)"]
-	style H fill:#0000FF,stroke:#0000FF;
-
-	G <---->|Twin| H
-
-```
-
-
-- Data format throughout this course:
-
-```mermaid
-graph TB;
-    A["Unstructured data \n  (pdf, images, websites, text documents)"] -->|Processing & Cleaning| B[" Structured data \n (JSON, CSV, parquet, Arrow, SQL)"]
-    style A fill:#8B0000,stroke:#8B0000;
-    style B fill:#8B0000,stroke:#8B0000;
-    B -->|Load clean Data| C["MongoDB \n (dictionary / list of dictionary / pandas / JSON)"]
+    B -->|Load clean data| C["MongoDB \n (dictionary / list of dictionary / pandas / JSON  / CSV / database records)"]
     style C fill:#0000FF,stroke:#0000FF;
     C -->|Structured Data| D["Machine Learning \n (Vectors / Embeddings)"]
     style D fill:#8B4513,stroke:#8B4513;
@@ -70,7 +42,7 @@ graph TB;
 
 	E["Exploratory data analysis"]
 
-	C["MongoDB"] -->|Create dataset| H["Publication Media (Hugging face)"]
+	C -->|Create dataset| H["Publication Media (Hugging face)"]
 	style H fill:#0000FF,stroke:#0000FF;
 
 	G <---->|Twin| H
