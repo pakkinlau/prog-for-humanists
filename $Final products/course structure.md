@@ -24,26 +24,58 @@ Updated: Outline of the course
 This table format provides a clear overview of the different projects and their respective project parts.
 
 - Overall framework for this course: 
-
 ```mermaid
 graph TB;
-    A["Data from Web"] -->|Raw Data| B["Processing & Cleaning"]
+    A["Raw data from Web"] -->|Processing & Cleaning| B["Clean data"]
     style A fill:#8B0000,stroke:#8B0000;
     style B fill:#8B0000,stroke:#8B0000;
-    B -->|Clean Data| C["MongoDB"]
+    B -->|Load clean Data| C["MongoDB"]
     style C fill:#0000FF,stroke:#0000FF;
     C -->|Structured Data| D["Machine Learning"]
     style D fill:#8B4513,stroke:#8B4513;
-    D -->|Processed Data| E["Exploratory data analysis"]
-    style E fill:#006400,stroke:#006400;
+    D -->|Processed Data| F["Data Visualization"]
     D -->|Embeddings| C
     C -->|Processed Data| G["Publication Media (GitHub)"]
-    E -->|Data Insights| F["Data Visualization"]
     style F fill:#006400,stroke:#006400;
     style G fill:#006400,stroke:#006400;
     F -->|Insights & Reports| G["Publication Media (GitHub)"]
 
+	E["Exploratory data analysis"]
+
+	C["MongoDB"] -->|Create dataset| H["Publication Media (Hugging face)"]
+	style H fill:#0000FF,stroke:#0000FF;
+
+	G <---->|Twin| H
+
 ```
+
+
+- Data format throughout this course:
+
+```mermaid
+graph TB;
+    A["Unstructured data \n  (pdf, images, websites, text documents)"] -->|Processing & Cleaning| B[" Structured data \n (JSON, CSV, parquet, Arrow, SQL)"]
+    style A fill:#8B0000,stroke:#8B0000;
+    style B fill:#8B0000,stroke:#8B0000;
+    B -->|Load clean Data| C["MongoDB \n (dictionary / list of dictionary / pandas / JSON)"]
+    style C fill:#0000FF,stroke:#0000FF;
+    C -->|Structured Data| D["Machine Learning \n (Vectors / Embeddings)"]
+    style D fill:#8B4513,stroke:#8B4513;
+    D -->|Processed Data| F["Data Visualization"]
+    D -->|Embeddings| C
+    C -->|Processed Data| G["Publication Media (GitHub)"]
+    style F fill:#006400,stroke:#006400;
+    style G fill:#006400,stroke:#006400;
+    F -->|Insights & Reports| G["Publication Media (GitHub)"]
+
+	E["Exploratory data analysis"]
+
+	C["MongoDB"] -->|Create dataset| H["Publication Media (Hugging face)"]
+	style H fill:#0000FF,stroke:#0000FF;
+
+	G <---->|Twin| H
+```
+
 
 ---
 
@@ -121,12 +153,18 @@ def read_pdf(file):
 	- Case study: Accessing Artworks: 
 		- Metmuseum (https://www.metmuseum.org/art/collection/search/53222)
 		- Requesting metadata, and the actual images of the artwork from Metmuseum API.
+
 - Introduction to data format
 	- JSON (while downloading the data from online resources)
 	- CSV 
+	- parquet
+	- arrow
+	- SQL
 - Document ETL:
 	- Langchain retrieval (document loaders, document transformers)
 		- https://python.langchain.com/docs/modules/data_connection/document_transformers/
+	- Hugging face retrieval (csv, json, parquet, arrow, SQL)
+		- `dataset = load_dataset("arrow", data_files={'train': 'train.arrow', 'test': 'test.arrow'})`
 - Data cleaning and preprocessing 
 	- Dealing with missing values
 	- Enforcing attribute types to columns of CSV, and check the validity of cell values. 

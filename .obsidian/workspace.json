@@ -159,8 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4797c0672bbd16cc",
+  "active": "bdd8f96ce295b200",
   "lastOpenFiles": [
+    "colabs/pyarrow/play_with_dataset.ipynb",
+    "colabs/asdas.py",
     "colabs/pyarrow/play_with_pyarrow.ipynb",
     "colabs/pyarrow/play_with_data.ipynb",
     "colabs/pyarrow/download_dataset.py",
@@ -172,8 +174,6 @@
     "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/symbolism.txt",
     "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/symbolism.py",
     "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/surrealism.txt",
-    "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/surrealism.py",
-    "colabs/wikiart-image-dataset/wikiart-image-dataset/wikiartcrawler/groups/romanticism.txt",
     "colabs/wikiart-image-dataset/wikiart-image-dataset/tests/test_images_processed/madame-cezanne-in-blue-1890.portrait.pre_isr.jpg",
     "colabs/wikiart-image-dataset/wikiart-image-dataset/tests/test_images_processed/madame-cezanne-in-blue-1890.portrait.jpg",
     "colabs/wikiart-image-dataset/wikiart-image-dataset/tests/test_images_processed/madame-cezanne-in-blue-1890.portrait.debug_4.jpg",

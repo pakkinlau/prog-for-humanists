@@ -10,3 +10,4 @@ files = os.listdir(directory_path)
 print("List of files in the directory:")
 for file in files:
     print(file)
+
