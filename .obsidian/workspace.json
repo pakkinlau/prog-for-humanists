@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "18835555cdfa9d0b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "4797c0672bbd16cc",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -161,29 +148,29 @@
   },
   "active": "4797c0672bbd16cc",
   "lastOpenFiles": [
-    "colabs/New colabs/Image/handwritting_malala(full).jpg",
-    "colabs/New colabs/Image/handwritting_malala.jpg",
-    "colabs/New colabs/Image/handwritting_malala(crop).jpg",
-    "colabs/New colabs/Image/handwritten_training.jpg",
-    "colabs/New colabs/Image/handwritten.jpg",
-    "colabs/New colabs/02. Images.ipynb",
-    "colabs/New colabs/01. Pdf.ipynb",
+    "colabs/Unit 1b/01.  JSON.ipynb",
+    "colabs/Unit 1b/01. ",
+    "colabs/Unit 1b",
+    "colabs/Unit 1a/Txt/sample.docx",
+    "colabs/Unit 1a/Txt/neural_networks_and_deep_learning.txt",
+    "colabs/Unit 1a/Txt/humanity_paper.txt",
+    "colabs/Unit 1a/Txt/dilemma.txt",
+    "colabs/Unit 1a/Pdf/humanity_paper.pdf",
+    "colabs/Unit 1a/Image/handwritting_malala(full).jpg",
+    "colabs/Unit 1a/Image/handwritting_malala(crop).jpg",
+    "colabs/Unit 1a/Image/cover.jpg",
+    "colabs/Unit 1a/Image/6.jpg",
+    "colabs/Unit 1a/Image/5.jpg",
+    "colabs/Unit 1a/Image/4.jpg",
+    "colabs/Unit 1a/Image/3.jpg",
+    "colabs/Unit 1a/Image/2.jpg",
+    "colabs/Unit 1a/Image/1.jpg",
+    "colabs/Unit 1a/Txt",
+    "colabs/Unit 1a/Pdf",
+    "colabs/Unit 1a/Image",
+    "colabs/New colabs/Image/cover.jpg",
     "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
     "$Final products/course structure.md",
-    "colabs/New colabs/Image/6.jpg",
-    "colabs/New colabs/Image/5.jpg",
-    "colabs/New colabs/Image/4.jpg",
-    "colabs/New colabs/Image/3.jpg",
-    "colabs/New colabs/Image/2.jpg",
-    "colabs/New colabs/Image/1.jpg",
-    "colabs/New colabs/Txt/humanity_paper.txt",
-    "colabs/New colabs/Pdf/humanity_paper.pdf",
-    "colabs/New colabs/Txt/dilemma.txt",
-    "colabs/New colabs/Pdf/dilemma.pdf",
-    "colabs/New colabs/Pdf/Asso for Info Science   Tech - 2015 - Ekbia - Big data  bigger dilemmas  A critical review.pdf",
-    "test.sh",
-    "abc.txt",
-    "git_test.py",
     "colabs/wikiart-image-dataset/wikiart-image-dataset/README.md",
     "colabs/wikiart-image-dataset/README.md",
     "Research sprints/Week 2 - The scope of the course.md",
