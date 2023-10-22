@@ -8,6 +8,18 @@
         "type": "tabs",
         "children": [
           {
+            "id": "18835555cdfa9d0b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "4797c0672bbd16cc",
             "type": "leaf",
             "state": {
@@ -19,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "mongoDB",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +78,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -146,29 +160,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4797c0672bbd16cc",
+  "active": "f6ba8ae153739731",
   "lastOpenFiles": [
-    "colabs/Unit 1b/01.  JSON.ipynb",
-    "colabs/Unit 1b/01. ",
-    "colabs/Unit 1b",
-    "colabs/Unit 1a/Txt/sample.docx",
-    "colabs/Unit 1a/Txt/neural_networks_and_deep_learning.txt",
-    "colabs/Unit 1a/Txt/humanity_paper.txt",
-    "colabs/Unit 1a/Txt/dilemma.txt",
-    "colabs/Unit 1a/Pdf/humanity_paper.pdf",
-    "colabs/Unit 1a/Image/handwritting_malala(full).jpg",
-    "colabs/Unit 1a/Image/handwritting_malala(crop).jpg",
-    "colabs/Unit 1a/Image/cover.jpg",
-    "colabs/Unit 1a/Image/6.jpg",
-    "colabs/Unit 1a/Image/5.jpg",
-    "colabs/Unit 1a/Image/4.jpg",
-    "colabs/Unit 1a/Image/3.jpg",
-    "colabs/Unit 1a/Image/2.jpg",
-    "colabs/Unit 1a/Image/1.jpg",
-    "colabs/Unit 1a/Txt",
-    "colabs/Unit 1a/Pdf",
-    "colabs/Unit 1a/Image",
-    "colabs/New colabs/Image/cover.jpg",
+    "colabs/Unit 1b - Value extraction/02. NLP.ipynb",
+    "colabs/Unit 1b - Value extraction/02. Tokenization and keywords.ipynb",
+    "colabs/Unit 2b - CRUD operations/03. Vector search.ipynb",
+    "colabs/Unit 2b - CRUD operations/02. Vector indexing.ipynb",
+    "colabs/Unit 2b - CRUD operations/02. Vectors.ipynb",
+    "colabs/Unit 3a - Supervised learning/02. creating labels.ipynb",
+    "colabs/Unit 3a - Supervised learning",
+    "colabs/Unit 2b - CRUD operations/01. CRUD operations.ipynb",
+    "colabs/Unit 2b - CRUD operations",
+    "colabs/Unit 2a  - Setting up MongoDB/01. Setup mongoDB altas.ipynb",
+    "colabs/Unit 2b/01. CRUD operations.ipynb",
+    "colabs/Unit 1a - Unstructured data/Image/handwritting_malala(full).jpg",
+    "colabs/Unit 1a - Unstructured data/Image/handwritting_malala(crop).jpg",
+    "colabs/Unit 1a - Unstructured data/Image/cover.jpg",
+    "colabs/Unit 1a - Unstructured data/Image/6.jpg",
+    "colabs/Unit 1a - Unstructured data/Image/3.jpg",
+    "colabs/Unit 1a - Unstructured data/Image/5.jpg",
+    "colabs/Unit 1a - Unstructured data/Image/4.jpg",
+    "colabs/Unit 1a - Unstructured data/Image/2.jpg",
+    "colabs/Unit 1a - Unstructured data/Image/1.jpg",
+    "colabs/Unit 1a - Unstructure data/Image/handwritting_malala(full).jpg",
     "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
     "$Final products/course structure.md",
     "colabs/wikiart-image-dataset/wikiart-image-dataset/README.md",

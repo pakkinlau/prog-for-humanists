@@ -1,0 +1,881 @@
+6NeuralNetworksandDeepLearning
+Neural networks (NNs) were inspired by the Nobel prize winning work of Hubel and
+Wiesel on the primary visual cortex of cats [259]. Their seminal experiments showedthat neuronal networks were organized in hierarchical layers of cells for processing visualstimulus. The ﬁrst mathematical model of the NN, termed the Neocognitron in 1980 [193],had many of the characteristic features of today’s deep convolutional NNs (or DCNNs),
+including a multi-layer structure, convolution, max pooling and nonlinear dynamical nodes.
+The recent success of DCNNs in computer vision has been enabled by two critical com-ponents: (i) the continued growth of computational power, and (ii) exceptionally largelabeled data sets which take advantage of the power of a deep multi-layer architecture.
+Indeed, although the theoretical inception of NNs has an almost four-decade history, theanalysis of the ImageNet data set in 2012 [310] provided a watershed moment for NNs anddeep learning [324]. Prior to this data set, there were a number of data sets available withapproximately tens of thousands of labeled images. ImageNet provided over 15 millionlabeled, high-resolution images with over 22,000 categories. DCNNs, which are only onepotential category of NNs, have since transformed the ﬁeld of computer vision by domi-nating the performance metrics in almost every meaningful computer vision task intendedfor classiﬁcation and identiﬁcation.
+Although ImageNet has been critically enabling for the ﬁeld, NNs were textbook mate-
+rial in the early 1990s with a focus typically on a small number of layers. Critical machinelearning tasks such as principal component analysis (PCA) were shown to be intimatelyconnected with networks which included back propagation. Importantly, there were a num-ber of critical innovations which established multilayer feedforward networks as a classof universal approximators [255]. The past ﬁve years have seen tremendous advances inNN architectures, many designed and tailored for speciﬁc application areas. Innovationshave come from algorithmic modiﬁcations that have led to signiﬁcant performance gainsin a variety of ﬁelds. These innovations include pretraining, dropout, inception modules,
+data augmentation with virtual examples, batch normalization, and/or residual learning
+(See Ref. [216] for a detailed exposition of NNs). This is only a partial list of potentialalgorithmic innovations, thus highlighting the continuing and rapid pace of progress in theﬁeld. Remarkably, NNs were not even listed as one of the top 10 algorithms of data miningin 2008 [562]. But a decade later, its undeniable and growing list of successes on challengedata sets make it perhaps the most important data mining tool for our emerging generationof scientists and engineers.
+195
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press196 NeuralNetworksandDeepLearning
+As already shown in the last two chapters, all of machine learning revolves fundamen-
+tally around optimization. NNs speciﬁcally optimize over a compositional function
+argmin
+Aj(
+fM(AM,···,f2(A2,f1(A1,x))···)+λg(Aj))
+(6.1)
+which is often solved using stochastic gradient descent and back propagation algorithms.
+Each matrix Akdenotes the weights connecting the neural network from the kth to(k+1)th
+layer. It is a massively underdetermined system which is regularized by g(Aj). Composi-
+tion and regularization are critical for generating expressive representations of the dataand preventing overﬁtting, respectively. This general optimization framework is at thecenter of deep learning algorithms, and its solution will be considered in this chapter.Importantly, NNs have signiﬁcant potential for overﬁtting of data so that cross-validationmust be carefully considered. Recall that if you don’t cross-validate, you is dumb.
+6.1 NeuralNetworks:1-LayerNetworks
+The generic architecture of a multi-layer NN is shown in Fig. 6.1. For classiﬁcation tasks,
+the goal of the NN is to map a set of input data to a classiﬁcation. Speciﬁcally, we train the
+NN to accurately map the data xjto their correct label yj. As shown in Fig. 6.1, the input
+space has the dimension of the raw data xj∈Rn. The output layer has the dimension of
+the designed classiﬁcation space. Constructing the output layer will be discussed further inthe following.
+Immediately, one can see that there are a great number of design questions regarding
+NNs. How many layers should be used? What should be the dimension of the layers? Howshould the output layer be designed? Should one use all-to-all or sparsiﬁed connectionsbetween layers? How should the mapping between layers be performed: a linear mapping
+or a nonlinear mapping ? Much like the tuning options on SVM and classiﬁcation trees,
+NNs have a signiﬁcant number of design options that can be tuned to improve performance.
+Initially, we consider the mapping between layers of Fig. 6.1. We denote the various
+layers between input and output as x
+(k)where kis the layer number. For a linear mapping
+between layers, the following relations hold
+x(1)=A1x (6.2a)
+x(2)=A2x(1)(6.2b)
+y=A3x(2). (6.2c)
+This forms a compositional structure so that the mapping between input and output can be
+represented as
+y=A3A2A1x. (6.3)
+This basic architecture can scale to Mlayers so that a general representation between input
+data and the output layer for a linear NN is given by
+y=AMAM−1···A2A1x. (6.4)
+This is generally a highly underdetermined system that requires some constraints on the
+solution in order to select a unique solution. One constraint is immediately obvious: Themapping must generate Mdistinct matrices that give the best mapping. It should be noted
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.1 NeuralNetworks: 1-LayerNetworks 197
+Figure6.1 Illustration of a neural net architecture mapping an input layer xto an output layer y.T h e
+middle (hidden) layers are denoted x(j)where jdetermines their sequential ordering. The matrices
+Ajcontain the coefﬁcients that map each variable from one layer to the next. Although the
+dimensionality of the input layer x∈Rnis known, there is great ﬂexibility in choosing the
+dimension of the inner layers as well as how to structure the output layer. The number of layers and
+how to map between layers is also selected by the user. This ﬂexible architecture gives great
+freedom in building a good classiﬁer.
+that linear mappings, even with a compositional structure, can only produce a limited range
+of functional responses due to the limitations of the linearity.
+Nonlinear mappings are also possible, and generally used, in constructing the NN.
+Indeed, nonlinear activation functions allow for a richer set of functional responses thantheir linear counterparts. In this case, the connections between layers are given by
+x
+(1)=f1(A1,x) (6.5a)
+x(2)=f2(A2,x(1)) (6.5b)
+y=f3(A3,x(2)). (6.5c)
+Note that we have used different nonlinear functions fj(·)between layers. Often a single
+function is used; however, there is no constraint that this is necessary. In terms of mapping
+the data between input and output over Mlayers, the following is derived
+y=fM(AM,···,f2(A2,f1(A1,x))···) (6.6)
+which can be compared with (6.1) for the general optimization which constructs the NN.
+As a highly underdetermined system, constraints should be imposed in order to extracta desired solution type, as in (6.1). For big data applications such as ImageNET andcomputer vision tasks, the optimization associated with this compositional framework is
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press198 NeuralNetworksandDeepLearning
+expensive given the number of variables that must be determined. However, for moderate
+sized networks, it can be performed on workstation and laptop computers. Modern stochas-tic gradient descent and back propagation algorithms enable this optimization, and both arecovered in later sections.
+AOne-LayerNetwork
+To gain insight into how an NN might be constructed, we will consider a single layer net-work that is optimized to build a classiﬁer between dogs and cats. The dog and cat examplewas considered extensively in the previous chapter. Recall that we were given images ofdogs and cats, or a wavelet version of dogs and cats. Fig. 6.2 shows our construction. Tomake this as simple as possible, we consider the simple NN output
+y={dog,cat}={ + 1,−1} (6.7)
+which labels each data vector with an output y∈{ ± 1}. In this case the output layer is
+a single node. As in previous supervised learning algorithms the goal is to determine amapping so that each data vector x
+jis labeled correctly by yj.
+The easiest mapping is a linear mapping between the input images xj∈Rnand the
+output layer. This gives a linear system AX=Yof the form
+AX=Y→[a1a2···an]⎡
+⎣x1x2··· xp⎤
+⎦=[+1+1··· − 1−1](6.8)
+Figure6.2 Single layer network for binary classiﬁcation between dogs and cats. The output layer for
+this case is a perceptron with y∈{ ± 1}. A linear mapping between the input image space and output
+output layer can be constructed for training data by solving A=YX†. This gives a least square
+regression for the matrix Amapping the images to label space.
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.2 Multi-LayerNetworksandActivationFunctions 199
+where each column of the matrix Xis a dog or cat image and the columns of Yare its
+corresponding labels. Since the output layer is a single node, both AandYreduce to
+vectors. In this case, our goal is to determine the matrix (vector) Awith components aj.
+The simplest solution is to take the pseudo-inverse of the data matrix X
+A=YX†. (6.9)
+Thus a single output layer allows us to build a NN using least-square ﬁtting. Of course, we
+could also solve this linear system in a variety of other ways, including with sparsity-promoting methods. The following code solves this problem through both least-squareﬁtting ( pinv) and the LASSO.
+Code6.1 1-layer, linear neural network.
+load catData_w .mat;load dogData_w .mat;CD=[dog_wave cat_wave ];
+train =[dog_wave (:,1:60) cat_wave (:,1:60)];
+test =[dog_wave (:,61:80) cat_wave (:,61:80)];
+label =[ones (60,1); -1 *ones (60,1)].’;
+A=label *pinv (train );test_labels =sign (A*test );
+subplot (4,1,1), bar(test_labels )
+subplot (4,1,2), bar(A)
+figure (2), subplot (2,2,1)
+A2=flipud (reshape (A,32,32)); pcolor (A2),colormap (gray )
+figure (1), subplot (4,1,3)
+A=lasso (train .’,label .’,’Lambda’ ,0.1).’;
+test_labels =sign (A*test );
+bar(test_labels )
+subplot (4,1,4)
+bar(A)
+figure (2), subplot (2,2,2)
+A2=flipud (reshape (A,32,32)); pcolor (A2),colormap (gray )
+Figs. 6.3 and 6.4 show the results of this linear single-layer NN with single node output
+layer. Speciﬁcally, the four rows of Fig. 6.3 show the output layer on the withheld test datafor both the pseudo-inverse and LASSO methods along with a bar graph of the 32 ×32
+(1024 pixels) weightings of the matrix A. Note that all matrix elements are nonzero in
+the pseudo-inverse solution, while the LASSO highlights a small number of pixels that
+can classify the pictures as well as using all pixels. Fig. 6.4 shows the matrix Afor the
+two solution strategies reshaped into 32 ×32 images. Note that for the pseudo-inverse, the
+weightings of the matrix elements Ashow many features of the cat and dog face. For
+the LASSO method, only a few pixels are required that are clustered near the eyes andears. Thus for this single layer network, interpretable results are achieved by looking at theweights generated in the matrix A.
+6.2 Multi-LayerNetworksandActivationFunctions
+The previous section constructed what is perhaps the simplest NN possible. It was linear,
+had a single layer, and a single output layer neuron. The potential generalizations areendless, but we will focus on two simple extensions of the NN in this section. The ﬁrstextension concerns the assumption of linearity in which we assumed that there is a linear
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press200 NeuralNetworksandDeepLearning
+Figure6.3 Classiﬁcation of withheld data tested on a trained, single-layer network with linear
+mapping between inputs (pixel space) and a single output. (a) and (c) are the bar graph of the output
+layer score y∈{ ± 1}achieved for the withheld data using a pseudo-inverse for training and the
+LASSO for training respectively. The results show in both cases that dogs are more oftenmisclassiﬁed than cats are misclassiﬁed. (b) and (d) show the coefﬁcients of the matrix Afor the
+pseudo-inverse and LASSO respectively. Note that the LASSO has only a small number of nonzero
+elements, thus suggesting the NN is highly sparse.
+Figure6.4 Weightings of the matrix Areshaped into 32 ×32 arrays. The left matrix shows the matrix
+Acomputed by least-square regression (the pseudo-inverse) while the right matrix shows the matrix
+Acomputed by LASSO. Both matrices provide similar classiﬁcation scores on withheld data. They
+further provide interpretability in the sense that the results from the pseudo-inverse show many of
+the features of dogs and cats while the LASSO shows that measuring near the eyes and ears alonecan give the features required for distinguishing between dogs and cats.
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.2 Multi-LayerNetworksandActivationFunctions 201
+transform from the image space to the output layer: Ax=yin (6.8). We highlight here
+common nonlinear transformations from input-to-output space represented by
+y=f(A,x) (6.10)
+where f(·)is a speciﬁed activation function (transfer function) for our mapping.
+The linear mapping used previously, although simple, does not offer the ﬂexibility and
+performance that other mappings offer. Some standard activation functions are given by
+f( x)=x −linear (6.11a)
+f( x)={0x≤0
+1x> 0−binary step (6.11b)
+f( x)=1
+1+exp(−x)−logistic (soft step) (6.11c)
+f( x)=tanh(x) −TanH (6.11d)
+f( x)={0x≤0
+xx > 0−rectiﬁed linear unit (ReLU) . (6.11e)
+There are other possibilities, but these are perhaps the most commonly considered in prac-
+tice and they will serve for our purposes. Importantly, the chosen function f( x) will be dif-
+ferentiated in order to be used in gradient descent algorithms for optimization. Each of thefunctions above is either differentiable or piecewise differentiable. Perhaps the most com-monly used activation function is currently the ReLU, which we denote f( x)=ReLU(x).
+With a nonlinear activation function f( x) , or if there are more than one layer, then
+standard linear optimization routines such as the pseudo-inverse and LASSO can no longerbe used. Although this may not seem immediately signiﬁcant, recall that we are optimizingin a high-dimensional space where each entry of the matrix Aneeds to be found through
+optimization. Even moderate to small problems can be computationally expensive to solvewithout using specialty optimization methods. Fortunately, the two dominant optimiza-tion components for training NNs, stochastic gradient descent and backpropagation, areincluded with the neural network function calls in MATLAB. As these methods are criti-cally enabling, both of them are considered in detail in the next two sections of this chapter.
+Multiple layers can also be considered as shown in (6.4) and (6.5c). In this case, the
+optimization must simultaneously identify multiple connectivity matrices A
+1,A2,···AM,
+in contrast to the linear case where only a single matrix is determined ¯A=AM···A2AM.
+The multiple layer structure signiﬁcantly increases the size of the optimization problem aseach matrix element of the Mmatrices must be determined. Even for a one layer structure,
+an optimization routine such as fminsearch will be severely challenged when considering
+a nonlinear transfer function and one needs to move to a gradient descent-based algorithm.
+MATLAB’s neural network toolbox, much like TensorFlow in python, has a wide range
+of features which makes it exceptionally powerful and convenient for building NNs. In thefollowing code, we will train a NN to classify between dogs and cats as in the previousexample. However, in this case, we allow the single layer to have a nonlinear transferfunction that maps the input to the output layer. The output layer for this example will bemodiﬁed to the following
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press202 NeuralNetworksandDeepLearning
+y=[1
+0]
+={dog}and y=[0
+1]
+={cat}. (6.12)
+Half of the data is extracted for training, while the other half is used for testing the results.
+The following code builds a network using the train command to classify between our
+images.
+Code6.2 Neural network with nonlinear transfer functions.
+load catData_w .mat;load dogData_w .mat;
+CD=[dog_wave cat_wave ];
+x=[dog_wave (:,1:40) cat_wave (:,1:40)];
+x2=[dog_wave (:,41:80) cat_wave (:,41:80)];
+label =[ones (40,1) zeros (40,1);
+zeros (40,1) ones (40,1)].’;
+net =patternnet (2,’trainscg’ );
+net.layers {1}. transferFcn =’tansig’ ;
+net =train (net,x,label );
+view (net)
+y=net(x);
+y2=net(x2);
+perf =perform (net,label ,y);
+classes2 =vec2ind (y);
+classes3 =vec2ind (y2);
+In the code above, the patternnet command builds a classiﬁcation network with two
+outputs (6.12). It also optimizes with the option trainscg which is a scaled conjugate
+gradient backpropagation .T h e net.layers also allows us to specify the transfer function,
+in this case hyperbolic tangent functions (6.11d). The view(net)command produces a
+diagnostic tool shown in Fig. 6.5 that summarizes the optimization and NN.
+The results of the classiﬁcation for a cross-validated training set as well as a withhold set
+are shown in Fig. 6.6. Speciﬁcally, the desired outputs are given by the vectors (6.12). Forboth the training and withhold sets, the two components of the vector are shown for the 80training images (40 cats and 40 dogs) and the 80 withheld images (40 cats and 40 dogs).The training set produces a perfect classiﬁer using a one layer network with a hyperbolictangent transfer function (6.11d). On the withheld data, it incorrectly identiﬁes 6 of 40 dogsand cats, yielding an accuracy of ≈85% on new data.
+The diagnostic tool shown in Fig. 6.5 allows access to a number of features critical
+for evaluating the NN. Fig. 6.7 is a summary of the performance achieved by the NNtraining tool. In this ﬁgure, the training algorithm automatically breaks the data into atraining, validation and test set. The backpropagation enabled, stochastic gradient descentoptimization algorithm then iterates through a number of training epochs until the cross-validated error achieves a minimum. In this case, twenty-two epochs is sufﬁcient to achievea minimum. The error on the test set is signiﬁcantly higher than what is achieved for cross-validation. For this case, only a limited amount of data is used for training (40 dogs and 40cats), thus making it difﬁcult to achieve great performance. Regardless, as already shown,once the algorithm has been trained it can be used to evaluate new data as shown in Fig. 6.6.
+There are two other features easily available with the NN diagnostic tool of Fig. 6.5.
+Fig. 6.8 shows an error histogram associated with the trained network. As with Fig. 6.7, the
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.2 Multi-LayerNetworksandActivationFunctions 203
+Figure6.5 MATLAB neural network visualization tool. The number of iterations along with the
+performance can all be accessed from the interactive graphical tool. The performance, error
+histogram and confusion buttons produce Figs. 6.7-6.9 respectively.
+data is divided into training, validation, and test sets. This provides an overall assessment
+of the classiﬁcation quality that can be achieved by the NN training algorithm. Anotherview of the performance can be seen in the confusion matrices for the training, validation,
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press204 NeuralNetworksandDeepLearning
+Figure6.6 Comparison of the output vectors y=[y1y2]Twhich are ideally (6.12) for the dogs and
+cats considered here. The NN training stage produces a cross-validated classiﬁer that achieves 100%
+accuracy in classifying the training data (top two panels for 40 dogs and 40 cats). When applied to awithheld set, 85% accuracy is achieved (bottom two panels for 40 dogs and 40 cats).
+and test data. This is shown in Fig. 6.9. Overall, between Figs. 6.7 to 6.9, high-quality diag-
+nostic tools are available to evaluate how well the NN is able to achieve its classiﬁcationtask. The performance limits are easily seen in these ﬁgures.
+6.3 TheBackpropagationAlgorithm
+As was shown for the NNs of the last two sections, training data is required to determinethe weights of the network. Speciﬁcally, the network weights are determined so as to bestclassify dog versus cat images. In the 1-layer network, this was done using both least-squareregression and LASSO. This shows that at its core, an optimization routine and objectivefunction is required to determine the weights. The objective function should minimizea measure of the misclassiﬁed images. The optimization, however, can be modiﬁed byimposing a regularizer or constraints, such as the ℓ
+1penalization in LASSO.
+In practice, the objective function chosen for optimization is not the true objective func-
+tion desired, but rather a proxy for it. Proxies are chosen largely due to the ability to differ-entiate the objective function in a computationally tractable manner. There are also manydifferent objective functions for different tasks. Instead, one often considers a suitably
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.3 TheBackpropagationAlgorithm 205
+0 5 10 15 20 25
+28 Epochs10-310-210-1100Cross-Entropy  (crossentropy)Best Validation Performance is 0.0041992 at epoch 22
+Train
+Validation
+Test
+Best
+Figure6.7 Summary of training of the NN over a number of epochs. The NN architecture
+automatically separates the data into training, validation and test sets. The training continues (with amaximum of 1000 epochs) until the validation error curve hits a minimum. The training then stops
+and the trained algorithm is then used on the test set to evaluate performance. The NN trained here
+has only a limited amount of data (40 dogs and 40 cats), thus limiting the performance. This ﬁgureis accessed with the performance button on the NN interactive tool of Fig. 6.6.
+chosen loss function so as to approximate the true objective. Ultimately, computational
+tractability is critical for training NNs.
+The backpropagation algorithm (backprop) exploits the compositional nature of NNs
+in order to frame an optimization problem for determining the weights of the network.Speciﬁcally, it produces a formulation amenable to standard gradient descent optimization(See Section 4.2). Backprop relies on a simple mathematical principle: the chain rulefor differentiation. Moreover, it can be proven that the computational time required toevaluate the gradient is within a factor of ﬁve of the time required for computing theactual function itself [44]. This is known as the Baur-Strassen theorem. Fig. 6.10 givesthe simplest example of backprop and how the gradient descent is to be performed. The
+input-to-output relationship for this single node, one hidden layer network, is given by
+y=g(z,b) =g(f(x,a),b). (6.13)
+Thus given a function f(·)andg(·)with weighting constants aandb, the output error
+produce by the network can be computed against the ground truth as
+E=1
+2(y0−y)2(6.14)
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press206 NeuralNetworksandDeepLearning
+050100150200250300350InstancesError Histogram with 20 Bins-0.9412
+-0.8421
+-0.743
+-0.6439-0.5449-0.4458
+-0.3467
+-0.2476
+-0.1485
+-0.04947
+0.04961
+0.14870.2478
+0.3469
+0.4459
+0.545
+0.6441
+0.7432
+0.8423
+0.9413
+Errors = Targets - OutputsTraining
+Validation
+Test
+Zero Error
+Figure6.8 Summary of the error performance of the NN architecture for training, validation and test
+sets. This ﬁgure is accessed with the errorhistogram button on the NN interactive tool of Fig. 6.6.
+where y0is the correct output and yis the NN approximation to the output. The goal is to
+ﬁndaandbto minimize the error. The minimization requires
+∂E
+∂a=−(y0−y)dy
+dzdz
+da=0. (6.15)
+A critical observation is that the compositional nature of the network along with the chain
+rule forces the optimization to backpropagate error through the network. In particular, theterms dy/dz dz/dashow how this backprop occurs. Given functions f(·)andg(·), the chain
+rule can be explicitly computed.
+Backprop results in an iterative, gradient descent update rule
+a
+k+1=ak+δ∂E
+∂ak(6.16a)
+bk+1=bk+δ∂E
+∂bk(6.16b)
+where δis the so-called learning rate and ∂E/∂a along with ∂E/∂b can be explicitly com-
+puted using (6.15). The iteration algorithm is executed to convergence. As with all iterativeoptimization, a good initial guess is critical to achieve a good solution in a reasonableamount of computational time.
+Backprop proceeds as follows: (i) A NN is speciﬁed along with a labeled training set.
+(ii) The initial weights of the network are set to random values. Importantly, one mustnot initialize the weights to zero, similar to what may be done in other machine learning
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.3 TheBackpropagationAlgorithm 207
+123
+Target Class1
+23Output ClassTraining Confusion Matrix
+33
+31.7%
+0
+0.0%
+0
+0.0%
+100%
+0.0%0
+0.0%
+31
+29.8%
+1
+1.0%
+96.9%
+3.1%0
+0.0%
+0
+0.0%
+39
+37.5%
+100%
+0.0%100%
+0.0%
+100%
+0.0%
+97.5%
+2.5%
+99.0%
+1.0%
+123
+Target Class1
+23Output ClassValidation Confusion Matrix
+8
+34.8%
+0
+0.0%
+0
+0.0%
+100%
+0.0%0
+0.0%
+10
+43.5%
+0
+0.0%
+100%
+0.0%0
+0.0%
+0
+0.0%
+5
+21.7%
+100%
+0.0%100%
+0.0%
+100%
+0.0%
+100%
+0.0%
+100%
+0.0%
+123
+Target Class1
+2
+3Output ClassTest Confusion Matrix
+9
+39.1%
+0
+0.0%
+0
+0.0%
+100%
+0.0%0
+0.0%
+8
+34.8%
+0
+0.0%
+100%
+0.0%0
+0.0%
+1
+4.3%
+5
+21.7%
+83.3%
+16.7%100%
+0.0%
+88.9%
+11.1%
+100%
+0.0%
+95.7%
+4.3%
+123
+Target Class1
+2
+3Output ClassAll Confusion Matrix
+50
+33.3%
+0
+0.0%
+0
+0.0%
+100%
+0.0%0
+0.0%
+49
+32.7%
+1
+0.7%
+98.0%
+2.0%0
+0.0%
+1
+0.7%
+49
+32.7%
+98.0%
+2.0%100%
+0.0%
+98.0%
+2.0%
+98.0%
+2.0%
+98.7%
+1.3%
+Figure6.9 Summary of the error performance through confusion matrices of the NN architecture for
+training, validation and test sets. This ﬁgure is accessed with the confusion button on the NN
+interactive tool of Fig. 6.6.
+algorithms. If weights are initialized to zero, after each update, the outgoing weights of each
+neuron will be identical, because the gradients will be identical. Moreover, NNs often getstuck at local optima where the gradient is zero but that are not global minima, so randomweight initialization allows one to have a chance of circumventing this by starting at manydifferent random values. (iii) The training data is run through the network to producean output y, whose ideal ground-truth output is y
+0. The derivatives with respect to each
+network weight is then computed using backprop formulas (6.15). (iv) For a given learningrateδ, the network weights are updated as in (6.16). (v) We return to step (iii) and continue
+iterating until a maximum number of iterations is reached or convergence is achieved.
+As a simple example, consider the linear activation function
+f( ξ,α) =g(ξ,α) =αξ. (6.17)
+In this case we have in Fig. 6.10
+z=ax (6.18a)
+y=bz. (6.18b)
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press208 NeuralNetworksandDeepLearning
+Figure6.10 Illustration of the backpropagation algorithm on a one-node, one hidden layer
+network. The compositional nature of the network gives the input-output relationship
+y=g(z,b) =g(f(x,a),b) . By minimizing the error between the output yand its desired output
+y0, the composition along with the chain rule produces an explicit formula (6.15) for updating the
+values of the weights. Note that the chain rule backpropagates the error all the way through the
+network. Thus by minimizing the output, the chain rule acts on the compositional function to
+produce a product of derivative terms that advance backward through the network.
+We can now explicitly compute the gradients such as (6.15). This gives
+∂E
+∂a=−(y0−y)dy
+dzdz
+da=−(y0−y)·b·x (6.19a)
+∂E
+∂b=−(y0−y)dy
+db=−(y0−y)z=−(y0−y)·a·x. (6.19b)
+Thus with the current values of aandb, along with the input-output pair xandyand
+target truth y0, each derivative can be evaluated. This provides the required information to
+perform the update (6.16).
+The backprop for a deeper net follows in a similar fashion. Consider a network with M
+hidden layers labeled z1tozmwith the ﬁrst connection weight abetween xandz1.T h e
+generalization of Fig. 6.10 and (6.15) is given by
+∂E
+∂a=−(y0−y)dy
+dzmdzm
+dzm−1···dz2
+dz1dz1
+da. (6.20)
+The cascade of derivates induced by the composition and chain rule highlights the back-
+propagation of errors that occurs when minimizing the classiﬁcation error.
+A full generalization of backprop involves multiple layers as well multiple nodes per
+layer. The general situation is illustrated in Fig. 6.1. The objective is to determine thematrix elements of each matrix A
+j. Thus a signiﬁcant number of network parameters need
+to be updated in gradient descent. Indeed, training a network can often be computationallyinfeasible even though the update rules for individual weights is not difﬁcult. NNs can thus
+suffer from the curse of dimensionality as each matrix from one layer to another requires
+updating n
+2coefﬁcients for an n-dimensional input, assuming the two connected layers are
+bothn-dimensional.
+Denoting all the weights to be updated by the vector w, where wcontains all the elements
+of the matrices Ajillustrated in Fig. 6.1, then
+wk+1=wk+δ∇E (6.21)
+where the gradient of the error ∇E, through the composition and chain rule, produces the
+backpropagation algorithm for updating the weights and reducing the error. Expressed in acomponent-by-component way
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.4 TheStochasticGradientDescentAlgorithm 209
+wj
+k+1=wj
+k+δ∂E
+∂wj
+k(6.22)
+where this equation holds for the jth component of the vector w.T h et e r m ∂E/∂ wj
+produces the backpropagation through the chain rule, i.e. it produces the sequential set
+of functions to evaluate as in (6.20). Methods for solving this optimization more quickly,
+or even simply enabling the computation to be tractable, remain of active research interest.
+Perhaps the most important method is stochastic gradient descent which is considered inthe next section.
+6.4 TheStochasticGradientDescentAlgorithm
+Training neural networks is computationally expensive due to the size of the NNs being
+trained. Even NNs of modest size can become prohibitively expensive if the optimization
+routines used for training are not well informed. Two algorithms have been especiallycritical for enabling the training of NNs: stochastic gradient descent (SGD) and backprop.
+Backprop allows for an efﬁcient computation of the objective function’s gradient whileSGD provides a more rapid evaluation of the optimal network weights. Although alternativeoptimization methods for training NNs continue to provide computational improvements,backprop and SGD are both considered here in detail so as to give the reader an idea of thecore architecture for building NNs.
+Gradient descent was considered in Section 4.2. Recall that this algorithm was developed
+for nonlinear regression where the data ﬁt takes the general form
+f( x)=f( x,β) (6.23)
+where βare ﬁtting coefﬁcients used to minimize the error. In NNs, the parameters βare
+the network weights, thus we can rewrite this in the form
+f(x)=f(x,A
+1,A2,···,AM) (6.24)
+where the Ajare the connectivity matrices from one layer to the next in the NN. Thus A1
+connects the ﬁrst and second layers, and there are Mhidden layers.
+The goal of training the NN is to minimize the error between the network and the data.
+The standard root-mean square error for this case is deﬁned as
+argmin
+AjE(A1,A2,···,AM)=argmin
+Ajn∑
+k=1(f (xk,A1,A2,···,AM)−yk)2(6.25)
+which can be minimized by setting the partial derivative with respect to each matrix com-
+ponent to zero, i.e. we require ∂E/∂(a ij)k=0 where (aij)kis theith row and jth column
+of the kth matrix ( k=1,2,···M). Recall that the zero derivate is a minimum since there
+is no maximum error. This gives the gradient ∇f(x)of the function with respect to the NN
+parameters. Note further that f(·)is the function evaluated at each of the ndata points.
+As was shown in Section 4.2, this leads to a Newton-Raphson iteration scheme for
+ﬁnding the minima
+xj+1(δ)=xj−δ∇f(xj) (6.26)
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press210 NeuralNetworksandDeepLearning
+where δis a parameter determining how far a step should be taken along the gradient
+direction. In NNs, this parameter is called the learning rate . Unlike standard gradient
+descent, it can be computationally prohibitive to compute an optimal learning rate.
+Although the optimization formulation is easily constructed, evaluating (6.25) is often
+computationally intractable for NNs. This due to two reasons: (i) the number of matrixweighting parameters for each A
+jis quite large, and (ii) the number of data points nis
+generally also large.
+To render the computation (6.25) potentially tractable, SGD does not estimate the gra-
+dient in (6.26) using all ndata points. Rather, a single, randomly chosen data point, or a
+subset for batch gradient descent , is used to approximate the gradient at each step of the
+iteration. In this case, we can reformulate the least-square ﬁtting of (6.25) so that
+E(A1,A2,···,AM)=n∑
+k=1Ek(A1,A2,···,AM) (6.27)
+and
+Ek(A1,A2,···,AM)=(fk(xk,A1,A2,···,AM)−yk)2(6.28)
+where fk(·)is now the ﬁtting function for each data point, and the entries of the matrices
+Ajare determined from the optimization process.
+The gradient descent iteration algorithm (6.26) is now updated as follows
+wj+1(δ)=wj−δ∇fk(wj) (6.29)
+where wjis the vector of all the network weights from Aj(j=1,2,···,M)a tt h e jth
+iteration, and the gradient is computed using only the kth data point and fk(·). Thus instead
+of computing the gradient with all npoints, only a single data point is randomly selected
+and used. At the next iteration, another randomly selected point is used to compute thegradient and update the solution. The algorithm may require multiple passes through all thedata to converge, but each step is now easy to evaluate versus the expensive computation
+of the Jacobian which is required for the gradient. If instead of a single point, a subset of
+points is used, then we have the following batch gradient descent algorithm
+w
+j+1(δ)=wj−δ∇fK(wj) (6.30)
+where K∈[k1,k2,···kp] denotes the prandomly selected data points kjused to approx-
+imate the gradient.
+The following code is a modiﬁcation of the code shown in Section 4.2 for gradient
+descent. The modiﬁcation here involves taking a signiﬁcant subsampling of the data toapproximate the gradient. Speciﬁcally, a batch gradient descent is illustrated with a ﬁxedlearning rate of δ=2. Ten points are used to approximate the gradient of the function at
+each step.
+Code6.3 Stochastic gradient descent algorithm.
+h=0.1; x=-6: h:6; y=-6: h:6; n=length (x);
+[X,Y]=meshgrid (x,y);clear x,clear y
+F1=1.5-1.6 *exp(-0.05 *(3*(X+3).^2+( Y+3).^2));
+F=F1+ (0.5- exp(-0.1 *(3*(X-3).^2+( Y-3).^2)));
+[dFx,dFy]=gradient (F,h,h);
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.4 TheStochasticGradientDescentAlgorithm 211
+x0=[4 0 -5]; y0=[0 -5 2]; col=[’ro’ ,’bo’ ,’mo’ ];
+for jj=1:3
+q=randperm (n);i1=sort (q(1:10));
+q2=randperm (n);i2=sort (q2(1:10));
+x(1)= x0(jj);y(1)= y0(jj);
+f(1)= interp2 (X(i1,i2),Y(i1,i2),F(i1,i2),x(1), y(1));
+dfx=interp2 (X(i1,i2),Y(i1,i2),dFx(i1,i2),x(1), y(1));
+dfy=interp2 (X(i1,i2),Y(i1,i2),dFy(i1,i2),x(1), y(1));
+tau=2;
+for j=1:50
+x(j+1)= x(j)-tau*dfx;% update x, y, and f
+y(j+1)= y(j)-tau*dfy;
+q=randperm (n);ind1 =sort (q(1:10));
+q2=randperm (n);ind2 =sort (q2(1:10));
+f(j+1)= interp2 (X(i1,i2),Y(i1,i2),F(i1,i2),x(j+1), y(j+1))
+dfx=interp2 (X(i1,i2),Y(i1,i2),dFx(i1,i2),x(j+1), y(j+1));
+dfy=interp2 (X(i1,i2),Y(i1,i2),dFy(i1,i2),x(j+1), y(j+1));
+if abs (f(j+1)- f(j))<10^(-6) % check convergence
+break
+end
+end
+ifjj==1; x1=x;y1=y;f1=f;end
+ifjj==2; x2=x;y2=y;f2=f;end
+ifjj==3; x3=x;y3=y;f3=f;end
+clear x,clear y,clear f
+end
+Fig. 6.11 shows the convergence of SGD for three initial conditions. As with gradient
+descent, the algorithm can get stuck in local minima. However, the SGD now approxi-
+mates the gradient with only 100 points instead of the full 104points, thus allowing for a
+computation which is three orders of magnitude smaller. Importantly, the SGD is a scalablealgorithm, allowing for signiﬁcant computational savings even as the data grows to be high-
+x
+yf(x, y)
+-6 -4 -2 0 2 4 6-6-4-20246x
+y
+Figure6.11 Stochastic gradient descent applied to the function featured in Fig. 4.3(b). The
+convergence can be compared to a full gradient descent algorithm as shown in Fig. 4.6. Each
+step of the stochastic (batch) gradient descent selects 100 data points for approximating the
+gradient, instead of the 104data points of the data. Three initial conditions are shown:
+(x0,y0)={(4,0), (0,−5), (−5,2)}. The ﬁrst of these (red circles) gets stuck in a local minima
+while the other two initial conditions (blue and magenta) ﬁnd the global minima. Interpolation of
+the gradient functions of Fig. 4.5 are used to update the solutions.
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press212 NeuralNetworksandDeepLearning
+dimensional. For this reason, SGD has become a critically enabling part of NN training.
+Note that the learning rate, batch size, and data sampling play an important role in theconvergence of the method.
+6.5 DeepConvolutionalNeuralNetworks
+With the basics of the NN architecture in hand, along with an understanding of how toformulate an optimization framework (backprop) and actually compute the gradient descentefﬁciently (SGD), we are ready to construct deep convolution neural nets (DCNN) which
+are the fundamental building blocks of deep learning methods. Indeed, today when practi-
+tioners generally talk about NNs for practical use, they are typically talking about DCNNs.But as much as we would like to have a principled approach to building DCNNs, thereremains a great deal of artistry and expert intuition for producing the highest performingnetworks. Moreover, DCNNs are especially prone to overtraining, thus requiring specialcare to cross-validate the results. The recent textbook on deep learning by Goodfellowet al. [216] provides a detailed an extensive account of the state-of-the-art in DCNNs. Itis especially useful for highlighting many rules-of-thumb and tricks for training effectiveDCNNs.
+Like SVM and random forest algorithms, the MATLAB package for building NNs has a
+tremendous number of features and tuning parameters. This ﬂexibility is both advantageousand overwhelming at the same time. As was pointed out at the beginning of this chapter,it is immediately evident that there are a great number of design questions regarding NNs.How many layers should be used? What should be the dimension of the layers? Howshould the output layer be designed? Should one use all-to-all or sparsiﬁed connectionsbetween layers? How should the mapping between layers be performed: a linear mapping
+or anonlinear mapping ?
+The prototypical structure of a DCNN is illustrated in Fig. 6.12. Included in the visualiza-
+tion is a number of commonly used convolutional and pooling layers. Also illustrated is thefact that each layer can be used to build multiple downstream layers, or feature spaces, that
+can be engineered by the choice of activation functions and/or network parametrizations.
+All of these layers are ultimately combined into the output layer. The number of connec-
+tions that require updating through backprop and SGD can be extraordinarily high, thuseven modest networks and training data may require signiﬁant computational resources.A typical DCNN is constructed of a number of layers, with DCNNs typically havingbetween 7-10 layers. More recent efforts have considered the advantages of a truly deepnetwork with approximately 100 layers, but the merits of such architectures are still notfully known. The following paragraphs highlight some of the more prominent elements thatcomprise DCNNs, including convolutional layers, pooling layers, fully-connected layersand dropout.
+ConvolutionalLayers
+Convolutional layers are similar to windowed (Gabor) Fourier transforms or wavelets fromChapter 2, in that a small selection of the full high-dimensional input space is extracted andused for feature engineering. Fig. 6.12 shows the convolutional windows (dark gray boxes)that are slid across the entire layer (light gray boxes). Each convolution window transforms
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.5 DeepConvolutionalNeuralNetworks 213
+Figure6.12 Prototypical DCNN architecture which includes commonly used convolutional and
+pooling layers. The dark gray boxes show the convolutional sampling from layer to layer. Note thatfor each layer, many functional transformations can be used to produce a variety of feature spaces.
+The network ultimately integrates all this information into the output layer.
+the data into a new node through a given activation function, as shown in Fig. 6.12(a).
+The feature spaces are thus built from the smaller patches of the data. Convolutionallayers are especially useful for images as they can extract important features such asedges. Wavelets are also known to efﬁciently extract such features and there are deepmathematical connections between wavelets and DCNNs as shown by Mallat and co-workers [358, 12]. Note that in Fig. 6.12, the input layer can be used to construct manylayers by simply manipulating the activation function f(·)to the next layer as well the size
+of the convolutional window.
+PoolingLayers
+It is common to periodically insert a Pooling layer between successive convolutional layers
+in a DCNN architecture. Its function is to progressively reduce the spatial size of the
+representation in order to reduce the number of parameters and computation in the network.This is an effective strategy to (i) help control overﬁtting and (ii) ﬁt the computation inmemory. Pooling layers operate independently on every depth slice of the input and resizethem spatially. Using the max operation, i.e. the maximum value for all the nodes in itsconvolutional window, is called max pooling . In image processing, the most common form
+of max pooling is a pooling layer with ﬁlters of size 2 ×2 applied with a stride of 2 down-
+samples every depth slice in the input by 2 along both width and height, discarding 75%of the activations. Every max pooling operation would in this case be taking a max over 4numbers (a 2x2 region in some depth slice). The depth dimension remains unchanged. Anexample max pooling operation is shown in Fig. 6.12(b), where a 3 ×3 convolutional cell
+is transformed to a single number which is the maximum of the 9 numbers.
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press214 NeuralNetworksandDeepLearning
+Fully-ConnectedLayers
+Occasionally, fully-connected layers are inserted into the DCNN so that different regions
+can be connected. The pooling and convolutional layers are local connections only, while
+the fully-connected layer restores global connectivity. This is another commonly used
+layer in the DCNN architecture, providing a potentially important feature space to improveperformance.
+Dropout
+Overﬁtting is a serious problem in DCNNs. Indeed, overﬁtting is at the core of why DCNNsoften fail to demonstrate good generalizability properties (See Chapter 4 on regression).Large DCNNs are also slow to use, making it difﬁcult to deal with overﬁtting by combiningthe predictions of many different large neural nets for online implementation. Dropout isa technique which helps address this problem. The key idea is to randomly drop nodesin the network (along with their connections) from the DCNN during training, i.e. duringSGD/backprop updates of the network weights. This prevents units from co-adapting toomuch. During training, dropout samples form an exponential number of different “thinned"networks. This idea is similar to the ensemble methods for building random forests. Attest time, it is easy to approximate the effect of averaging the predictions of all thesethinned networks by simply using a single unthinned network that has smaller weights.
+This signiﬁcantly reduces overﬁtting and has shown to give major improvements over other
+regularization methods [499].
+There are many other techniques that have been devised for training DCNNs, but the
+above methods highlight some of the most commonly used. The most successful applica-tions of these techniques tend to be in computer vision tasks where DCNNs offer unpar-alleled performance in comparison to other machine learning methods. Importantly, theImageNET data set is what allowed these DCNN layers to be maximally leveraged forhuman level recognition performance.
+To illustrate how to train and execute a DCNN, we use data from MATLAB. Speciﬁcally,
+we use a data set that has a training and test set with the alphabet characters A, B, and C.The following code loads the data set and plots a representative sample of the characters inFig. 6.13.
+Code6.4 Loading alphabet images.
+load lettersTrainSet
+perm =randperm (1500,20);
+for j= 1:20
+subplot (4,5, j);
+imshow (XTrain (:,:,:, perm (j)));
+end
+This code loads the training data, XTrain, that contains 1500 28 ×28 grayscale images of
+the letters A, B, and C in a 4-D array. There are equal numbers of each letter in the data set.The variable TTrain contains the categorical array of the letter labels, i.e. the truth labels.
+The following code constructs and trains a DCNN.
+Code6.5 Train a DCNN.
+layers =[imageInputLayer ([28 28 1]);
+convolution2dLayer (5,16);
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.5 DeepConvolutionalNeuralNetworks 215
+Figure6.13 Representative images of the alphabet characters A, B, and C. There are a total of 1500
+28×28 grayscale images (XTrain) of the letters that are labeled (TTrain).
+reluLayer ();
+maxPooling2dLayer (2,’Stride’ ,2);
+fullyConnectedLayer (3);
+softmaxLayer ();
+classificationLayer ()];
+options =trainingOptions (’sgdm’ );
+rng(’default’ )% For reproducibility
+net =trainNetwork (XTrain ,TTrain ,layers ,options );
+Note the simplicity in how diverse network layers are easily put together. In addition,
+a ReLu activation layer is speciﬁed along with the training method of stochastic gradientdescent (sgdm). The trainNetwork command integrates the options and layer speciﬁca-
+tions to build the best classiﬁer possible. The resulting trained network can now be used ona test data set.
+Code6.6 Test the DCNN performance.
+load lettersTestSet ;
+YTest =classify (net,XTest );
+accuracy =sum(YTest ==TTest )/numel (TTest )
+The resulting classiﬁcation performance is approximately 93%. One can see by this code
+structure that modifying the network architecture and speciﬁcations is trivial. Indeed, one
+can probably easily engineer a network to outperform the illustrated DCNN. As already
+mentioned, artistry and expert intuition are critical for producing the highest performingnetworks.
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press216 NeuralNetworksandDeepLearning
+6.6 NeuralNetworksforDynamicalSystems
+Neural networks offer an amazingly ﬂexible architecture for performing a diverse set of
+mathematical tasks. To return to S. Mallat: Supervised learning is a high-dimensional
+interpolation problem [358]. Thus if sufﬁciently rich data can be acquired, NNs offer the
+ability to interrogate the data for a variety of tasks centered on classiﬁcation and prediction.To this point, the tasks demonstrated have primarily been concerned with computer vision.However, NNs can also be used for future state predictions of dynamical systems (SeeChapter 7).
+To demonstrate the usefulness of NNs for applications in dynamical systems, we will
+consider the Lorenz system of differential equations [345]
+˙x=σ(y−x) (6.31a)
+˙y=x(ρ−z)−y (6.31b)
+˙z=xy−βz, (6.31c)
+where the state of the system is given by x=[xyz ]
+Twith the parameters σ=10,ρ=
+28,andβ=8/3. This system will be considered in further detail in the next chapter.
+For the present, we will simulate this nonlinear system and use it as a demonstration ofhow NNs can be trained to characterize dynamical systems. Speciﬁcally, the goal of thissection is to demonstrate that we can train a NN to learn an update rule which advances thestate space from x
+ktoxk+1, where kdenotes the state of the system at time tk. Accurately
+advancing the solution in time requires a nonlinear transfer function since Lorenz itself isnonlinear.
+The training data required for the NN is constructed from high-accuracy simulations of
+the Lorenz system. The following code generates a diverse set of initial conditions. Onehundred initial conditions are considered in order to generate one hundred trajectories. Thesampling time is ﬁxed at /Delta1t=0.01. Note that the sampling time is not the same as the
+time-steps taken by the 4th-order Runge-Kutta method [316]. The time-steps are adaptivelychosen to meet the stringent tolerances of accuracy chosen for this example.
+Code6.7 Create training data of Lorenz trajectories.
+% Simulate Lorenz system
+dt=0.01; T=8; t=0:dt:T;
+b=8/3; sig=10; r=28;
+Lorenz =@(t,x)([ sig *(x(2) - x(1)) ; ...
+r*x(1)- x(1) *x(3) - x(2) ; ...
+x(1) *x(2) - b*x(3) ]);
+ode_options =odeset (’RelTol’ ,1e-10, ’AbsTol’ ,1e-11);
+input =[]; output =[];
+for j=1:100 % training trajectories
+x0=30*(rand (3,1)-0.5);
+[t,y]= ode45 (Lorenz ,t,x0);
+input =[input ;y(1:end-1,:)];
+output =[output ;y(2:end,:)];
+plot3 (y(:,1), y(:,2), y(:,3)), hold on
+plot3 (x0(1), x0(2), x0(3), ’ro’ )
+end
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.6 NeuralNetworksforDynamicalSystems 217
+-20-100
+5010203040506070
+0
+3020100-10-20 -50-30 x(t)y(t)z(t)
+Figure6.14 Evolution of the Lorenz dynamical equations for one hundred randomly chosen initial
+conditions (red circles). For the parameters σ=10,ρ=28,andβ=8/3, all trajectories collapse
+to an attractor. These trajectories, generated from a diverse set of initial data, are used to train aneural network to learn the nonlinear mapping from x
+ktoxk+1.
+The simulation of the Lorenz system produces to key matrices: input andoutput .T h e
+former is a matrix of the system at xk, while the latter is the corresponding state of the
+system xk+1advanced /Delta1t=0.01.
+The NN must learn the nonlinear mapping from xktoxk+1. Fig. 6.14 shows the various
+trajectories used to train the NN. Note the diversity of initial conditions and the underlyingattractor of the Lorenz system.
+We now build a NN trained on trajectories of Fig. 6.14 to advance the solution /Delta1t=0.01
+into the future for an arbitrary initial condition. Here, a three-layer network is constructedwith ten nodes in each layer and a different activation unit for each layer. The choice ofactivation types, nodes in the layer and number of layers are arbitrary. It is trivial to makethe network deeper and wider and enforce different activation units. The performance of
+the NN for the arbitrary choices made is quite remarkable and does not require additional
+tuning. The NN is build with the following few lines of code.
+Code6.8 Build a neural network for Lorenz system.
+net =feedforwardnet ([10 10 10]);
+net.layers {1}. transferFcn =’logsig’ ;
+net.layers {2}. transferFcn =’radbas’ ;
+net.layers {3}. transferFcn =’purelin’ ;
+net =train (net,input .’,output .’);
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press218 NeuralNetworksandDeepLearning
+Figure6.15 (a) Network architecture used to train the NN on the trajectory data of Fig. 6.14. A
+three-layer network is constructed with ten nodes in each layer and a different activation unit for
+each layer. (b) Performance summary of the NN optimization algorithm. Over 1000 epochs oftraining, accuracies on the order of 10
+−5are produced. The NN is also cross-validated in the
+process.
+The code produces a function netwhich can be used with a new set of data to produce
+predictions of the future. Speciﬁcally, the function netgives the nonlinear mapping from
+xktoxk+1. Fig. 6.15 shows the structure of the network along with the performance of
+the training over 1000 epochs of training. The results of the cross-validation are alsodemonstrated. The NN converges steadily to a network that produces accuracies on theorder of 10
+−5.
+Once the NN is trained on the trajectory data, the nonlinear model mapping xktoxk+1
+can be used to predict the future state of the system from an initial condition. In the
+following code, the trained function netis used to take an initial condition and advance
+the solution /Delta1t. The output can be re-inserted into the netfunction to estimate the solution
+2/Delta1tinto the future. This iterative mapping can produce a prediction for the future state
+as far into the future as desired. In what follows, the mapping is used to predict theLorenz solutions eight time units into the future from for a given initial condition. Thiscan then be compared against the ground truth simulation of the evolution using a 4th-order Runge-Kutta method. The following iteration scheme gives the NN approximation tothe dynamics.
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.6 NeuralNetworksforDynamicalSystems 219
+20
+10
+005
+-10101520
+3025
+203035
+104045
+050
+-20 -10 -20 -30
+Figure6.16 Comparison of the time evolution of the Lorenz system (solid line) with the NN
+prediction (dotted line) for two randomly chosen initial conditions (red dots). The NN prediction
+stays close to the dynamical trajectory of the Lorenz model. A more detailed comparison is given in
+Fig. 6.17.
+Code6.9 Neural network for prediction.
+ynn(1,:)= x0;
+for jj=2:length (t)
+y0=net(x0);
+ynn(jj,:)= y0.’; x0=y0;
+end
+plot3 (ynn(:,1), ynn(:,2), ynn(:,3), ’:’,’Linewidth’ ,[2])
+Fig. 6.16 shows the evolution of two randomly drawn trajectories (solid lines) com-
+pared against the NN prediction of the trajectories (dotted lines). The NN prediction is
+remarkably accurate in producing an approximation to the high-accuracy simulations. Thisshows that the data used for training is capable of producing a high-quality nonlinear modelmapping x
+ktoxk+1. The quality of the approximation is more clearly seen in Fig. 6.17
+where the time evolution of the individual components of xare shown against the NN
+predictions. See Section 7.5 for further details.
+In conclusion, the NN can be trained to learn dynamics. More precisely, the NN seems to
+learn an algorithm which is approximately equivalent to a 4th-order Runge-Kutta schemefor advancing the solution a time-step /Delta1t. Indeed, NNs have been used to model dynamical
+systems [215] and other physical processes [381] for decades. However, great strides havebeen made recently in using DNNs to learn Koopman embeddings, resulting in severalexcellent papers [550, 368, 513, 564, 412, 332]. For example, the V AMPnet architec-
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press220 NeuralNetworksandDeepLearning
+Figure6.17 Comparison of the time evolution of the Lorenz system for two randomly chosen initial
+conditions (Also shown in Fig. 6.16). The left column shows that the evolution of the Lorenz
+differential equations and the NN mapping gives identical results until t≈5.5, at which point they
+diverge. In contrast, the NN prediction stays on the trajectory of the second initial condition for theentire time window.
+ture [550, 368] uses a time-lagged auto-encoder and a custom variational score to identify
+Koopman coordinates on an impressive protein folding example. In an alternative formu-lation, variational auto-encoders can build low-rank models that are efﬁcient and compactrepresentations of the Koopman operator from data [349]. By construction, the resultingnetwork is both parsimonious and interpretable, retaining the ﬂexibility of neural networksand the physical interpretation of Koopman theory. In all of these recent studies, DNNrepresentations have been shown to be more ﬂexible and exhibit higher accuracy than otherleading methods on challenging problems.
+6.7 TheDiversityofNeuralNetworks
+There are a wide variety of NN architectures, with only a few of the most dominantarchitectures considered thus far. This chapter and book does not attempt to give a com-prehensive assessment of the state-of-the-art in neural networks. Rather, our focus is onillustrating some of the key concepts and enabling mathematical architectures that have ledNNs to a dominant position in modern data science. For a more in-depth review, pleasesee [216]. However, to conclude this chapter, we would like to highlight some of the
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.7 TheDiversityofNeuralNetworks 221
+NN architectures that are used in practice for various data science tasks. This overview
+is inspired by the neural network zoo as highlighted by Fjodor Van Veen of the Asimov
+Institute (http://www.asimovinstitute.org).
+The neural network zoo highlights some of the different architectural structures around
+NNs. Some of the networks highlighted are commonly used across industry, while othersserve niche roles for speciﬁc applications. Regardless, it demonstrates that tremendousvariability and research effort focused on NNs as a core data science tool. Fig. 6.18 high-lights the prototype structures to be discussed in what follows. Note that the bottom panelhas a key to the different type of nodes in the network, including input cells, output cells,and hidden cells. Additionally, the hidden layer NN cells can have memory effects, kernelstructures and/or convolution/pooling. For each NN architecture, a brief description isgiven along with the original paper proposing the technique.
+Perceptron
+The ﬁrst mathematical model of NNs by Fukushima was termed the Neocognitron in1980 [193]. His model had a single layer with a single output cell called the perceptron,which made a categorial decision based on the sign of the output. Fig. 6.2 shows this archi-tecture to classify between dogs and cats. The perceptron is an algorithm for supervisedlearning of binary classiﬁers.
+FeedForward(FF)
+Feed forward networks connect the input layer to output layer by forming connectionsbetween the units so that they do not form a cycle. Fig. 6.1 has already shown a versionof this architecture where the information simply propagates from left to right in thenetwork. It is often the workhorse of supervised learning where the weights are trainedso as to best classify a given set of data. A feedforward network was used in Figs. 6.5and 6.15 for training a classiﬁer for dogs versus cats and predicting time-steps of theLorenz attractor respectively. An important subclass of feed forward networks is deep feed
+forward (DFF) NNs. DFFs simply put together a larger number of hidden layers, typically
+7-10 layers, to form the NN. A second important class of FF is the radial basis network ,
+which uses radial basis functions as the activation units [87]. Like any FF network, radialbasis function networks have many uses, including function approximation, time seriesprediction, classiﬁcation, and control.
+RecurrentNeuralNetwork(RNN)
+Illustrated in Fig. 6.18(a), RNNs are characterized by connections between units that forma directed graph along a sequence. This allows it to exhibit dynamic temporal behavior fora time sequence [172]. Unlike feedforward neural networks, RNNs can use their internalstate (memory) to process sequences of inputs. The prototypical architecture in Fig. 6.18(a)shows that each cell feeds back on itself. This self-interaction, which is not part of theFF architecture, allows for a variety of innovations. Speciﬁcally, it allows for time delaysand/or feedback loops. Such controlled states are referred to as gated state or gated memory,and are part of two key innovations: long-short term memory (LSTM)networks [248] and
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press222 NeuralNetworksandDeepLearning
+Figure6.18 Neural network architectures commonly considered in the literature. The NNs are
+comprised of input nodes, output nodes, and hidden nodes. Additionally, the nodes can have
+memory, perform convolution and/or pooling, and perform a kernel transformation. Each network,
+and their acronym is explained in the text.
+gated recurrent units (GRU) [132]. LSTM is of particular importance as it revolutionized
+speech recognition, setting a variety of performance records and outperforming traditionalmodels in a variety of speech applications. GRUs are a variation of LSTMs which havebeen demonstrated to exhibit better performance on smaller datasets.
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.7 TheDiversityofNeuralNetworks 223
+AutoEncoder(AE)
+The aim of an auto encoder, represented in Fig. 6.18(b), is to learn a representation (encod-
+ing) for a set of data, typically for the purpose of dimensionality reduction. For AEs, theinput and output cells are matched so that the AE is essentially constructed to be a nonlineartransform into and out of a new representation, acting as an approximate identity map onthe data. Thus AEs can be thought of as a generalization of linear dimensionality reductiontechniques such as PCA. AEs can potentially produce nonlinear PCA representations ofthe data, or nonlinear manifolds on which the data should be embedded [71]. Since mostdata lives in nonlinear subspaces, AEs are an important class of NN for data science, withmany innovations and modiﬁcations. Three important modiﬁcations of the standard AE arecommonly used. The variational auto encoder (V AE) [290] (shown in Fig. 6.18(c)) is a
+popular approach to unsupervised learning of complicated distributions. By making strongassumptions concerning the distribution of latent variables, it can be trained using standardgradient descent algorithms to provide a good assessments of data in an unsupervised
+fashion. The denoising auto encoder (DAE) [541] (shown in Fig. 6.18(c)) takes a partially
+corrupted input during training to recover the original undistorted input. Thus noise isintentionally added to the input in order to learn the nonlinear embedding. Finally, thesparse auto encoder (SAE) [432] (shown in Fig. 6.18(d)) imposes sparsity on the hidden
+units during training, while having a larger number of hidden units than inputs, so that anautoencoder can learn useful structures in the input data. Sparsity is typically imposed bythresholding all but the few strongest hidden unit activations.
+MarkovChain(MC)
+A Markov chain is a stochastic model describing a sequence of possible events in whichthe probability of each event depends only on the state attained in the previous event. Soalthough not formally a NN, it shares many common features with RNNs. Markov chainsare standard even in undergraduate probability and statistics courses. Fig. 6.18(f) shows thebasic architecture where each cell is connected to the other cells by a probability model fora transition.
+HopfieldNetwork(HN)
+A Hopﬁeld network is a form of a RNN which was popularized by John Hopﬁeld in1982 for understanding human memory [254]. Fig. 6.18(g) shows the basic architectureof an all-to-all connected network where each node can act as an input cell. The networkserves as a trainable content-addressable associative memory system with binary threshold
+nodes. Given an input, it is iterated on the network with a guarantee to converge to a localminimum. Sometimes it converge to a false pattern, or memory (wrong local minimum),rather than the stored pattern (expected local minimum).
+BoltzmannMachine(BM)
+The Boltzmann machine, sometimes called a stochastic Hopﬁeld network with hiddenunits, is a stochastic, generative counterpart of the Hopﬁeld network. They were one of theﬁrst neural networks capable of learning internal representations, and are able to representand (given sufﬁcient time) solve difﬁcult combinatoric problems [246]. Fig. 6.18(h) showsthe structure of the BM. Note that unlike Markov chains (which have no input units) or
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press224 NeuralNetworksandDeepLearning
+Hopﬁeld networks (where all cells are inputs), the BM is a hybrid which has a mixture
+of input cells and hidden units. Boltzmann machines are intuitively appealing due to theirresemblance to the dynamics of simple physical processes. They are named after the Boltz-mann distribution in statistical mechanics, which is used in their sampling function.
+RestrictedBoltzmannMachine(RBM)
+Introduced under the name Harmonium by Paul Smolensky in 1986 [493], RBMs have
+been proposed for dimensionality reduction, classiﬁcation, collaborative ﬁltering, featurelearning, and topic modeling. They can be trained for either supervised or unsupervisedtasks. G. Hinton helped bring them to prominence by developing fast algorithms for eval-uating them [397]. RBMs are a subset of BMs where restrictions are imposed on the NNsuch that nodes in the NN must form a bipartite graph (See Fig. 6.18(e)). Thus a pair ofnodes from each of the two groups of units (commonly referred to as the “visible" and“hidden" units, respectively) may have a symmetric connection between them; there are no
+connections between nodes within a group. RBMs can be used in deep learning networks
+and deep belief networks by stacking RBMs and optionally ﬁne-tuning the resulting deepnetwork with gradient descent and backpropagation.
+DeepBeliefNetwork(DBN)
+DBNs are a generative graphical model that are composed of multiple layers of latenthidden variables, with connections between the layers but not between units within eachlayer [52]. Fig. 6.18(i) shows the architecture of the DBN. The training of the DBNs canbe done stack by stack from AE or RBM layers. Thus each of these layers only has tolearn to encode the previous network, which is effectively a greedy training algorithm forﬁnding locally optimal solutions. Thus DBNs can be viewed as a composition of simple,unsupervised networks such as RBMs and AEs where each sub-network’s hidden layerserves as the visible layer for the next.
+DeepConvolutionalNeuralNetwork(DCNN)
+DCNNs are the workhorse of computer vision and have already been considered in thischapter. They are abstractly represented in Fig. 6.18(j), and in a more speciﬁc fashion in
+Fig. 6.12. Their impact and inﬂuence on computer vision cannot be overestimated. They
+were originally developed for document recognition [325].
+DeconvolutionalNetwork(DN)
+Deconvolutional Networks, shown in Fig. 6.18(k), are essentially a reverse of DCNNs [567].The mathematical structure of DNs permit the unsupervised construction of hierarchicalimage representations. These representations can be used for both low-level tasks such asdenoising, as well as providing features for object recognition. Each level of the hierarchygroups information from the level beneath to form more complex features that exist over alarger scale in the image. As with DCNNs, it is well suited for computer vision tasks.
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press6.7 TheDiversityofNeuralNetworks 225
+DeepConvolutionalInverseGraphicsNetwork(DCIGN)
+The DCIGN is a form of a V AE that uses DCNNs for the encoding and decoding [313]. As
+with the AE/V AE/SAE structures, the output layer shown in Fig. 6.18(l) is constrained tomatch the input layer. DCIGN combine the power of DCNNs with V AEs, which providesa formative mathematical architecture for computer visions and image processing.
+GenerativeAdversarialNetwork(GAN)
+In an innovative modiﬁcation of NNs, the GAN architecture of Fig. 6.18(m) trains twonetworks simultaneously [217]. The networks, often which are a combination of DCNNsand/or FFs, train by one of the networks generating content which the other attemptsto judge. Speciﬁcally, one network generates candidates and the other evaluates them.Typically, the generative network learns to map from a latent space to a particular datadistribution of interest, while the discriminative network discriminates between instancesfrom the true data distribution and candidates produced by the generator. The generativenetwork’s training objective is to increase the error rate of the discriminative network (i.e.,"fool" the discriminator network by producing novel synthesized instances that appear tohave come from the true data distribution). The GAN architecture has produced interestingresults in computer vision for producing synthetic data, such as images and movies.
+LiquidStateMachine(LSM)
+The LSM shown in Fig. 6.18(n) is a particular kind of spiking neural network [352]. AnLSM consists of a large collection of nodes, each of which receives time varying input fromexternal sources (the inputs) as well as from other nodes. Nodes are randomly connected
+to each other. The recurrent nature of the connections turns the time varying input into a
+spatio-temporal pattern of activations in the network nodes. The spatio-temporal patternsof activation are read out by linear discriminant units. This architecture is motivated byspiking neurons in the brain, thus helping understand how information processing anddiscrimination might happen using spiking neurons.
+ExtremeLearningMachine(ELM)
+With the same underlying architecture of an LSM shown in Fig. 6.18(n), the ELM is aFF network for classiﬁcation, regression, clustering, sparse approximation, compressionand feature learning with a single layer or multiple layers of hidden nodes, where theparameters of hidden nodes (not just the weights connecting inputs to hidden nodes) neednot be tuned. These hidden nodes can be randomly assigned and never updated, or can beinherited from their ancestors without being changed. In most cases, the output weights ofhidden nodes are usually learned in a single step, which essentially amounts to learning alinear model [108].
+EchoStateNetwork(ESN)
+ESNs are RNNs with a sparsely connected hidden layer (with typically 1% connectivity).The connectivity and weights of hidden neurons have memory and are ﬁxed and randomlyassigned (See Fig. 6.18(o)). Thus like LSMs and ELMs they are not ﬁxed into a well-
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press226 NeuralNetworksandDeepLearning
+ordered layered structure. The weights of output neurons can be learned so that the network
+can generate speciﬁc temporal patterns [263].
+DeepResidualNetwork(DRN)
+DRNs took the deep learning world by storm when Microsoft Research released DeepResidual Learning for Image Recognition [237]. These networks led to 1st-place winningentries in all ﬁve main tracks of the ImageNet and COCO 2015 competitions, whichcovered image classiﬁcation, object detection, and semantic segmentation. The robustnessof ResNets has since been proven by various visual recognition tasks and by nonvisualtasks involving speech and language. DRNs are very deep FF networks where there areextra connections that pass from one layer to a layer two to ﬁve layers downstream. Thisthen carries input from an earlier stage to a future stage. These networks can be 150 layers
+deep, which is only abstractly represented in Fig. 6.18(p).
+KohonenNetwork(KN)
+Kohonen networks are also known as self-organizing feature maps [298]. KNs use com-
+petitive learning to classify data without supervision. Input is presented to the KN asin Fig. 6.18(q), after which the network assesses which of the neurons closely matchthat input. These self-organizing maps differ from other NNs as they apply competitivelearning as opposed to error-correction learning (such as backpropagation with gradientdescent), and in the sense that they use a neighborhood function to preserve the topologicalproperties of the input space. This makes KNs useful for low-dimensional visualization ofhigh-dimensional data.
+NeuralTuringMachine(NTM)
+An NTM implements a NN controller coupled to an external memory resource (SeeFig. 6.18(r)), which it interacts with through attentional mechanisms [219]. The memory
+interactions are differentiable end-to-end, making it possible to optimize them using
+gradient descent. An NTM with a LSTM controller can infer simple algorithms such ascopying, sorting, and associative recall from input and output examples.
+SuggestedReading
+Texts
+(1) Deep learning , by I. Goodfellow, Y . Bengio and A. Courville, 2016 [216].
+(2) Neural networks for pattern recognition , by C. M. Bishop, 1995 [63].
+PapersandReviews
+(1) Deep learning , by Y . LeCun, Y . Bengio and G. Hinton, Nature , 2015 [324].
+(2) Understanding deep convolutional networks , by S. Mallat, Phil. Trans. R. Soc. A ,
+2016 [358].
+(3) Deep learning: mathematics and neuroscience , by T. Poggio, Views & Reviews,
+McGovern Center for Brains, Minds and Machines , 2016 [430].
+(4) Imagenet classiﬁcation with deep convolutional neural , by A. Krizhevsky, I.
+Sutskever and G. Hinton, Advances in neural information processing systems ,
+2012 [310].
+https://doi.org/10.1017/9781108380690.007  Published online by Cambridge University Press
