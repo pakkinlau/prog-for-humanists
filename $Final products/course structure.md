@@ -49,7 +49,33 @@ graph TB;
 ```
 
 - The relationship between these files
-	- 
+```mermaid
+graph LR;
+	A["pyarrow"]
+	B["parquet"]
+	C["pandas"]
+	D["pyspark"]
+	E["CSV"]
+	F["dataframe"]
+
+	A --- B
+	B --- D
+	E --- C
+	C --- F
+	D --- F
+
+subgraph data loader;	
+	C --- D
+end
+
+style A fill:#006400,stroke:#006400;
+style B fill:#006400,stroke:#006400;
+style E fill:#006400,stroke:#006400;
+style C fill:#A52A2A, stroke:#000000;
+style D fill:#A52A2A, stroke:#000000; 
+style F fill:#0000FF, stroke:#000000
+```
+
 
 ---
 
