@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "MMAT5320",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -146,7 +147,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4797c0672bbd16cc",
+  "active": "f6ba8ae153739731",
   "lastOpenFiles": [
     "colabs/Unit 3d -  LLM embeddings and prediction fine-tuning/02. Finetuning.ipynb",
     "colabs/Unit 3d -  LLM embeddings and prediction fine-tuning/01. LLM embeddings.ipynb",
