@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "$Final products/course structure.md",
+                "file": "slides/Unit 3/slide3c - Fine-tuning.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "MMAT5320",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "$Final products/course structure.md",
+                "file": "slides/Unit 3/slide3c - Fine-tuning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "$Final products/course structure.md",
+                "file": "slides/Unit 3/slide3c - Fine-tuning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "$Final products/course structure.md"
+                "file": "slides/Unit 3/slide3c - Fine-tuning.md"
               }
             }
           }
@@ -147,29 +146,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f6ba8ae153739731",
+  "active": "4797c0672bbd16cc",
   "lastOpenFiles": [
-    "colabs/Unit 3d -  LLM embeddings and prediction fine-tuning/02. Finetuning.ipynb",
-    "colabs/Unit 3d -  LLM embeddings and prediction fine-tuning/01. LLM embeddings.ipynb",
-    "colabs/Unit 3d -  LLM embeddings and prediction fine-tuning",
-    "colabs/Unit 3c - Supervised learning in text data/02. creating labels.ipynb",
-    "colabs/Unit 3c - Supervised learning in text data/01. supervised.ipynb",
-    "colabs/Unit 3c - Supervised learning in text data",
-    "colabs/Unit 3b - Unsupervised learning in text data/word2vec2.model",
-    "colabs/Unit 3b - Unsupervised learning in text data/word2vec1.model",
-    "colabs/Unit 3b - Unsupervised learning in text data/word2vec.model",
-    "colabs/Unit 3b - Unsupervised learning in text data/newsgroups_data.json",
-    "colabs/Unit 3b - Unsupervised learning in text data/03. visualizing word embeddings.ipynb",
-    "colabs/Unit 1a - Unstructured data/Image/handwritting_malala(full).jpg",
-    "colabs/Unit 1a - Unstructured data/Image/handwritting_malala(crop).jpg",
-    "colabs/Unit 1a - Unstructured data/Image/cover.jpg",
-    "colabs/Unit 1a - Unstructured data/Image/6.jpg",
-    "colabs/Unit 1a - Unstructured data/Image/5.jpg",
-    "colabs/Unit 1a - Unstructured data/Image/4.jpg",
-    "colabs/Unit 1a - Unstructured data/Image/3.jpg",
-    "colabs/Unit 1a - Unstructured data/Image/2.jpg",
-    "colabs/Unit 1a - Unstructured data/Image/1.jpg",
-    "colabs/Unit 1a/Image/handwritting_malala(full).jpg",
+    "slides/Unit 3/slide3b - Embeddings in Machine Learning.md",
+    "slides/Unit 3/slide3a - Neural network basics.md",
+    "slides/Unit 3/slide3c - Fine-tuning.md",
+    "Pasted image 20231115061758.png",
+    "Pasted image 20231115061738.png",
+    "Pasted image 20231115060348.png",
+    "Pasted image 20231115060140.png",
+    "Pasted image 20231115055614.png",
+    "Pasted image 20231115053611.png",
+    "Pasted image 20231115053347.png",
+    "Pasted image 20231115053251.png",
+    "colabs/Unit 3c -  Fine-tuning word embeddings/03. Fine-tuning for text classification tasks.ipynb.ipynb",
+    "colabs/Unit 3b - Understanding word embeddings/05. Evaluating word embedding expressiveness.ipynb",
+    "colabs/Unit 3b - Understanding word embeddings/04. Visualizing word embeddings.ipynb",
+    "colabs/Unit 3b - Understanding word embeddings/03. Contextual word embeddings.ipynb",
+    "colabs/Unit 3b - Understanding word embeddings/02. Static word embeddings.ipynb",
+    "colabs/Unit 1b - NLP and value extraction/Txt/sample.docx",
+    "colabs/Unit 1b - NLP and value extraction/Txt/neural_networks_and_deep_learning.txt",
+    "colabs/Unit 1b - NLP and value extraction/Txt/humanity_paper.txt",
+    "colabs/Unit 1b - NLP and value extraction/Txt/dilemma.txt",
+    "colabs/Unit 1b - NLP and value extraction/Txt",
+    "Untitled.md",
+    "Pasted image 20231114182323.png",
+    "Pasted image 20231114182308.png",
     "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
     "$Final products/course structure.md",
     "colabs/wikiart-image-dataset/wikiart-image-dataset/README.md",
@@ -189,11 +191,6 @@
     "Research sprints/$Research reading sprints.md",
     "Meta/Log.md",
     "Meta/pedagogy.md",
-    "Images/Pasted image 20230909143831.png.md",
-    "$Final products/All teaching materials.md",
-    "Meta/pipeline.md",
-    "Concepts/MongoDB.md",
-    "Resources/HIST4702.md",
-    "Concepts/Spark.md"
+    "Images/Pasted image 20230909143831.png.md"
   ]
 }

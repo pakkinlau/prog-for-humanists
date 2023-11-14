@@ -1,0 +1,46 @@
+
+- Datasets 
+	- Book: Bringing together China and the West (CUHK online)
+		- https://www.lib.cuhk.edu.hk/en/btcntw-sci-maths/
+		- 湯若望授，焦勖述，潘仕成輯《火攻挈要》（三卷）番禺：潘氏海山仙館，[1643] (1849)Schall von Bell, Johann Adam; Jiao, Xu and Pan, Shicheng (eds.). Huogong qieyao (The Essentials of Gunnery, 3 juan). Panyu: Panshi Haishan Xianguan, [1643] (1849). 
+	- Book: 《火攻挈要》
+		- An ancient chinese book
+	- "HathiTrust digital library"
+		- Hathi = elephant
+		- a collaborative initiative among several universities and research libraries. The primary goal of HathiTrust is to digitize, preserve, and provide access to a vast collection of books and other materials from libraries around the world. 
+		- HathiTrust Resource analytics portal
+			- Text cleaning and analysis techniques
+				- Text extraction, textual analysis, linguistic analysis, Automated translation, Image analysis, File manipulation, OCR correction, Indexing and search
+			- How to use HathiTrust to research:
+				- History
+					- Stevens, G. (2017). New Metadata Recipes for Old Cookbooks: Creating and Analyzing a Digital Collection Using the HathiTrust Research Center Portal. Code4Lib Journal, (37). https://journal.code4lib.org/articles/12548.
+				- Information science
+					- Murdock J, Allen C, Börner K, Light R, McAlister S, Ravenscroft A, et al. (2017) Multi-level computational methods for interdisciplinary research in the HathiTrust Digital Library. PLoS ONE 12(9): e0184188. https://doi-org.proxy.library.cornell.edu/10.1371/journal.pone.0184188 
+				- Linguistics
+					- Soto-Corominas, A., De la Rosa, J., & Suárez, J. L. (2018). What Loanwords Tell Us about Spanish (and Spain). Digital Studies/le Champ Numérique, 8(1), 4. DOI: http://doi.org/10.16995/dscn.297
+				- Musicology
+					- Downie, J. S., Bhattacharyya, S., Giannetti, F., Koehl, E. D., & Organisciak, P. (2020). The HathiTrust Digital Library’s potential for musicology research. International Journal on Digital Libraries, 1-16. https://doi.org/10.1007/s00799-020-00283-7 
+
+
+
+- Reference:
+	- Programming historican
+		- https://programminghistorian.org/
+	- Book: Programming for humanist
+		- Author: William J.B. Mattingly
+			- Experience:
+				- PhD in history and 5+ years of programming experience. 3+ years of experience applying machine learning to historical documents. 
+			- His current job: 
+				- Build machine learning and NLP pipelines for classifying archival records. 
+				- NLP, machine learning, Data science, spaCy
+			- Open source projects
+				- LeetTopic
+				- Streamlit pandas
+	- Brief research of what HIST4702 about:
+		- Digital humanities award: an organization that promoting DH awareness, and promoting certain criteria of DH:
+			- Use DH for fun
+			- Data visualization
+			- Exploration of DH failure / limitation
+			- DH tool or suite of tools
+			- DH dataset
+			- DH training material

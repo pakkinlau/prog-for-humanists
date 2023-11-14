@@ -1,0 +1,783 @@
+ADVANCES IN INFORMATION SCIENCE
+Big Data, Bigger Dilemmas: A Critical Review
+Hamid Ekbia
+Center for Research on Mediated Interaction (CROMI), School of Informatics and Computing, IndianaUniversity, Bloomington, Indiana. E-mail: hekbia@indiana.edu
+Michael Mattioli
+Center for Intellectual Property, Maurer School of Law, Indiana University, Bloomington, Indiana.E-mail: mmattiol@indiana.edu
+Inna Kouper
+Center for Research on Mediated Interaction (CROMI), School of Informatics and Computing; Data to InsightCenter, Pervasive Technology Institute, Indiana University, Bloomington, Indiana. E-mail:inkouper@indiana.edu
+G. Arave
+Center for Research on Mediated Interaction (CROMI), School of Informatics and Computing, IndianaUniversity, Bloomington, Indiana. E-mail: garave@indiana.edu
+Ali Ghazinejad
+Center for Research on Mediated Interaction (CROMI), School of Informatics and Computing, IndianaUniversity, Bloomington, Indiana. E-mail: alighazi@indiana.edu
+Timothy Bowman
+Center for Research on Mediated Interaction (CROMI), School of Informatics and Computing, IndianaUniversity, Bloomington, Indiana. E-mail: tdbowman@indiana.edu
+Venkata Ratandeep Suri
+Center for Research on Mediated Interaction (CROMI), School of Informatics and Computing, IndianaUniversity, Bloomington, Indiana. E-mail: vsuri@indiana.edu
+Andrew Tsou
+Center for Research on Mediated Interaction (CROMI), School of Informatics and Computing, IndianaUniversity, Bloomington, Indiana. E-mail: atsou@indiana.edu
+Scott Weingart
+Center for Research on Mediated Interaction (CROMI), School of Informatics and Computing, IndianaUniversity, Bloomington, Indiana. E-mail: sbweing@indiana.edu
+Cassidy R. Sugimoto
+Center for Research on Mediated Interaction (CROMI), School of Informatics and Computing, IndianaUniversity, Bloomington, Indiana. E-mail: sugimoto@indiana.edu
+Received October 28, 2013; Revised February 16, 2014; Accepted March 12, 2014
+© 2014 ASIS&T Published online 31 December 2014 in Wiley Online Library
+(wileyonlinelibrary.com). DOI: 10.1002/asi.23294
+JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY, 66(8):1523–1545, 2015The recent interest in Big Data has generated a broad
+range of new academic, corporate, and policy practicesalong with an evolving debate among its proponents,detractors, and skeptics. While the practices draw on acommon set of tools, techniques, and technologies,most contributions to the debate come either from aparticular disciplinary perspective or with a focus on adomain-speciﬁc issue. A close examination of thesecontributions reveals a set of common problematics thatarise in various guises and in different places. It alsodemonstrates the need for a critical synthesis of theconceptual and practical dilemmas surrounding BigData. The purpose of this article is to provide such asynthesis by drawing on relevant writings in the sci-ences, humanities, policy, and trade literature. In bring-ing these diverse literatures together, we aim to shedlight on the common underlying issues that concern andaffect all of these areas. By contextualizing the phenom-enon of Big Data within larger socioeconomic develop-ments, we also seek to provide a broader understandingof its drivers, barriers, and challenges. This approachallows us to identify attributes of Big Data that requiremore attention—autonomy, opacity, generativity, dispar-ity, and futurity—leading to questions and ideas formoving beyond dilemmas.
+Introduction
+“Big Data” has become a topic of discussion in various
+circles, arriving with a fervor that parallels some of the mostsigniﬁcant movements in the history of computing—forexample the development of personal computing in the1970s, the World Wide Web in the 1990s, and social mediain the 2000s. In academia, the number of dedicated venues(journals, workshops, and conferences), initiatives, and pub-lications on this topic reveal a continuous and consistentgrowing trend. Figure 1, which shows the number ofscholarly, trade, and mass media publications across ﬁve
+academic databases in the last six years with Big Data intheir title or as a keyword, is illustrative of this trend.
+Along with academic interest, practitioners in business,
+industry, and government have found that Big Data offerstremendous opportunities for commerce, innovation, andsocial engineering. The World Economic Forum (2013),for instance, dubbed data a new “asset class,” and somecommentators have mused that data are “the new oil” (e.g.,Rotella, 2012). These developments provide the impetus forthe creation of the required technological infrastructure,policy frameworks, and public debates in the U.S., Europe,and other parts of the world (National Science Foundation,2012; OSP, 2012; Williford & Henry, 2012). The growingBig Data trend has also prompted a series of reﬂectiveengagements with the topic that, although few and farbetween, introduce stimulating insights and critical ques-tions (e.g., Borgman, 2012; boyd & Crawford, 2012). Theinterest within the general public has also intensiﬁed due tothe blurring of boundaries between data produced by
+humans and data about humans (Shilton, 2012).
+These developments reveal a diversity of perspectives,
+interests, and expectations regarding Big Data. While someacademics see an opportunity for a new area of study andeven a new kind of “science,” others emphasize novel meth-odological and epistemic approaches, and still others seepotential risks and pitfalls. Industry practitioners, trying tomake sense of their own practices, by contrast, inevitablydraw on the available repertoire of computing processes andtechniques—abstraction, decomposition, modularization,machine learning, worst-case analysis, etc. (Wing, 2006)—in dealing with the problem of what to do when one has“lots of data to store, or lots of data to analyze, or lots of
+FIG. 1. Number of publications with the phrase “Big Data” in ﬁve academic databases between 2008 and 2013.
+1524 JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+machines to coordinate” (White, 2012, p. xvii). Finally, legal
+scholars, philosophers of science, and social commentatorsseek to inject a critical perspective by identifying the con-ceptual questions, ethical dilemmas, and socioeconomicchallenges brought about by Big Data.
+These variegated accounts point to the need for a critical
+synthesis of perspectives, which we propose to explore andexplain as a set of dilemmas.
+1In our study of the diverse
+literatures and practices related to Big Data, we have observeda set of recurrent themes and problematics. Although they areoften framed in terminologies that are disciplined-speciﬁc,issue-oriented, or methodologically informed, these themesultimately speak to the same underlying frictions. We seethese frictions as inherent to the modern way of life, embod-ied as they currently are in the sociohistorical developmentsassociated with digital technologies—hence, our framingthem as dilemmas (Ekbia, Kallinikos, & Nardi, 2014). Someof these dilemmas are novel, arising from the unique phenom-ena and issues that have recently emerged due to the deepen-ing penetration of the social fabric by digital information, butmany of them are the reincarnation of some of the erstwhilequestions and quandaries in scientiﬁc methodology, episte-mology, aesthetics, ethics, political economy, and elsewhere.Because of this, we have chosen to organize our discussion ofthese dilemmas according to their origin, incorporating theirspeciﬁc disciplinary or technical manifestations as specialcases or examples that help to illustrate the dilemmas on aspectrum of possibilities. Our understanding of dilemmas, assuch, is not binary: rather, it is based on gradations of issuesthat arise with various nuances in conceptual, empirical, ortechnical work.
+Before embarking on the discussion of dilemmas faced
+on these various dimensions, we must specify the scope ofour inquiry into Big Data, the deﬁnition of which is itself apoint of contention.
+Conceptualizing Big Data
+A preliminary examination of the debates, discussions,
+and writings on Big Data demonstrates a pronounced lack ofconsensus about the deﬁnition, scope, and character of whatfalls within the purview of Big Data. A meeting of theOrganization for Economic Co-operation (OECD) in Febru-ary of 2013, for instance, revealed that all 150 delegates hadheard of the term “Big Data,” but a mere 10% were preparedto offer a deﬁnition (Anonymous, 2013). Perhaps worry-ingly, these delegates “were government ofﬁcials who willbe called upon to devise policies on supporting or regulatingBig Data” (Anonymous, 2013, para. 1).A similar uncertainty is prevalent in academic writing,
+where writers refer to the topic as “a moving target”(Anonymous, 2008, p.1) where data “can be ‘big’ in differ-ent ways” (Lynch, 2008, p. 28). Big Data has been describedas “a relative term” (Minelli, Chambers, & Dhiraj, 2013, p.9) that is intended to describe “the mad, inconceivablegrowth of computer performance and data storage”(Doctorow, 2008, p. 17). Such observations have led Floridi(2012) to the conclusion that “it is unclear what exactly theterm ‘Big Data’ means and hence refers to” (p. 435). To giveshape to this mélange of deﬁnitions, we identify three maincategories of deﬁnitions in the current literature: (i) product-oriented with a quantitative focus on the size of data; (ii)process-oriented with a focus on the processes involved inthe collection, curation, and use of data; and (iii) cognition-oriented with a focus on the way human beings, with theirparticular cognitive capacities, can relate to data. We reviewthese perspectives, and then provide a fourth—that is, asocial movement perspective—as an alternative conceptual-ization of Big Data.
+The Product-Oriented Perspective: The Scale of Change
+The product-oriented perspective tends to emphasize the
+attributes of data, particularly their size, speed, and structureor composition. Typically putting the size in the range ofpetabytes to exabytes (Arnold, 2011; Kaisler, Armour,Espinosa, & Money, 2013; Wong, Shen, & Chen, 2012), oreven yottabytes (a trillion terabytes) (Bollier, 2010, p. vii),this perspective derives its motivation from estimates ofincreasing data ﬂows in social media and elsewhere. On adaily basis, Facebook collects more than 500 terabytes ofdata (Tam, 2012), Google processes about 24 petabytes(Davenport, Barth, & Bean, 2012, p. 43), and Twitter, a socialmedia platform known for the brevity of its content, producesnearly 12 terabytes (Gobble, 2013, p. 64). Nevertheless, thethreshold for what constitutes Big Data is still contested.According to Arnold (2011), “100,000 employees, severalgigabytes of email per employee” does not qualify as BigData, whereas the vast amounts of information processedon the Internet—for example, “8,000 tweets a second,”or Google “receiv[ing] 35 hours of digital video everyminute”— doqualify (p. 28).
+Another motivating theme from the product-oriented per-
+spective is to adopt an historical outlook, comparing thequantity of data present now with what was available in therecent past. Ten years ago, a gigabyte of data seemed like avast amount of information, but the digital content on theInternet is currently estimated to be close to 500 billiongigabytes. On a broader scale, “it is estimated that humanityaccumulated 180 exabytes of data between the invention ofwriting and 2006. Between 2006 and 2011, the total grew tentimes and reached 1,600 exabytes. This ﬁgure is nowexpected to grow fourfold approximately every 3 years”(Floridi, 2012, p. 435). Perhaps most illustrative of the com-parative trend is the growth of astronomical data:
+1Bysynthesis , we intend the inclusion of various perspectives regardless
+of their institutional origin (academia, government, industry, media, etc.).Bycritical , we mean a kind of synthesis that takes into account historical
+context, philosophical presuppositions, possible economic and politicalinterests, and the intended and unintended consequences of various per-spectives. By dilemma , we mean a situation that presents itself as a set of
+indeterminate outcomes that do not easily lend themselves to a compromiseor resolution.
+JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015 1525
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+When the Sloan Digital Sky Survey started work in 2000, its
+telescope in New Mexico collected more data in its ﬁrst fewweeks than had been amassed in the entire history of astronomy.Now, a decade later, its archive contains a whopping 140 tera-bytes of information. A successor, the Large Synoptic SurveyTelescope, due to come on stream in Chile in 2016, will acquirethat quantity of data every ﬁve days (Anonymous, 2010,para. 1).
+Some variations of the product-oriented view take a broader
+perspective, highlighting the characteristics of data that gobeyond sheer size. Thus, Laney (2001), among others,advanced the now-conventionalized tripartite approach toBig Data—namely, that data change along three dimensions:volume, velocity, and variety (others have added value andveracity to this list). The increasing breadth and depth of ourlogging capabilities lead to the increase in data volume, theincreasing pace of interactions leads to increasing data veloc-ity, and the multiplicity of formats, structures, and semanticsin data leads to increasing data variety. A National ScienceFoundation (NSF) solicitation to advance Big Data tech-niques and technologies encompassed all three dimensions,and referred to Big Data as “large, diverse, complex, longi-tudinal, and/or distributed data sets generated from instru-ments, sensors, Internet transactions, email, video, clickstreams, and/or all other digital sources available today and inthe future” (Core Techniques and Technologies, 2012). Simi-larly, Gobble (2013) observes that “bigness is not just aboutsize. Data may be big because there’s too much of it(volume), because it’s moving too fast (velocity), or becauseit’s unstructured in a usable way (variety)” (p. 64; see alsoMinelli et al., 2013, p. 83).
+In brief, the product-oriented perspective highlights the
+novelty of Big Data largely in terms of the attributes of thedata themselves. In so doing, it brings to forth the scale andmagnitude of the changes brought about by Big Data, andthe consequent prospects and challenges generated by thesetransformations.
+The Process-Oriented Perspective: Pushing the
+Technological Frontier
+The process-oriented perspective underscores the novelty
+of processes that are involved, or are required, in dealing withBig Data. The processes of interest are typically computa-tional in character, relating to the storage, management,aggregation, searching, and analysis of data, while the moti-vating themes derive their signiﬁcance from the opacity ofBig Data. Big Data, boyd and Crawford (2011) posit, “isnotable not because of its size, but because of its relationalityto other data” (p. 1). Wardrip-Fruin (2012) emphasizes thatwith data growth human-designed and human-interpretablecomputational processes increasingly shape our research,communication, commerce, art, and media. Wong et al.(2012) further argue that “when data grows to a certainsize, patterns within the data tend to become white noise”(p. 204).According to this perspective, it is in dealing with the
+issues of opacity, noise, and relationality that technologymeets its greatest challenge and perhaps opportunity. Theoverwhelming amounts of data that are generated by sensorsand logging systems such as cameras, smart phones, ﬁnan-cial and commercial transaction systems, and social net-works are hard to move and protect from corruption orloss (Big Data, 2012; Kaisler et al., 2013). Accordingly,Kraska (2013) deﬁnes Big Data as “when the normal appli-cation of current technology doesn’t enable users to obtaintimely, cost-effective, and quality answers to data-drivenquestions” (p. 85), and Jacobs (2009) suggests that Big Datarefers to “data whose size forces us to look beyond thetried-and-true methods that are prevalent at that time” (p.44). Rather than focusing on the size of the output, therefore,these authors consider the processing and storing abilities oftechnologies associated with Big Data to be its deﬁningcharacteristic.
+In highlighting the challenges of processing Big Data, the
+process perspective also emphasizes the requisite technologi-cal infrastructure, particularly the technical tools and pro-gramming techniques involved in the creation of data (Vis,2013), as well as the computational, statistical, and technicaladvances that need to be made in order to analyze it. Accord-ingly, current technologies are deemed insufﬁcient for theproper analysis of Big Data, either because of economicconcerns or the limitations of the machinery itself (Trelles,Prins, Snir, & Jansen, 2011). This is partly because Big Dataencompasses both structured and unstructured data of allvarieties: text, audio, video, click streams, log ﬁles, and more(White, 2011, p. 21). In this light, “the fundamental problems. . . are rendering efﬁciency and data management . . . [andreducing] the complexity and number of geometries used todisplay a scene as much as possible” (Pajarola, 1998, p. 1).Complexity reduction, as such, constitutes a key theme of theprocess-oriented perspective, driving the current interest invisualization techniques (Ma & Wang, 2009; see also thesection on Aesthetic Dilemmas, below).
+To summarize, by focusing on those attributes of Big
+Data that derive from complexity-enhancing structural andrelational considerations, the process-oriented perspectiveseeks to push the frontiers of computing technology in han-dling those complexities.
+The Cognition-Oriented Perspective: Whither the
+Human Mind?
+Finally, the cognition-based perspective draws our atten-
+tion to the challenges that Big Data poses to human beings interms of their cognitive capacities and limitations. On onehand, with improved storage and processing technologies,we become aware of how Big Data can help address prob-lems on a macro-scale. On the other hand, even with theoriesof how a system or a phenomenon works, its interactions areso complex and massive that human brains simply cannotcomprehend them (Weinberger, 2012). Based on an analogywith the number of words a human being might hear in their
+1526 JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+lifetime—“surely less than a terabyte of text”—Horowitz
+(2008, para. 3) refers to the concerns of a computer scientist:“Any more than that and it becomes incomprehensible by asingle person, so we have to turn to other means of analysis:people working together, or computers, or both.” Kraska(2013) invokes another analogy to make a similar point: “A[terabyte] of data is nothing for the US National SecurityAgency (NSA), but is probably a lot for an individual”(p. 85).
+In this manner, the concern with the limited capacity of
+the human mind to make sense of large amounts of dataturns into a thematic focus for the cognition-oriented per-spective. In particular, the implications for the conduct ofscience have become a key concern to commentators such asHowe et al. (2008), who observe that “such data, producedat great effort and expense, are only as useful as researchers’ability to locate, integrate and access them” (p. 47). Thisattitude echoes earlier visions underlying the developmentof scholarly systems. Eugene Garﬁeld, in his construction ofwhat would become the Web of Science, stated that his mainobjective was the development of “an information systemwhich is economical and which contributes signiﬁcantly tothe process of information discovery—that is, the correla-tion of scientiﬁc observations not obvious to the searchers”(Garﬁeld, 1963, p. 201).
+Others, however, see an opportunity for new modes of
+scholarly activity—for instance, engaging in distributed andcoordinated (as opposed to collaborative) work (Waldrop,2008). By this deﬁnition, the ability to distribute activity,store data, search, and cross-tabulate becomes a more impor-tant distinction in the epistemology of Big Data than size orcomputational processes alone (see the forthcoming sectionon Epistemological Dilemmas). boyd and Crawford (2012),for instance, argue that Big Data is about the “capacity tosearch, aggregate, and cross-reference large data sets”(p. 665), an objective that has been exempliﬁed in large-scale observatory efforts in biology, ecology, and geology(Aronova, Baker, & Oreskes, 2010; Lin, 2013).
+In short, the cognition-oriented perspective conceptual-
+izes Big Data as something that exceeds human ability tocomprehend and therefore requires mediation throughtrans-disciplinary work, technological infrastructures, statis-tical analyses, and visualization techniques to enhanceinterpretability.
+The Social Movement Perspective: The Gap Between
+Vision and Reality
+The three perspectives that we have identiﬁed present
+distinct conceptualizations of Big Data, but they also mani-fest the various motivational themes, problematics, andagendas that drive each perspective. None of these perspec-tives by itself delineates the full scope of Big Data, nor arethey mutually exclusive. However, in their totality theyprovide useful insights and a good starting point for ourinquiry. We notice, in particular, that little attention is paid inthese perspectives to the socioeconomic, cultural, and politi-
+cal shifts that underlie the phenomenon of Big Data, and thatare, in turn, enabled by it. Focusing on these shifts allows fora different line of inquiry—one that explains the diffusion oftechnological innovation as a “computerization movement”(Kling & Iacono, 1995).
+The development of computing seems to have followed a
+recurring pattern wherein an emerging technology is pro-moted by loosely organized coalitions that mobilize groupsand organizations around a utopian vision of a preferredsocial order. This historical pattern is the focus of the per-spective of “computerization movement,” which discerns aparallel here with the broader notion of “social movement”(De la Porta & Diani, 2006). Rather than emphasizing thefeatures of technology, organizations, and environment, thisperspective considers technological change “in a broadercontext of interacting organizations and institutions thatshape utopian visions of what technology can do and how itcan be used” (Elliott & Kraemer, 2008, p. 3). A prominentexample of computerization movements is the nationwidemobilization of Internet access during the Clinton-Goreadministration in the U.S. around the vision of a worldwhere people can live and work at the location of theirchoice (The White House, 1993). The gap between thesevisions and socioeconomic and cultural realities, along withthe political strife associated with the gap, is often lost inarticulation of these visions.
+A similar dynamic is discernible in the case of Big Data,
+giving support to a construal of this phenomenon as a com-puterization movement. This is most evident in the strategicalliances formed around Big Data among heterogeneousplayers in business, academia, and government. The complexecosystem in which Big Data technologies are developed ischaracterized by a symbiotic relationship between technol-ogy companies, the open source community, and universities(Capek, Frank, Gerdt, & Shields, 2005). Apache Hadoop, thewidely adopted open source framework in Big Data research,for instance, was developed based on contributions from theopen source community and information technology (IT)companies such asYahoo! using schemes such as the GoogleFile System and MapReduce—a programming model and anassociated implementation for processing and generatinglarge data sets (Harris, 2013).
+Another strategic partnership was shaped between com-
+panies, universities, and federal agencies in the area of edu-cation, aimed at preparing the next generation of Big Datascientists. In 2007, Google, in collaboration with IBM andthe NSF (in addition to participation from major universi-ties) began the Academic Cluster Computing Initiative,offering hardware, software, support services, and start-upgrants aimed at improving student knowledge of highly par-allel computing practices and providing the skills and train-ing necessary for the emerging paradigm of large-scaledistributed computing (Ackerman, 2007; Harris, 2013). In asimilar move, IBM, as part of its Academic Initiative, hasfostered collaborative partnerships with a number of univer-sities, both in the U.S. and abroad, to offer courses, faculty
+JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015 1527
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+awards, and program support focusing on Big Data and
+analytics (Gardner, 2013; International Business Machines[IBM], 2013). As of 2013, nearly 26 universities now offercourses related to Big Data science across the U.S.; thesecourses, expectedly, are supported by a number of IT com-panies (Cain-Miller, 2013).
+The driving vision behind these initiatives draws parallels
+between them and “the dramatic advances in supercomput-ing and the creation of the Internet,” emphasizing “ourability to use Big Data for scientiﬁc discovery, environmen-tal and biomedical research, education, and national secu-rity” (OSP, 2012, para. 3). Business gurus, managementprofessionals, and many academics seem to concur with thisvision, seeing the potential in Big Data to quantify andthereby change various aspects of contemporary life(Mayer-Schonberger & Cukier, 2013), “to revolutionize theart of management” (Ignatius, 2012, p. 12), or to be part ofa major transformation that requires national effort (RidingThe Wave, 2010). As with previous computerization move-ments, however, there are signiﬁcant gaps between thesevisions and the realities on the ground.
+As suggested earlier, we propose to explore these gaps as a
+set of dilemmas on various dimensions, starting with the mostabstract philosophical and methodological issues, and movingthrough speciﬁcally technical matters toward legal, ethical, eco-nomic, and political questions. These dilemmas, as we shall seebelow, are concerned with foundational questions about whatwe know about the world and about ourselves (epistemology),how we gain that knowledge (methodology) and how wepresent it to our audiences (aesthetics), what techniques andtechnologies are developed for these purposes (technology),how these impact the nature of privacy (ethics) and intellectualproperty (law), and what all of this implies in terms of socialequity and political control (political economy).
+Epistemological Dilemmas
+The relationship between data—what the world presents
+to us through our senses and instruments—and our knowl-edge of the world—how we understand and interpret whatwe get—has been a philosophically tortuous one with a longhistory. The epistemological issues introduced by Big Datashould be philosophically contextualized with respect to thishistory.
+According to some philosophers, the distinction between
+data and knowledge has largely to do with the nonevidentcharacter of “matters of fact,” which can only be understoodthrough the relation of cause and effect (unlike abstracttruths of geometry or arithmetic). For David Hume, forexample, this latter relation “is not, in any instance, attainedby reasonings a priori; but arises entirely from experience,when we ﬁnd that any particular objects are constantlyjoined with each other” (Hume, 1993/1748, p. 17). Hume’sproposition is meant to be a corrective response to therationalist trust in the power of human reason—for example,Descartes’s (1913) dictum “that, touching the things whichour senses do not perceive, it is sufﬁcient to explain howthey can be” (p. 210). In making this statement, Descartes
+points to the gap between the “reality” of the material worldand the way it appears to us—for example, the perceptualillusion of a straight stick that appears as bent whenimmersed in water, or of the retrograde motion of the planetMercury that appears to reverse its orbital direction. Thesolution that he proposes, as with many other pioneers ofmodern science (Galileo, Boyle, Newton, and others), is forscience to focus on “primary qualities” such as extension,shape, and motion, and to forego “secondary qualities” suchas color, sound, taste, and temperature (van Fraassen, 2008).Descartes’s solution was at odds, however, with what Aris-totelian physicists adhered to for many centuries—namely,that science must explain how things happen by demonstrat-ing that they must happen in the way they do. The solution
+undermined, in other words, the criterion of universal neces-sity that was the linchpin of Aristotelian science.
+This “ﬂaunting of previously upheld criteria” (van
+Fraassen, 2008, p. 277) has been a recurring pattern in thehistory of science, which is punctuated by episodes in whichearlier success criteria for the completeness of scientiﬁcknowledge are rejected by a new wave of scientists andphilosophers who declare victory for their own ways accord-ing to some new criteria. This, in turn, provokes complaintsand concerns by the defendants of the old order, who typicallysee the change as a betrayal of some universal principle:Aristotelians considered Descartes’s mechanics as violatingthe principle of necessity, and Cartesians blamed Newton’sphysics and the idea of action at a distance as a violation of theprinciple of determinism, as did Newtonians who deridedquantum mechanics for that same reason. Meanwhile, thedefendants of non-determinism, seeking new success criteria,introduced the Common Cause Principle, which gave rise toa new criterion of success that van Fraassen (2008) calls theAppearance-from-Reality criterion (p. 280). This criterion isbased on a key distinction between phenomenon and appear-ance—that is, between “observable entities (objects, events,processes, etc.) of any sort [and] the contents of measurementoutcomes” (van Fraassen, 2008, p. 283). Planetary motions,for instance, constitute a phenomenon that appears differentto us terrestrial observers depending on our measurementtechniques and technologies—hence, the difference betweenMercury’s unidirectional orbit and its appearance of retro-grade motion. Another example is the phenomenon ofmicro-motives (e.g., individual preferences in terms of neigh-borhood relations) and how they appear as macro-behaviorswhen measured by statistical instruments (e.g., racially seg-regated urban areas; Schelling, 1978).
+2
+2We note that the relationship between the phenomenon and the appear-
+ance is starkly different in these two examples, with one having to do with(visual) perspective and the other with issues of emergence, reduction, andlevels of analysis. Despite the difference, however, both examples speak tothe gap between phenomenon and appearance, which is our interest here.
+1528 JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+What the Appearance-from-Reality criterion demands in
+cases such as these is for our scientiﬁc theories to “save thephenomenon” not only in the sense that they should“deduce” or “predict” the appearances, but also in the sensethat they should “produc[e]” them (van Fraassen, 2008,p. 283). Mere prediction, in other words, is not adequate formeeting this criterion; the theory should also explain themechanisms that provide a bridge between the phenomenonand the appearances. Van Fraassen shows that, while theCommon Cause Principle is satisﬁed by the causal modelsof general use in natural and social sciences, theAppearance-from-Reality criterion is already rejected inﬁelds such as cognitive science and quantum mechanics.The introduction of Big Data, it seems, is a developmentalong the same trajectory, posing a threat to the CommonCause Principle as well as the Appearance-from-Reality cri-terion, repeating an historical pattern that has been the hall-mark of scientiﬁc change for centuries.
+Saving the Phenomena: Causal Relations or
+Statistical Correlations?
+The distinction between causal relation and correlation
+is at the center of current debates among the proponentsand detractors of “data-intensive science”—a debate thathas been going on for decades, albeit with less intensity,between the advocates of data-driven science and those oftheory-driven science (Hey, Tansley, & Tolle, 2009). Theproponents, who claim that “correlation supersedes causa-tion, and science can advance even without coherentmodels, uniﬁed theories, or really any mechanistic expla-nation at all” (Anderson, 2008, para. 19), are, in somemanner, questioning the viability of the Common CausePrinciple, and calling for an end to theory, method, and the“old ways.” Moving away from the “old ways,” though, hadbegun even before the advent of Big Data, in the era ofpost-World War II Big Science when, for instance, manyscientists involved in geological, biological, and ecologicaldata initiatives held the belief that data collection could bean end in itself, independent of theories or models(Aronova et al., 2010).
+The defenders of the “old ways,” on the other hand,
+respond in various manners. Some, such as microbiologistCarl Woese, sound the alarm for a “lack of vision” in anengineering biology that “might still show us how to getthere; [but that] just doesn’t know where ‘there’ is” (Woese,2004, p. 173; cf. Callebaut, 2012, p. 71). Others, concernedabout the ahistorical character of digital research, call for areturn to the “sociological imagination” to help us under-stand what techniques are most meaningful, what informa-tion is lost, what data are accessed, etc. (Uprichard, 2012,p. 124). Still others suggest an historical outlook, advocatinga focus on “long data”—that is, on data sets with a “massivehistorical sweep” (Arbesman, 2013, para. 4). Deﬁning theperceived difference between the amount and nature ofpresent and past data-driven sciences as superﬁcially relyingon sheer size, these authors suggest that one should focus on
+the dynamics of data accumulation (Strasser, 2012).Although data were historically unavailable on a petabytescale, they argue, the problem of data overload existed evenduring the time when naturalists kept large volumes of unex-amined specimens in boxes (Strasser, 2012) and when socialscientists were amassing large volumes of survey data (boyd& Crawford, 2012, p. 663).
+A more conciliatory view comes from those who cast
+doubts on “using blind correlations to let data speak”(Harkin, 2013, para. 7) or from the advocates of “scientiﬁcperspectivism,” according to whom “science cannot as amatter of principle transcend our human perspective”(Callebaut, 2012, p. 69; cf. Giere, 2006). By emphasizingthe limited and biased character of allscientiﬁc representa-
+tions, this view reminds us of the ﬁniteness of our knowl-edge, and warns against the rationalist illusion of aGod’s-eye view of the world. In its place, scientiﬁc perspec-tivism recommends a more modest and realistic view of“science as engineering practice” that can also help usunderstand the world (Callebaut, 2012, p. 80; cf. Giere,2006). Whether or not data-intensive science, enriched andpromulgated by Big Data, is such a science is a contentiousclaim. What is perhaps not contentious is that science andengineering have traditionally been driven by distinctiveprinciples. Based on the principle of “understanding bybuilding,” engineering is driven by the ethos of “workingsystems”—that is, those systems that function according topredetermined speciﬁcations (Agre, 1997). While this prin-ciple might or might not lead to effectively working assem-blages, its validity is certainly not guaranteed in the reversedirection: Not all systems that work necessarily provideaccurate theories and representations. In other words, theysave the appearance but not necessarily the phenomenon.This is perhaps the central dilemma of the 20th centuryscience, best manifested in areas such as artiﬁcial intelli-gence and cognitive science (Ekbia, 2008). Big Data pushesthis dilemma even further in practice and perspective,attached as it is to “prediction.” Letting go of mechanicalexplanations, some radical perspectives on Big Data seek tosave the phenomenon by simply saving the appearance. In sodoing, they collapse the distinction between the two: pheno-menon becomes appearance.
+Saving the Appearance: Productions or Predictions?
+Prediction is the hallmark of Big Data. Big Data allows
+practitioners, researchers, policy analysts, and others topredict the onset of trends far earlier than was previouslypossible. This ranges from the spread of opinions, viruses,crimes, and riots to shifting consumer tastes, political trends,and the effectiveness of novel medications and treatments.Many such social, biological, and cultural phenomena arenow the object of modeling and simulation using the tech-niques of statistical physics (Castellano, Fortunato, &Loreto, 2009). British researchers, for instance, recentlyunveiled a program called Emotive “to map the mood of the
+JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015 1529
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+nation” using data from Twitter and other social media
+(BBC, 2013). By analyzing 2,000 tweets per second andrating them for expressions of one of eight human emotions(anger, disgust, fear, happiness, sadness, surprise, shame,and confusion), the researchers claim that they can “helpcalm civil unrest and identify early threats to public safety”(BBC, 2013, para. 3).
+While the value of a project such as this may be clear
+from the perspective of law enforcement, it is not difﬁcult toimagine scenarios where this kind of threat identiﬁcationmight function erratically, leading to more chaos than order.Even if we assume that human emotions can be meaning-fully reduced to eight basic categories (what of complexemotions such as grief, annoyance, contentment, etc.?), andalso assume cross-contextual consistency in the expressionof emotions (how does one differentiate the “happiness” ofthe fans of Manchester United after a winning game fromthe expression of the “same” emotion by the admirers of theRoyal family on the occasion of the birth of the heir to thethrone?), technical limitations are quite likely to underminethe predictive value of the proposed system. Available datafrom Twitter have been shown to have a very limited char-acter in terms of scale (spatial and temporal), scope, andquality (boyd & Crawford, 2012), making some observerswonder if this kind of “nowcasting” could blind us to themore hidden long-term undercurrents of social change(Khan, 2012).
+In brief, an historical trend of which Big Data is a key
+component seems to have propelled a shift in terms ofsuccess criterion in science from causal explanations to pre-dictive modeling and simulation. This shift, which is largelydriven by forces that operate outside science (see the forth-coming Political Economy section), pushes the earliertrend—already underway in the 20th century, in breakingthe bridge between phenomena and appearances—to itslogical limit. If 19th-century science strove to “save thephenomenon” and produce the appearance from it throughcausal mechanisms, and 20th-century science sought to“save the appearance” and let go of causal explanations,21st-century science, and Big Data in particular, seems to becontent with the prediction of appearances alone. The inter-est in the prediction of appearances, and the garnering ofevidence needed to support them, still stems from the rathernarrow deductive-nomological model, which presumes alaw-governed reality. In the social sciences, this model maybe rejected in favor of other explanatory forms that allow forthe effects of human intentionality and free will, and thatrequire the interpretation of the meanings of events andhuman behavior in a context-sensitive manner (Furner,2004). Such alternative explanatory forms ﬁnd little space inBig Data methodologies, which tend to collapse the distinc-tion between phenomena and appearances altogether, pre-senting us with structuralism run amok. As in the previouseras in history, this trend is going to have its proponents anddetractors, spread over a broad spectrum of views. There isno need to ask which of these embodies “real” science, foreach one of them bears the seeds of its own dilemmas.Methodological Dilemmas
+The epistemological dilemmas discussed in the previous
+section ﬁnd a parallel articulation in matters of methodologyin the sciences and humanities—for example, in debatesbetween the proponents of “qualitative” and “quantitative”methods. Some humanists and social scientists haveexpressed concern that “playing with data [might serve as a]gateway drug that leads to more-serious involvement inquantitative research” (Nunberg, 2010, para. 12), leading toa kind of technological determinism that “brings with it apotential negative impact upon qualitative forms of research,with digitization projects optimized for speed rather thanquality, and many existing resources neglected in the race todigitize ever-increasing numbers of texts” (Gooding,Warwick, & Terras, 2012, para. 6–7). The proponents, on theother hand, drawing an historical parallel with “the domes-tication of human mind that took place with pen and paper,”argue that the shift doesn’t have to be dehumanizing:“Rather than a method of thinking with eyes and hand, wewould have a method of thinking with eyes and screen”(Berry, 2011, p. 22).
+In response to the emerging trend of digitizing, quantify-
+ing, and distant reading of texts and documents in humani-ties, skeptics ﬁnd the methods of “data-diggers” and“stat-happy quants [that] take the human out of the humani-ties” (Parry, 2010, para. 5) and that “necessitate an imper-sonal invisible hand” (Trumpener, 2009, p. 164) at odds withprinciples of humanistic inquiry (Schöch, 2013, para. 7).According to these commentators, while humanistic inquiryhas been traditionally epitomized by the lone scholar, workin the digital humanities requires collaboration among pro-grammers, interface experts, and others (Terras, 2013, asquoted by Sunyer, 2013).
+One might argue that Big Data calls into question the
+simplistic dichotomy between quantiative and qualitativemethods. Even “fractal distinctions” (Abbott, 2001, p. 11)might not, as such, be adequate to describe the blurring thatoccurs between analysis and interpretation in Big Data, par-ticularly given the rise of large-scale visualizations. Many ofthe methodological issues that arise, therefore, derive fromthe stage at which subjectivity is introduced into the process:that is, the decisions made in terms of sampling, cleaning,and statistical analysis. Proponents of a “pure” quantitativeapproach herald the autonomy of the data from subjectivity:“The data speaks for itself!” However, human intervention ateach step undermines the notion of a purely objective BigData science.
+Data Cleaning: To Count or Not to Count?
+Revealing an historical pattern similar to what we saw in
+the sciences, these disputes echo long-standing debatesin academe between qualitatively- and quantitatively-oriented practitioners: “It would be nice if all of the datawhich sociologists require could be enumerated,” WilliamCameron wrote in 1963, “Because then we could run them
+1530 JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+through IBM machines and draw charts as the economists do
+. . . [but] not everything that can be counted counts, and noteverything that counts can be counted” (p. 13). These wordshave a powerful resonance to those who observe the inter-mingling of raw numbers, mechanized ﬁltering, and humanjudgment in the ﬂow of Big Data.
+Data making involves multiple social agents with poten-
+tially diverse interests. In addition, the processes of datageneration remain opaque and under-documented (Helles& Jensen, 2013). As rich ethnographic and historicalaccounts of data and science in the making demonstrate,the data that emerge from such processes can be incom-plete or skewed. Anything from instrument calibration andstandards that guide the installation, development, andalignment of infrastructures (Edwards, 2010) to humanhabitual practices (Ribes & Jackson, 2013) or even inten-tional distortions (Bergstein, 2013) can disrupt the“rawness” of data. As Gitelman and Jackson (2013) pointout, data need to be imagined and enunciated to exist asdata, and such imagination happens in the particulars ofdisciplinary orientations, methodologies, and evolvingpractices.
+Having been variously “pre-cooked” at the stages of
+collection, management, and storage, Big Data does notarrive in the hands of analysts ready for analysis. Rather, inorder to be “usable,” it has to be “cleaned” or “condi-tioned” with tools such as Beautiful Soup and scriptinglanguages such as Perl and Python (O’Reilly Media, 2011,p. 6). This essentially consists of deciding which attributesand variables to keep and which ones to ignore (Bollier,2010, p. 13)—a process that involves mechanized humanwork, through services such as Mechanical Turk, but alsointerpretative human judgment and subjective opinions thatcan “spoil the data” (Andersen, 2010; cf. Bollier, 2010,p. 13). These issues become doubly critical when personaldata are involved on a large scale and “de-identiﬁcation”turns into a key concern—issues that are further exacer-bated by the potential for “re-identiﬁcation,” which, inturn, undermines the thrust in Big Data research toward“data liquidity.” The dilemma between the ethos of datasharing, liquidity, and transparency, on the one hand, andrisks to privacy and anonymity through reidentiﬁcation, onthe other, emerges in such diverse areas as medicine,location-tagged payments, geo-locating mobile devices,and social media (Ohm, 2010; Tucker, 2013). Editors andpublishing houses are increasingly aware of these tensions,particularly as organizations begin to mandate data sharingwith reviewers and, following publication, with readers(Cronin, 2013).
+The traditional tension between “qualitative” and “quan-
+titative,” therefore, is rendered obsolete with the introduc-tion of Big Data techniques. In its place, we see a tensionbetween the empirics of raw numbers, the algorithmics ofmechanical ﬁltering, and the dictates of subjective judg-ment, playing itself out in the question that Cameron raisedmore than 50 years ago: what counts and what doesn’tcount?Statistical Signiﬁcance: To Select or Not to Select
+The question of what to include—what to count and what
+not to count—has to do with the “input” of Big Data ﬂows.A similar question arises with regard to the “output,” soto speak, in the form of a longstanding debate over thevalue of signiﬁcance tests (e.g., Gelman & Stern, 2006;Gliner, Leech, & Morgan, 2002; Goodman, 1999, 2008;Nieuwenhuis, Forstmann, & Wagenmakers, 2011). Tradi-tionally, signiﬁcance has been an issue with small samplesbecause of concerns over volatility, normality, and valida-tion. In such samples, a change in a single unit can reversethe signiﬁcance and affect the reproducibility of results(Button et al., 2013). Furthermore, small samples precludetests of normality (and other tests of assumptions), therebyinvalidating the statistic (Fleishman, 2012). This mightsuggest that Big Data is immune from such concerns. Farfrom it—the large size of data, some argue, makes it perhapstooeasy to ﬁnd statistically signiﬁcant results:
+As long as studies are conducted as ﬁshing expeditions, with
+a willingness to look hard for patterns and report anycomparisons that happen to be statistically signiﬁcant, we willsee lots of dramatic claims based on data patterns that don’trepresent anything real in the general population (Gelman,2013b, para. 11).
+boyd and Crawford (2012) call this phenomenon apophenia:
+“Seeing patterns where none actually exist, simply becauseenormous quantities of data can offer connections thatradiate in all directions” (p. 668). Similar concerns over“data dredging” and “cherry picking” have been raised byothers (Taleb, 2013; Weingart, 2012, para. 13–15).
+Various remedies have been proposed for improving false
+reliance on statistical signiﬁcance, including the use ofsmaller p-values,
+3correcting for “researcher degrees of
+freedom” (Simmons, Nelson, & Simonsohn, 2011, p. 1359),and the use of Bayesian analyses (Irizarry, 2013). Otherproposals, skeptical of the applicability to Big Data of “thetools offered by traditional statistics,” suggest that we avoidusing p-values altogether and rely on statistics that are
+“[m]ore intuitive, more compatible with the way the humanbrain perceives correlations”—for example, rank correla-tions as potential models to account for the noise, outliers,and variously-sized “buckets” into which Big Data is oftenbinned (Granville, 2013, para. 2–3; see also Gelman,2013a).
+These remedies, however, do not address concerns
+related to sampling and selection bias in Big Data research.Twitter, for instance, which has issues of scale and scope, isalso plagued with issues of replicability in sampling. Thelargest sampling frame on Twitter, the “ﬁrehose,” containsall public tweets but excludes private and protected ones.Other levels of access—the “gardenhose” (10% of public
+3That is, the probability of obtaining a test statistic at least as extreme as
+the observation, assuming a true null hypothesis.
+JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015 1531
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+tweets), the “spritzer” (1% of public tweets), and “white-
+listed” (recent tweets retrieved through the API; boyd &Crawford, 2012)—provide a high degree of variability, “ran-domness,” and speciﬁcity, making the data prone to sam-pling and selection biases and replication nigh impossible.These biases are accentuated when people try to generalizebeyond tweets or tweeters to all people within a target popu-lation, as we saw in the case of the Emotive project; as boydand Crawford (2012) observed, “it is an error to assume‘people’ and ‘Twitter users’ are synonymous” (p. 669).
+In brief, Big Data research has not eliminated some of the
+major and longstanding dilemmas in the history of sciencesand humanities: rather, it has redeﬁned and ampliﬁed them.Signiﬁcant among these are the questions of relevance(what counts and what doesn’t), validity (how meaningfulthe ﬁndings are), generalizability (how far the ﬁndingsreach), and replicability (the degree to which the results canbe reproduced). This kind of research also urges scholars tothink beyond the traditional “quantitative” and “qualitative”dichotomy, challenging them to rethink and redraw intellec-tual orientations along new dimensions.
+Aesthetic Dilemmas
+If the character of knowledge is being transformed, tra-
+ditional methods are being challenged, and intellectualboundaries redrawn by Big Data, perhaps our ways of rep-resenting knowledge are also being re-imagined—and theyare. Historians of science have carefully shown how scien-tiﬁc ideas, theories, and models have historically developedalong with the techniques and technologies of imaging andvisualization (Jones & Galison, 1998). They have also notedhow “beautiful” theories in science tend to be borne out asaccurate, even when they initially contradict the receivedwisdom of the day (Chandrasekhar, 1987). Bringing to bearthe powerful visualization capabilities of modern comput-ers, novel features of the digital medium, and their attendantdazzling aesthetics, Big Data marks a new stage in the rela-tionship between “beauty and truth [as] cognate qualities”(Kostelnick, 2007, p. 283). Given the opaque character oflarge data sets, graphical representations become essentialcomponents of modeling and communication (O’ReillyMedia, 2011). While this is often considered to be a straight-forward “mapping” of data points to visualizations, a greatdeal of translational work is involved, which renders theaccuracy of the claims problematic.
+Data visualization traces its roots back to William Play-
+fair (1759–1823; Spence, 2001; Tufte, 1983), whoseideas “functioned as transparent tools that helped to makevisible and understand otherwise hidden processes” (Hohl,2011, p. 1039). Similar ideas seem to drive current interestin Big Data visualization, where “well-designed visualrepresentations can replace cognitive calculations withsimple perceptual inferences and improve comprehen-sion, memory, and decision making” (Heer, Bostock &Ogievetsky, 2010, p. 59). Hohl (2011), however, contendsthat there is a fundamental difference between Playfair’sapproach and the current state of the art in Big Data visual-
+ization. Rather than making hidden processes overt, hecharges, “the visualisation [sic] process has become hiddenwithin a blackbox of hardware and software which onlyexperts can fully comprehend” (Hohl, 2011, p. 1040). This,he says, ﬂouts the basic principle of transparency in scien-tiﬁc investigation and reporting: We cannot truly evaluatethe accuracy or signiﬁcance of the results if those resultswere derived using nontransparent, aesthetically-drivenalgorithmic operations. While visualization has been her-alded as a primary tool for clarity, accuracy, and sensemak-ing in a world of huge data sets (Kostelnick, 2007),visualizations also bring a host of additional, sometimesunacknowledged, tensions and tradeoffs into the picture.
+Data Mapping: Arbitrary or Transparent?
+The ﬁrst issue is that, in order for a visualization to be
+rendered from a data set, those data must be translated intosome visual form—that is, what is called “the principledmapping of data variables to visual features such as position,size, shape, and color” (Heer et al., 2010, p. 67; cf. Börner,2007; Chen, 2006; Ware, 2013). By exploiting the humanability to organize objects in space, mapping helps usersunderstand data via spatial metaphors (Vande Moere, 2005).Data, however, take different forms, and this kind of trans-lation requires a substantial conceptual leap that leaves itsmark upon the resulting product. Considered from thisperspective, then, “any data visualization is ﬁrst and fore-most a visualization of the conversion rules themselves, andonly secondarily a visualization of the raw data” (Galloway,2011, p. 88).
+The spatial metaphor of mapping, furthermore, intro-
+duces some of the same limitations and tensions known tobe intrinsic to any cartographic rendering of real-worldphenomena. Not only must maps “lie” about some things inorder to represent the truth about others, unbeknownst tomost users any given map “is but one of an indeﬁnitelylarge number of maps that might be produced . . . from thesame data” (Monmonier, 1996, p. 2). These observationshold doubly true for Big Data, where the process of creat-ing a visualization requires that a number of rather arbitrarydecisions be made. Indeed, “for any given dataset thenumber of visual encodings—and thus the space of pos-sible visualization designs—is extremely large” (Heeret al., 2010, p. 59). Despite technical sophistication, deci-sions about these visual encodings are not always carriedout in an optimal way (Kostelnick, 2007, p. 285). More-over, the generative nature of visualizations as a type ofinquiry is often hidden—that is, some of the decisions aredismissed later as nonanalytical and not worth document-ing and reporting, while in fact they may have contributedto the ways in which the data will be seen and interpreted(Markham, 2013).
+On a more fundamental level, one could argue that
+“mapping” may not even be the best label for what happensin data visualization. As with (bibliometric) “maps” of
+1532 JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+science, the use of spatial metaphors and representations is
+not based on any epistemic logic, nor is it even logicallycohesive because “science is a nominal entity, not a realentity like land masses are” (Day, 2014). Although a map isgenerally understood to be different from the territory that itrepresents, people also have an understanding of what fea-tures are relevant on a map. In the case of data visualization,however, the relevance of features is not self-evident,making the limits of the map metaphor and the attributionsof meaning contestable. The actual layout of such visualiza-tions, as an artifact of both the algorithm and physical limi-tations such as plotter paper, are in fact more frequentlyarbitrary than not (Ware, 2013). This, again, questions therelationship between phenomenon and appearance in BigData analysis.
+Data Visualization: Accuracy or Aesthetics?
+Another issue arises in the tension between accuracy of
+visualizations and their aesthetic appeal. As a matter ofgeneral practice, the rules employed to create visualizationsare often weighted towards what yields a more visuallypleasing result rather than directly mapping the data. Mostgraph drawing algorithms are based on a common set ofcriteria about what things to apply and what things to avoid(e.g., minimize edge crossing and favor symmetry), andsuch criteria strongly shape the ﬁnal appearance of the visu-alization (Chen, 2006; Purchase, 2002). In line with thecognition-oriented perspective, proponents of aesthetically-driven visualizations argue that a more attractive display islikely to be more engaging for the end user (see Kostelnick,2007; Lau & Vande Moere, 2007), maintaining that, while itmay take users longer to understand the data in this format,they may “enjoy this (longer) time span more, learn complexinsights . . . retain information longer or like to use theapplication repeatedly” (Vande Moere, 2005, pp. 172–173).Some have noted, however, that there is an inversely propor-tional relationship between the aesthetic and informationalqualities of an information visualization (Gaviria, 2008; Lau& Vande Moere, 2007). As Galloway (2011) puts it, “thetriumph of the aesthetic precipitates a decline in informaticperspicuity” (p. 98). Although the tension or tradeoffbetween a visualization’s informational accuracy and itsaesthetic appeal is readily acknowledged by scholars, thesetradeoffs are not necessarily self-evident and are not alwaysdisclosed to users of data visualizations.
+Even if such limitations were disclosed to the user, the
+relative role of aesthetic intervention and informationalacuity is impossible to determine. Lau and Vande Moere(2007) have developed a model that attempts to classify anygiven visualization based on two continual, intersectingaxes, each of which moves from accuracy to aestheticism(see Figure 2 for a rendering of this visualization). Thehorizontal axis moves from literal representations of thenumerical data (more accurate) to interpretation of the data(more aesthetic). The vertical axis represents, on one end,the degree to which the visualization is meant to help theuser understand the data themselves (more accurate), as
+compared to the opposite end, where the graphic is meant tocommunicate the meaning of the data (more aesthetic).Laying aside the larger problem of what constitutes aninterpretation or meaning of a data set, it is unclear how onecould place a given visualization along either of these axes,as there is no clear rubric or metric for deciding the degreeto which interpretations and images are reﬂective ofmeaning rather than data points. This makes the model hardto apply practically, and gets us no closer to the aim ofproviding useful information to the end user, who is likelyunaware of the concessions that have been made so as torender a visualization aesthetically more pleasing and simul-taneously less accurate. The model, however, brings out thetension that is generally at work in the visualization ofdata.
+In summary, Big Data brings to the fore the conceptual
+and practical dilemmas of science and philosophy that haveto do with the relationship between truth and beauty. Whilethe use of visual props in communicating idea and meaningsis not new, the complexities associated with understandingBig Data and the visual capabilities of the digital mediumhave pushed this kind of practice to a whole new level,heavily tilting the balance between truth and beauty towardthe latter.
+Technological Dilemmas
+The impressive visual capabilities and aesthetic appeal of
+current digital products are largely due to the computationalpower of the underlying machinery. This power is providedby the improved performance of computational components,
+FIG. 2. Rendering of Lau and Vande Moere’s aesthetic-information
+matrix.
+JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015 1533
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+such as central processing units (CPUs), disk drive capaci-
+ties, and input/output (I/O) speed and network bandwidth.Big Data storage and processing technologies generallyneed to handle very large amounts of data, and be ﬂexibleenough to keep up with the speed of I/O operations and withthe quantitative growth of data (Adshead, n.d.). Real ornear-real-time information processing—that is, delivery ofinformation and analysis results as they occur—is the goaland a deﬁning characteristic of Big Data analytics. How thisgoal is accomplished depends on how computer architects,hardware designers, and software developers deal with thetension between continuity and innovation—a tension thatdrives technological development in general.
+Computers and Systems: Continuity or Innovation?
+The continuity of Big Data technologies is exempliﬁed
+by such concepts as parallel, distributed, or grid computing,which date back to the 1950s and to IBM’s efforts to carryout simultaneous computations on several processors(Wilson, 1994). The origins of cluster computing and high-performance computing (supercomputing), two groups ofcore technologies and architectures that maximize storage,networking, and computing power for data-intensiveapplications, can also be traced back to the 1960s. High-performance computing signiﬁcantly progressed in the 21stcentury, pushing the frontiers of computing to petascale andexascale levels. This progress was largely enabled by soft-ware innovations in cluster computer systems, which consistof many “nodes,” each having their own processors anddisks, all connected by high-speed networks. Comparedwith traditional high-performance computing, which relieson efﬁcient and powerful hardware, cluster computers maxi-mize reliability and efﬁciency by using existing commodity(off-the-shelf) hardware and newer, more sophisticated soft-ware (Bryant, Katz, & Lasowska, 2008). A Beowulf cluster,
+for example, is a cluster of commodity computers that arejoined into a small network, and use programs that allowprocessing to be shared among them. While softwaresolutions such as Beowulf clusters may work well, theirunderlying hardware base can seriously limit data-processing capacities as data continue to accumulate.
+These limitations of software-based approaches call for
+hardware or “cyberinfrastructure” solutions that are meteither by supercomputers or commodity computers. Thechoice between the two involves many parameters, includ-ing cost, performance needs, types of application, institu-tional support, and so forth. Larger organizations, includingmajor corporations, universities, and government agencies,can choose to purchase their own supercomputers or buytime within a shared network of supercomputers, such as theNSF’s XSEDE program.
+4With a two-week wait time and
+proper justiﬁcation, anyone from a U.S. university can getcomputing time on Stampede, the sixth fastest computer inthe world (Lockwood, 2013). Smaller organizations withbudget and support limitations would probably adopt a
+different approach that relies on commodity hardware andclusters.
+The gap between these two approaches has created a
+space for big players that can invest signiﬁcant resources ininnovative and customized solutions suited speciﬁcally todeal with Big Data, with a focus on centralization and inte-gration of data storage and analytics (see the earlier discus-sion on computerization movements).
+5This gave rise to the
+concept of the “data warehouse” (Inmon, 2000)—a prede-cessor of “cloud computing” that seeks to address the chal-lenges of creating and maintaining a centralized repository.Many data warehouses run on software suites that managesecurity, integration, exploration, reporting, and other pro-cesses necessary for Big Data storage and analytics, includ-ing specialized commercial software suites such as EMCGreenplum Database Software and open source alternativessuch as Apache Hadoop-based solutions (Dumbill, 2012).These solutions, in brief, have given rise to a spectrum ofalternative solutions to the continuity–innovation dilemma.Placed on this spectrum, Hadoop can be considered a com-promise solution: it is designed to work on commodityservers and yet it stores and indexes both structured andunstructured data (Turner, 2011). Many commercial enter-prises such as Facebook utilize the Hadoop framework andother Apache products (Thusoo et al., 2010). Hive is anaddition that deals with the continuity–innovation dilemmaby bringing together the “best” of older and newer technolo-gies, making use of traditional data warehousing tools suchas SQL, metadata, and partitioning to increase developers’productivity and stimulate more collaborative ad hoc ana-lytics (Thusoo et al., 2010). The popularity of Hadoop has asmuch to do with performance as it does with the fact that itruns on commodity hardware. This provides a clear com-petitive advantage to large players such as Google that canrely on freely available software and yet afford signiﬁcantinvestments in purchasing and customizing hardware andsoftware components (Fox, 2010; Metz, 2009). This wouldalso reintroduce the invisible divide between “haves”—those who can beneﬁt from the ideological drive toward“more” (more data, more storage, more speed, more capac-ity, more results, and, ultimately, more proﬁt or reward)—and “have nots” who lag behind or have to catch up byutilizing other means.
+The Role of Humans: Automation or Heteromation?
+Whatever approach is adopted in dealing with the tension
+between continuity and innovation, the technologies behindBig Data projects have another aspect that differentiates
+4https://www.xsede.org/5The largest data warehousing companies include eBay (5 petabytes of
+data), Wal-Mart Stores (2.5 petabytes), Bank of America (1.5 petabytes),and Dell (1 petabyte; Lai, 2008). Amazon.com operated a warehouse in2005 consisting of 28 servers and a storage capacity of over 50 terabytes(Layton, 2005).
+1534 JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+them from earlier technologies of automation, namely, the
+changing role and scale of human involvement.
+While earlier technologies may have been designed with
+the explicit purpose of replacing human labor or minimiz-ing human involvement in sociotechnical systems, Big Datatechnologies heavily rely on human labor and expertise inorder to function. This shift in the technological landscapedrives the recent interest in crowdsourcing and in what DeRoure (2012) calls “the rise of social machines.” As morecomputers and computing systems are connected intocyberinfrastructures that support Big Data, an increasingnumber of citizens will participate in the digital world andform a Big Society that helps to create, analyze, share, andstore Big Data. De Roure mentions citizen science and vol-unteer computing as classic examples of a human–machinesymbiosis that transcends purely technical or computationalsolutions.
+Another aspect of current computing environments that
+calls for further human involvement in Big Data is thechanging volume and complexity of software code. As soft-ware is getting increasingly sophisticated, code defects, suchas bugs or logical errors, are getting more difﬁcult to iden-tify. Testing that is done in a traditional way may be insuf-ﬁcient regardless of how thorough and extensive it is.Increasingly aware of this, some analysts propose openingup all software code, sharing it with others along withdata and using collaborative testing environments to repro-duce data analysis and strengthen credibility of computa-tional research (Stodden, Hurlin, & Perignon, 2012; Tenner,2012).
+Crowdsourcing or social machines leverage the labor and
+expertise of millions of individuals in the collection, testing,or otherwise processing of data, carrying out tasks that arebeyond current computer capabilities, and solving formi-dable computational problems. For example, the NationalAeronautics and Space Administration’s (NASA) Tourna-ment Lab challenged its large distributed community ofresearchers to build software that would automaticallydetect craters on various planets (Sturn, 2011). The data usedby developers to create their algorithms were created usingMoon Zoo, a citizen science project at zooniverse.com thatstudies the lunar surface. Crater images manually labeled bythousands of individuals were used for creating and testingthe software. The FoldIt project is another citizen scienceproject that utilizes a gaming approach to unravel verycomplex molecular structures of the proteins.
+6A similar
+process of dividing large tasks into smaller ones and usingmany people to work on them in parallel is used by Ama-zon’s Mechanical Turk Project, although it involves someﬁnancial compensation. Amazon advertises its approach as“access to an on-demand, scalable workforce.”
+7
+The shared tenet among these various projects is their
+critical reliance on technologies that require active humaninvolvement on large scales. Rather than describing the useof machines in Big Data in terms of automation, perhaps we
+should acknowledge the continuing creative role of humansin knowledge infrastructure and call it “heteromation”(Ekbia & Nardi, 2014). Heteromation and the rise of socialmachines also highlights the distinction between data gen-erated bypeople versus data generated about people. This
+kind of “participatory personal data” (Shilton, 2012)describes a new set of practices where individuals contributeto data collection by using mediating technologies, rangingfrom web entry forms to GPS trackers and sensors to moresophisticated apps and games. These practices shift thedynamics of power in the acts of measurement, groupings,and classiﬁcations between the measuring and the measuredsubjects (Nafus & Sherman, under review). Humans whohave always been the measured subjects receive an oppor-tunity to “own” their data, challenge the metrics, oreven expose values and biases embedded in automatedclassiﬁcations and divisions (Dwork & Mulligan, 2013).Whether or not this kind of “soft resistance” will tilt thebalance of power in favor of small players is yet to be seen,however.
+In brief, technology has evolved in concert with the Big
+Data movement, arguably providing the impetus behind it.These developments, however, are not without their con-cerns. The competitive advantage for institutions andcorporations that can afford the computing infrastructurenecessary to analyze Big Data creates a new subset of tech-nologically elite players. Simultaneously, there is a rise inshared “participation” in the construction of Big Datathrough crowdsourcing and other initiatives. The degree towhich these developments represent opportunities or under-mine ownership, privacy, and security remains to bediscussed.
+Legal and Ethical Dilemmas
+Changes in technology, along with societal expectations
+that are partly shaped by these changes, raise signiﬁcantlegal and ethical problems. These include new questionsabout the scope of individual privacy and the proper role ofintellectual property protection. Inconveniently, the lawaffords no single principle to balance the competing inter-ests of individuals, industries, and society as a whole in theburgeoning age of Big Data. As a result, policymakers mustnegotiate a new and shifting landscape (Solove, 2013,p. 1890).
+Privacy Concerns: To Participate or Not?
+The concept of privacy as a generalized legal “right” was
+introduced in an 1890 Harvard Law Review article written
+by Samuel Warren and Louis Brandeis—both of whomwould later serve as United States Supreme Court Justices(Warren & Brandeis, 1890). “The right to be let alone,” theauthors argued, is an “inevitable” extension of age-old legaldoctrines that discourage intrusions upon the human psyche(p. 195). These doctrines include laws forbidding slander,
+6http://fold.it/portal/info/science
+7https://www.mturk.com/mturk/
+JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015 1535
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+libel, nuisances, assaults, and the theft of trade secrets
+(pp. 194, 205, 212). Since the time of Warren and Brandeis,new technologies have led policymakers to continuallyreconsider the deﬁnition of privacy. In the 1980s and 1990s,the widespread adoption of personal computers and theInternet led to the enactment of statutes and regulations thatgoverned the privacy of electronic communications(Bambauer, 2012, p. 232). In the 2000s, even more lawswere enacted to address, inter alia , ﬁnancial privacy, health-
+care privacy, and children’s privacy (Schwartz & Solove,2011, p. 1831). Today, Big Data presents a new set ofprivacy concerns in diverse areas such as health, govern-ment, intelligence, and consumer data.
+One new privacy challenge stems from the use of Big
+Data to predict consumer behavior. A frequently (over)usedexample is that of the department store Target predicting thepregnancy of expectant mothers in order to target them withcoupons at what is perceived to be the optimal time (Duhigg,2012). In a similar vein, advertisers have recently startedassembling shopping proﬁles of individuals based oncompilations of publicly available metadata (such as thegeographic locations of social media posts; Mattioli,forthcoming), which has led some commentators to criticizesuch practices as privacy violations (Tene & Polonetsky,2012). Similar concerns have been expressed in the realm ofmedical research, where the electronic storage and distribu-tion of individual health data can potentially reveal informa-tion not only about the individual but about others relatedto them. This might happen, for instance, with the publicavailability of genomic data, as in a recent case that raisedobjections from the family members of a deceased woman.The subsequent removal of that information marked a legaltriumph for the family, but was a worrisome sign for advo-cates of open access that privacy concerns might signiﬁ-cantly slow the progress of Big Data research (Zimmer,2013). As leading commentators have observed, “[t]hesetypes of harms do not necessarily fall within the conven-tional invasion of privacy boundaries,” and thus raise newquestions for policymakers (Crawford & Schultz, 2014,p. 93).
+Another set of privacy concerns stems from government
+uses of Big Data. The recent revelation in the U.S. about theNSA’s monitoring of e-mail and mobile communications ofmillions of Americans might just be the tip of a much biggerlegal iceberg that will affect the whole system, including theSupreme Court (Risen, 2013; Risen & Lichtblau, 2013).Although the public seems to be divided in its perception ofthe privacy violations (Shane, 2013), the ofﬁcial defense bythe government tends to highlight the point that data gath-ering did not examine the substance of e-mails and phonecalls, but rather focused on more general metadata (Savage& Shear, 2013). Similar themes were raised in a 2012Supreme Court ruling on the constitutionality of the use ofGPS devices by police ofﬁcers to track criminal suspects(U.S. v. Jones , 2012). Public discussions on approaches to
+and standards of privacy are complicated by the fact thatgovernment ofﬁcials seem to be concerned less with whatthey actually do to people’s data than with public percep-
+tions of what they do or might do (Nash, 2013).
+The common theme that emerges from the foregoing
+examples is that vastly heterogeneous types of data can begenerated, transferred, and analyzed without the knowledgeof those affected. Such data are generated silently and oftenput to unforeseen uses after they have been collected byknown and unknown others, implicating privacy but alsoleading to second-order harms, such as “proﬁling, tracking,discrimination, exclusion, government surveillance and lossof control” (Tene & Polonetsky, 2012, p. 63). Ironically, theprotection of privacy, as well as its violation, depends ontechnology just as much as it depends on sound publicpolicy. “Masking” that seeks to obfuscate personallyidentifying information while preserving the usefulnessof underlying data, for instance, employs sophisticatedencryption techniques (El Emam, 2011). Despite its sophis-tication, however, it has been shown to be vulnerable tore-identiﬁcation, leading Ohm (2010) to opine that“[r]eidentiﬁcation science disrupts the privacy policylandscape by undermining the faith that we have placed inanonymization” (p. 1704). Another technological solution tothe privacy puzzle—namely, using software to meter andtrack the usage of individual parcels of data—requires indi-vidual citizens and consumers to tag their data with theirprivacy preferences. This approach, which was put forth bythe World Economic Forum, portrays a future in whichbanks, governments, and service providers would supplyconsumers with personally identiﬁable data collected aboutthem (World Economic Forum, 2013, p. 13). By resorting to(meta)data to protect data, though, this “solution” puts theonus of privacy protection on individual citizens. As such, itreintroduces in stark form the old dilemma of the division oflabor and responsibility between the public and privatespheres.
+Intellectual Property: To Open or to Hoard?
+The risk of free riding is a collective action problem well
+known to intellectual property theorists. Resources that arecostly to produce and subject to cheap duplication tend to beunderproduced because potential producers have little to gainand everything to lose. The function of intellectual propertylaws is to create an incentive for people to produce suchresources by entitling them to enjoin copyists for a limitedperiod of time. Conventional data, however, do not meet theeligibility requirements for patent protection, and are oftenbarred from copyright protection because commercially pub-lished data are often factual in nature (Patent Act, CopyrightAct). (When conventional data have met the eligibilityrequirements of copyright, protection has generally beenthin.) This facet ofAmerican intellectual property law has ledto efforts by database companies to urge Congress to enactnew laws that would provide sui generis intellectual-propertyprotection to databases (Reichman & Samuelson, 1997).
+Big Data may mark a new chapter in the story of intel-
+lectual property, expanding it to the broader issue of data
+1536 JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+ownership. Ironically, the very methods and practices that
+make Big Data useful may also infuse it with subjectivehuman judgments. As discussed earlier, a researcher’s sub-jective judgments can become deeply infused into a data setthrough sampling, data cleaning, and creative manipulationssuch as data masking. As a result, Big Data compilationsmay actually be more likely to satisfy the prerequisitesfor copyrightability than canonical factual compilations(Mattioli, forthcoming). If so, sui generis database protec-tion may be unnecessary. Existing intellectual property lawsmay also need to be adapted in order to accommodate BigData practices. In the United Kingdom, for example, law-makers have approved legislation that provides a copyrightexemption for data mining, allowing search engines to copybooks and ﬁlms in order to make them searchable. U.S.lawmakers have yet to seriously consider such a change tothe Copyright Act.
+To recap, the ethical and legal challenges brought about by
+Big Data present deeper issues that suggest signiﬁcant changesto dominant legal frameworks and practices. In addition toprivacy and data ownership, Big Data challenges the conven-tional wisdom of collective action phenomena such as freeriding—a topic discussed in the following section.
+Political Economy Dilemmas
+The explosive growth of data in recent years is accom-
+panied by a parallel development in the economy—namely,an explosive growth of wealth and capital in the globalmarket. This creates an interesting question about anotherkind of correlation, which, unlike the ones that we haveexamined so far, seems to be extrinsic to Big Data. Crudelystated, the question has to do with the relationship betweenthe growth of data and the growth of wealth and capital.What makes this a particularly signiﬁcant but also paradoxi-cal question is the concomitant rise in poverty, unemploy-ment, and destitution for the majority of the globalpopulation. A distinctive feature of the recent economicrecession is its strongly polarized character: A large amountof data and wealth is created, giving rise to philanthropicprojects in the distribution of both data and money, concen-trated in the hands of a very small group of people. Thisgives rise to a question regarding the relation between dataand poverty: It can be argued that Big Data tends to gener-ally act as a polarizing force not only in the market, but alsoin arenas such as science.
+The exploration of these questions leads to the issue of
+the mechanisms that support and enable such a polarizingfunction. Variegated in nature, such mechanisms operate atthe psychological, sociocultural, and political levels, as willbe described.
+Data as Asset: Contribution or Exploitation?
+The ﬂow of data on the Internet is largely concentrated in
+social networking sites, meta-search engines, gaming, and,to a lesser degree, in science (www.alexa.com/topsites).These same sites, it turns out, also represent a large
+proportion of the ﬂow of capital in the so-called informationeconomy. Facebook, for instance, increased its ad revenuefrom $300 million in 2008 to $4.27 billion in 2012. Theobservation of these trends reinforces the World EconomicForum’s recognition of data as a new “asset class” (2013)and the notion of data as the “new oil.” The caveat is thatdata, unlike oil, are not a natural resource, which means thattheir economic value cannot derive from what economistscall “rent.” What is the source of the value, then?
+This question is at the center of an ongoing debate that
+involves commentators from a broad spectrum of social andpolitical perspectives. Despite their differences, the views ofmany of these commentators converge on a single source:“users.” According to the VP for Research of the technologyconsulting ﬁrm Gartner, Inc., “Facebook’s nearly one billionusers have become the largest unpaid workforce in history”(Laney, 2012). From December 2008 to December 2013, thenumber of users on Facebook went from 140 million to morethan one billion. During this same period of time, Face-book’s revenue rose by about 1300%. Facebook’s ﬁling withthe Securities and Exchange Commission in February 2012indicated that “the increase in ads delivered was drivenprimarily by user growth” (Facebook, 2012, p. 50). Turningthe problem of free riding on its head, these developmentsintroduce a novel phenomenon, where instead of costlyresources being underproduced because they can be cheaplyduplicated (see the previous discussion of data ownership),user data generated at almost no cost are overproduced,giving rise to vast amounts of wealth concentrated in thehands of proprietors of technology platforms. The characterof this phenomenon is the focus of the current debate.
+Fuchs (2010), coming to the debate from a Marxist per-
+spective, has argued that users of social media sites such asFacebook are exploited in the same fashion that TV specta-tors are exploited.
+8The source of exploitation, according to
+Fuchs, is the “free labor” that users put into the creation ofuser-generated content (Terranova, 2000). Furthermore, thefact that users are not ﬁnancially compensated throws a verydiverse group of people into an exploited class that Fuchs,following Hardt and Negri (2000), calls the “multitude.”
+The nature of user contribution ﬁnds a different character-
+ization by Arvidsson and Colleoni (2012), who argue that theeconomy has shifted toward an affective law of value “wherethe values of companies and their intangible assets are set not inrelation to an objective measurement, like labor time, but inrelation to their ability to attract and aggregate various kinds ofaffective investments, like intersubjective judgments of theiroverall value or utility in terms of mediated forms of reputa-tion” (p. 142). This leads these authors to the conclusion thatthe right explanation for the explosive wealth of companiessuch as Facebook should be sought in ﬁnancial market mecha-nisms such as branding and valuation.
+8The theory of audience exploitation was originally put forth by the
+media theorist Dallas Smythe (1981).
+JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015 1537
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+Conversely, Ekbia (forthcoming) contends that the nature
+of user contribution should be articulated in the digitally-mediated networks that are prevalent in the currenteconomy. The winners in this “connexionist world” (Boltan-ski & Ciapello, 2005) are the ﬂexibly mobile, those who areable to move not only geographically (between places, proj-ects, and political boundaries), but also socially (betweenpeople, communities, and organizations) and cognitively(between ideas, habits, and cultures). This group largelyinvolves the nouveau riche of the Internet age (e.g., thefounders of high-tech communications and social mediacompanies; Forbes, 2013). The “losers” are those who haveto play as stand-ins for the ﬁrst group in order for the linkscreated in these networks to remain active, productive, anduseful. Interactions between these two groups are embeddedin a form of organizing that can be understood as “expectantorganizing”—a kind of organization that is structured withbuilt-in holes and gaps that are intended to be bridged andﬁlled through the activities of end users.
+9
+Whichever of these views one considers as an explanation
+for the source of value of data, it is hard not to acknowledgea correlation between user participation and contribution andthe simultaneous rise in wealth and poverty.
+Data and Social Image: Compliance or Resistance?
+Every society creates the image of an “idealized self” that
+presents itself as the archetype of success, prosperity, andgood citizenship. In contemporary societies, the idealizedself is someone who is highly independent, engaged, andself-reliant—a high-mobility person, as we saw, with apotential for re-education, reskilling, and relocation; thekind of person often sought by cutting-edge industries suchas ﬁnance, medicine, media, and high technology. This “newman,” according to sociologist Richard Sennett (2006),“takes pride in eschewing dependency, and reformers of thewelfare state have taken that attitude as a model—everyonehis or her own medical advisor and pension fund manager”(p. 101). Big Data has started to play a critical role in bothpropagating the image and developing the model, playingout a three-layer mechanism of social control through moni-toring, mining, and manipulation. Individual behaviors, aswe saw in the discussion of privacy, are under continuousmonitoring through Big Data techniques. The data that arecollected are then mined for various economic, political, andsurveillance purposes: Corporations use the data for targetedadvertising, politicians for targeted campaigns, and govern-ment agencies for targeted monitoring of all manners ofsocial behavior (health, ﬁnance, criminal, security, etc.).
+What makes these practices particularly daunting and pow-erful is their capability in identifying patterns that are not
+detectable by human beings, and are indeed unavailablebefore they are mined (Chakrabarti, 2009). Furthermore,these same patterns are fed back to individuals throughmechanisms such as recommender systems, creating avicious cycle of regeneration that puts people in “ﬁlterbubbles” (Pariser, 2012).
+These properties of autonomy, opacity, and generativity
+of Big Data bring the game of social engineering to a wholenew level, with its attendant beneﬁts and pitfalls. This leavesthe average person with an ambivalent sense of empower-ment and emancipatory self-expression combined withanxiety and confusion. This is perhaps the biggest dilemmaof contemporary life, which rarely disappears from the con-sciousness of the modern individual.
+Discussion
+We have reviewed here a large and diverse literature. We
+could, no doubt, have expanded upon each of these sectionsin book-length form as each section identiﬁes a diversity ofdata and particularistic issues associated with these data.However, the strength of this synthesis is in the identiﬁcationof recurring issues and themes across these disparatedomains. We discuss these themes brieﬂy here.
+Big Data Is Not a Monolith
+The review reveals, as expected, the diversity and hetero-
+geneity of perspectives among theorists and practitionersregarding the phenomenon of Big Data. This starts with thedeﬁnitions and conceptualizations of the phenomenon, but itcertainly does not stop there. Looking at Big Data as aproduct, a process, or a new phenomenon that challengeshuman cognitive capabilities, commentators arrive atvarious conclusions with regard to what the key issues are,what solutions are available, and where the focus should be.In dealing with the cognitive challenge, for instance, somecommentators seek a solution by focusing on what to delete(Waldrop, 2008, p. 437), while others, noting the increasingstorage capacity of computers at decreasing costs, suggest adifferent strategy: purchasing more storage space andkeeping everything (Kraska, 2013, p. 84).
+The perspective of Big Data as a computerization move-
+ment suggested here introduces a broader sociohistoricalperspective, and highlights the gap between articulatedvisions and the practical reality of Big Data. As in earliermajor developments in the history of computing, this gap isgoing to resurface in the tensions, negotiations, and partialresolutions among various players, but it is not going todisappear by ﬁat, nor does it surface in precisely the same wayacross all domains (e.g., health, ﬁnance, science; Sugimoto,Ekbia, & Mattioli, forthcoming). Whether we deal with thetension between the humanities and administrative agendasin academia, or between business interests and privacy
+9To understand this, we need to think in terms of networks (in the plural)
+rather than network (in the singular). The power and privilege of the
+winners is largely in the fact that they can move across various networks,creating connections among them—a privilege that others are deprived ofbecause they need to stay put in order to be included. This is the key ideabehind the notion of “structural holes,” although the standard accounts inthe organization and management literature present it from a differentperspective (e.g., Burt, 1992).
+1538 JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+concerns in law, the gap needs to be dealt with in a mixture of
+policy innovation and practical compromise, but it cannot bewished away. The case in British law of copyright exemptionfor data mining provides a good example of such pragmaticcompromise (Owens, 2011).
+The Light and Dark Side of Big Data
+Common attributes of Big Data—not only the ﬁve Vs of
+volume, variety, velocity, value, and veracity, but also itsautonomy, opacity, and generativity—endow this phenom-enon with a kind of novelty that is productive and empow-ering yet constraining and overbearing. Thanks to Big Datatechniques and technologies, we can now make more accu-rate predictions and potentially better decisions in dealingwith health epidemics, natural disasters, or social unrest. Atthe same time, however, one cannot fail to notice the impe-rious opacity of data-driven approaches to science, socialpolicy, cultural development, ﬁnancial forecasting, advertis-ing, and marketing (Kallinikos, 2013). In confronting theproverbial Big Data elephant, it seems we are all blind,regardless of how technically equipped and sophisticated wemight be. We saw the different aspects of the opacity indiscussing the size of data and in the issues that arise whenone tries to analyze, visualize, or monetize Big Data proj-ects. Big data is dark data —this is a lesson that ﬁnancial
+analysts and forecasters learned, and the rest of us paid forhandsomely, during the recent economic meltdown. Thefervent enthusiasts of technological advance refuse to admitand acknowledge this side of the phenomenon, whether theyare business consultants, policy advisors, media gurus, orscientists designing eye-catching visualization techniques.The right approach, in response to this unbridled enthusi-asm, is not to deny the light side of Big Data, but rather todevise techniques that bring human judgment and techno-logical prowess to bear in a meaningfully balanced manner.
+The Futurity of Big Data
+We live in a society that is obsessed with the future
+and predicting it. Enabled by the potentials of moderntechnoscience—from genetically driven life sciences tocomputer-enabled social sciences—contemporary societiestake more interest in what the future, as a set of possibilities,holds for us than how the past emerged from a set of possiblealternatives; the past is interesting, if at all, only insofar asit teaches us something about the future. As Rose andAbi-Rached (2013) wrote, “we have moved from the riskmanagement of almost everything to a general regime offuturity. The future now presents us neither with ignorancenor with fate, but with probabilities, possibilities, a spectrumof uncertainties, and the potential for the unseen and theunexpected and the untoward” (p. 14).
+Big Data is the product, but also an enabler, of this regime
+of futurity, which is embodied in Hal Varian’s notion of“nowcasting” (Varian, 2012). The ways by which Big Datashapes and transforms various arenas of human activity varydepending on the character of the activity in question. In
+health, where genetic risks and behavioral dispositions haveturned into foci of diagnosis and care, techniques of datamining and analytics provide very useful tools for the intro-duction of preventative measures that can mitigate futurevulnerabilities of individuals and communities. Meteorolo-gists, security and law enforcement agencies, and marketersand product developers can similarly beneﬁt from the pre-dictive capacity of these techniques. Applying the same pre-dictive approach to other areas such as social forecasting,academic research, cultural policy, or inquiries in thehumanities, however, might produce outcomes that arenarrow in reach, scope, and perspective, as we saw in thediscussion of Twitter earlier in this paper. With data havinga lifetime on the order of minutes, hours, or days, quicklylosing their meaning and value, caution needs to be exer-cised in making predictions or truth claims on matters withhigh social and political impact. In the humanities, forexample, the discipline of history can be potentially revital-ized through the application of modern computer technolo-gies, allowing historians to ask new questions and to perhapsﬁnd new insights into the events of the near and far past(Ekbia & Suri, 2013). At the same time, we cannot trivializethe perils and pitfalls of an historical inquiry that derives itsclues from computer simulations that churn massive but notnecessary data (Fogu, 2009).
+The Disparity of Big Data
+Research and practice in Big Data require vast resources,
+investments, and infrastructure that are only available to aselect group of players. Historically, technological develop-ments of this magnitude have fallen within the purview ofgovernment funding, with the intention (if not the guarantee)of universal access to all. The most recent case of thismagnitude was the launch of the Internet in the U.S., toutedas one of the most signiﬁcant contributions of the federalgovernment to technological development on a global scale.Although this development has taken a convoluted path,giving rise to (among other things) what is often referred toas the “digital divide” (Buente & Robbin, 2008), the histori-cal fact that this was originally a government project doesnot change. Big Data is taking a different path. This isperhaps the ﬁrst time in modern history, particularly in theU.S., that a technological development of this magnitude hasbeen left largely in the hands of the private sector. Initiativessuch as the NFS’s XSEDE program, discussed earlier, areattempts in alleviating the disparities caused by the creationof a technological elite. Although the full implications ofthis are yet to be revealed, disparities between the haves andhave-nots are already visible between major technologycompanies and their users, between government and citi-zens, and between large and small businesses and universi-ties, giving rise to what can be called the “data divide.” Thisis not limited to divisions between sectors, but also createsfurther divides within sectors. For example, technologically-oriented disciplines will receive priority for funding and
+JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015 1539
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+other resources given this computationally intensive turn in
+research. This potentially leads to a new Matthew Effect(Merton, 1973) reoriented around technological skills andexpertise rather than publication and citation.
+Beyond Dilemmas: Ways of Acting
+Digital technologies have a dual character—empowering,
+liberating, and transparent, yet also intrusive, constraining, andopaque. Big Data, as the embodiment of the latest advances indigital technologies, manifests this dual character in a vividmanner, putting the tensions and frictions of modernity in highrelief. Our framing of the social, technological, and intellectualissues arising from Big Data as a set of dilemmas was based onthis observation. As we have shown here, these dilemmas arepartly continuous with those of earlier eras but also partly novelin terms of their scope, scale, and complexity—hence, ourmetaphorical trope of “bigger dilemmas.”
+Dilemmas, of course, do not easily lend themselves to
+solutions or resolutions. Nonetheless, they should not beunderstood as impediments to action. In order to go beyonddilemmas, one needs to understand their historical and con-ceptual origins, the dynamics of their development, thedrivers of the dynamics, and the alternatives that they present.This is the track that we followed here. This allowed us totrace out the histories, drivers, and alternative pathways ofchange along the dimensions that we examined. Althoughthese dimensions do not exhaustively cover all the sociocul-tural, economic, and intellectual aspects of change broughtabout by Big Data, they were broad enough to provide acomprehensive picture of the phenomenon and to reveal someof its attributes that have been hitherto unnoticed or unexam-ined in a synthesized way. The duality, futurity, and disparityof Big Data, along with its various conceptualizations amongpractitioners, make it unlikely for a consensus view to emergein terms of dealing with the dilemmas introduced here. Here,as in science, a perspectivist approach might be our best bet.Such an approach is based on the assumption that “all theo-retical claims remain perspectival in that they apply only toaspects of the world and then, in part because they apply onlyto some aspects of the world, never with complete precision”(Giere, 2006, p. 15). Starting with this assumption, andkeeping the dilemmas in mind, we consider the following aspotential areas of research and practice for next steps.
+Ways of Knowing
+Many of the epistemological critiques of Big Data have
+centered around the assertion that theory is no longer nec-essary in a data-driven environment. We must ask ourselveswhat it is about this claim that strikes scholars as problem-atic. The virtue of a theory, according to some philosophersof science, is its intellectual economy—that is, its ability toallow us to obtain and structure information about observ-ables that are otherwise intractable (Duhem, 1954/1906,21ff). “Theorists are to replace reports of individual obser-vations with experimental laws and devise higher level laws(the fewer, the better) from which experimental laws (the
+more, the better) can be mathematically derived” (Bogen,2013). In light of this, one wonders if objections to data-driven science have to do with the practicality of such anundertaking (e.g., because of the bias and incompleteness ofdata), or if there are things that theories could tell us that BigData cannot? This calls for deeper analyses on the role oftheory and the degree to which Big Data approaches chal-lenge or undermine that role. What new conceptions oftheory, and of science for that matter, do we need in order toaccommodate the changes brought about by Big Data? Whatare the implications of these conceptions for theory-drivenscience? Does this shift change the relationship betweenscience and society? What type of knowledge is potentiallylost in such a shift?
+Ways of Being Social
+The vast quantity of data produced on social media sites,
+the ambiguity surrounding data ownership and privacy, andthe nearly ubiquitous participation in these sites make theman ideal focus for studies of Big Data. Many of the dilemmasdiscussed in this paper ﬁnd a manifestation in these settings,turning them into useful sources of information for furtherinvestigation. One area of research that requires more atten-tion is the manner in which these sites contribute to identityconstruction at the micro, meso, and macro levels. How isthe image of the idealized self (Weber, 1904) enacted andhow do people frame their identities (Goffman, 1974) incurrent digitized environments? What is the role of ubiqui-tous micro-validations in this process? To what extent dothese platforms serve as mechanisms for liberating and inwhat ways do they serve to constrain behavior? When doprojects such as Emotive become not only descriptive of theemotions in a society, but self-fulﬁlling prophecies thatregenerate what they allegedly uncover?
+Ways of Being Protected
+The current environment seems to offer little in the way
+of protecting personal rights, including the right to personalinformation. Issues of privacy are perhaps among the mostpressing and timely issues, particularly in light of recentrevelations about the access by NSA in the U.S. and othergovernmental and nongovernmental organizations aroundthe globe. Regulation ensures citizens a “reasonable expec-tation of privacy.” However, boundaries of what is expectedand reasonable are blurred in the context of Big Data. Newnotions of privacy need to take into account the complexities(if not impossibility) of anonymity in the Big Data age andto negotiate between the responsibilities and expectations ofproducers, consumers, and disseminators of data. Speciﬁccontexts should be investigated in which privacy is mostsensitive—for example, gene patents and genetic databases.It is hypothesized that such investigations would reveal thediversity of Big Data policies that will be necessary to takeinto account the differences, as well as relationships, among
+1540 JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+varying sectors. Issues of risk and responsibility are
+paramount—what level of responsibility must citizens, cor-porations, and the government absorb in terms of protectinginformation, rights, and accountabilities? What reward andreimbursement mechanisms should be implemented for anequitable distribution of wealth created through user-generated content? Even more fundamentally, what alterna-tive socioeconomic arrangements are conceivable to reversethe current trend toward a heavily polarized economy?
+Ways of Being Technological
+The division of labor between machines and humans has
+been a recurring motif of modern discourse. The advent ofcomputing has shifted the boundaries of this division inways that are both encouraging and discouraging withregard to human prosperity, dignity, and freedom. Whiletechnologies do not develop on their own accord, they dohave the capacity to impose a certain logic not only on howthey relate to human beings but also on how human beingsrelate to each other. This brings up a host of questions thatare novel or underexplored in character: What is the rightbalance between automation and heteromation in largesociotechnical systems? What sociotechnical arrangementsof people, artifacts, and connections make Big Data projectswork and not work? What are the potentials and limits ofcrowdsourcing in helping us meet current challenges inscience, policy, and governance? What types of infrastruc-tures are needed to enable technological innovation, andwho (the public or the private sector) should be their custo-dians? What parameters inﬂuence decisions in the choice ofhardware and software? How can we study these processes?As data becomes bigger and more diverse, how do we storeand describe them for long-term preservation and reuse?Can we do ethnographies of supercomputing and other BigData infrastructures?
+In brief, the depth, diversity, and complexity of questions
+and issues facing our societies is proportional, if not expo-nential, to the amount of data ﬂowing in the social andtechnological networks that we have created. More than 5decades ago, Weinberg (1961) wrote with concern on theshift from “little science” to “big science” and the implica-tions for science and society:
+Big Science needs great public support [and] thrives on public-
+ity. The inevitable result is the injection of a journalistic ﬂavorinto Big Science, which is fundamentally in conﬂict with thescientiﬁc method. If the serious writings about Big Sciencewere carefully separated from the journalistic writings, littleharm would be done. But they are not so separated. Issues ofscientiﬁc or technical merit tend to get argued in the popular,not the scientiﬁc, press, or in the congressional committee roomrather than in the technical society lecture hall; the spectacularrather than the perceptive becomes the scientiﬁc standard(p. 161).
+Substitute Big Data for Big Science in these remarks and
+one could easily see the parallels between the two situations,and the need for systematic investigation of current devel-
+opments. What makes this situation different, however, isthe degree to which all people from all walks of life areaffected by ongoing developments. We would not, therefore,argue that conversations about Big Data should be removedfrom the popular press or the congressional committeeroom. On the contrary, the complexity and ubiquity of BigData requires a concerted effort between academics andpolicy makers, in rich conversation with the public. We hopethat this critical review provides the platform for the launchof such efforts.
+References
+Abbott, A. (2001). Chaos of disciplines. Chicago: University of Chicago
+Press.
+Ackerman, A. (2007, October 9). Google, IBM forge computing program:
+Universities get access to big cluster computers. San Jose MercuryNews Online Edition. Retrieved from http://www.mercurynews.com/ci_7124839
+Adshead, A. (n.d.). Big Data storage: Deﬁning Big Data and the type of
+storage it needs. Retrieved from http://www.computerweekly.com/podcast/Big-data-storage-Deﬁning-big-data-and-the-type-of-storage-it-needs
+Agre, P. (1997). Computation and human experience. Cambridge, UK:
+Cambridge University Press.
+Anderson, C. (2008, June 23). The end of theory: The data deluge makes
+the scientiﬁc method obsolete. Wired. Retrieved from http://www.wired.com/science/discoveries/magazine/16-07/pb_theory
+Anonymous. (2008). Community cleverness required [Editorial]. Nature,
+455(7290), 1.
+Anonymous. (2010). Data, data everywhere. The Economist, 394(8671),
+3–5.
+Arbesman, S. (2013, January 29). Stop hyping Big Data and start paying
+attention to “Long Data”. Wired Opinion. Retrieved January 31,2013, from http://www.wired.com/opinion/2013/01/forget-big-data-think-long-data/
+Arnold, S.E. (2011). Big Data: The new information challenge. Online,
+27–29.
+Aronova, E., Baker, K.S., & Oreskes, N. (2010). Big Science and Big Data
+in biology: From the International Geophysical Year through the Inter-national Biological Program to the Long Term Ecological Research(LTER) Network, 1957–Present. Historical Studies in the Natural Sci-ences, 40(2), 183–224.
+Arvidsson, A., & Colleoni, E. (2012). Value in informational capitalism and
+on the internet. The Information Society, 28(3), 135–150.
+Bambauer, J.Y . (2012). The new intrusion. Notre Dame Law Review, 88,
+205.
+BBC. (2013, September 7). Computer program uses Twitter to “map mood
+of nation”. Retrieved from http://www.bbc.co.uk/news/technology-24001692
+Bergstein, B. (2013, February 20). The problem with our data obsession.
+MIT Technology Review. Retrieved from http://www.technologyreview.in/computing/42410/?mod =more
+Berry, D.M. (2011) The philosophy of software: Code and mediation in the
+digital age, London: Palgrave Macmillan.
+Big Data: A Workshop Report. (2012). Washington, DC: National Acad-
+emies Press. Retrieved from http://www.nap.edu/catalog.php?record_id=13541
+Bogen, J. (2013). Theory and observation in science. The Stanford
+Encyclopedia of Philosophy. Retrieved from http://plato.stanford.edu/archives/spr2013/entries/science-theory-observation/
+Bollier, D. (2010). The promise and peril of big data. Queenstown, MD:
+Aspen Institute.
+Boltanski, L., & Chiapello, È. (2005). The new spirit of capitalism. London,
+New York: Verso.
+JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015 1541
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+Borgman, C.L. (2012). The conundrum of sharing research data. Journal of
+the American Society for Information Science and Technology, 63(6),1059–1078.
+Börner, K. (2007). Making sense of mankind’s scholarly knowledge and
+expertise: collecting, interlinking, and organizing what we know anddifferent approaches to mapping (network) science. Environment &Planning B, Planning & Design, 34(5), 808–825.
+boyd, d., & Crawford, K. (2011). Six provocations for Big Data. Paper
+presented at the Oxford Internet Institute: A decade in internet time:Symposium on the dynamics of the internet and society. Retrieved fromhttp://papers.ssrn.com/sol3/papers.cfm?abstract_id =1926431
+boyd, d., & Crawford, K. (2012). Critical questions for Big Data. Informa-
+tion, Communication, & Society, 15(5), 662–679.
+Bryant, R.E., Katz, R.H., & Lasowska, E.D. (2008). Big-Data computing:
+Creating revolutionary breakthroughs in commerce, science, and society.The Computing Community Consortium project. Retrieved from http://www.cra.org/ccc/ﬁles/docs/init/Big_Data.pdf
+Buente, W., & Robbin, A. (2008). Trends in internet information behavior,
+2000–2004. Journal of the American Society for Information Science andTechnology, 59(11), 1743–1760.
+Burt, R. (1992). Structural holes. Cambridge, MA: Harvard University
+Press.
+Button, K.S., Ioannidis, J.P., Mokrysz, C., Nosek, B.A., Flint, J., Robinson,
+E.S., . . . (2013). Power failure: Why small sample size undermines thereliability of neuroscience. Nature Review: Neuroscience, 14(5), 365–376.
+Cain-Miller, C. (2013, April 11). Data science: The numbers of our lives.
+The New York Times, Online Edition. Retrieved from http://www.nytimes.com/2013/04/14/education/edlife/universities-offer-courses-in-a-hot-new-ﬁeld-data-science.html
+Callebaut, W. (2012). Scientiﬁc perspectivism: A philosopher of science’s
+response to the challenge of Big Data biology. Studies in History andPhilosophy of Biological and Biomedical Science, 43(1), 69–80.
+Cameron, W.B. (1963). Informal sociology: A casual introduction to socio-
+logical thinking. New York: Random House.
+Capek, P.G., Frank, S.P., Gerdt, S., & Shields, D. (2005). A history of
+IBM’s open-source involvement and strategy. IBM Systems Journal,44(2), 249–257.
+Castellano, C., Fortunato, S., & Loreto, V . (2009). Statistical physics of
+social dynamics. Reviews of Modern Physics, 81, 591–646.
+Chakrabarti, S. (2009). Data mining: Know it all. Amsterdam, London,
+New York: Morgan Kaufmann Publishers.
+Chandrasekhar, S. (1987). Truth and beauty: Aesthetics and motivations in
+science. Chicago: University of Chicago Press.
+Chen, C. (2006). Information visualization: Beyond the horizon (2nd ed.).
+London: Springer.
+Crawford, K., & Schultz, J. (2014). Big data and due process: Toward a
+framework to redress predictive privacy harms. Boston College LawReview, 55, 93–128.
+Cronin, B. (2013). Editorial: Thinking about data. Journal of the American
+Society for Information Science and Technology, 64(3), 435–436.
+Davenport, T. H., Barth, P., & Bean, R. (2012). How “Big Data” is different.
+Sloan Management Review, 43–46.
+Day, R.E. (2014). “The data—it is me!“ (“Les données—c’est Moi”!). In B.
+Cronin & C. R. Sugimoto (Eds.), Beyond bibliometrics: Metrics-basedevaluation of research. Cambridge, MA: MIT Press.
+De la Porta, D., & Diani, M. (2006). Social movements: An introduction
+(2nd Ed). Malden, MA: Blackwell Publishing.
+De Roure, D. (2012, July 27). Long tail research and the rise of social
+machines. SciLogs [Blog post]. Retrieved from http://www.scilogs.com/eresearch/social-machines/
+Descartes, R. (1913). The meditations and selections from the Principles of
+Reneì Descartes (1596–1650). Translated by John Veitch. Chicago: OpenCourt Publishing Company.
+Doctorow, C. (2008). Welcome to the petacentre. Nature, 455(7290),
+17–21.
+Duhem, Pierre (1954/1906). The aim and structure of physical theory.
+Princeton: Princeton University Press.Duhigg, C. (2012, March 2). Psst, you in aisle 5. New York Times Maga-
+zine. Retrieved from http://www.nytimes.com/2012/03/04/magazine/reply-all-consumer-behavior.html
+Dumbill, E. (2012, January 11). What is Big Data? An introduction to the
+Big Data landscape. Retrieved from http://strata.oreilly.com/2012/01/what-is-big-data.html
+Dwork, C., & Mulligan, D.K. (2013). It’s not privacy, and it’s not
+fair. Stanford Law Review, 66(35). Retrieved from http://www.stanfordlawreview.org/online/privacy-and-big-data/its-not-privacy-and-its-not-fair
+Edwards, P.N. (2010). A vast machine: Computer models, climate data, and
+the politics of global warming. Cambridge, MA: MIT Press.
+Ekbia, H. (2008). Artiﬁcial dreams: The quest for non-biological intelli-
+gence. New York: Cambridge University Press.
+Ekbia, H. (in press). The political economy of exploitation in a networked
+world. The Information Society.
+Ekbia, H., Kallinikos, J., & Nardi, B. (2014). Introduction to the special
+issue “Regimes of information: Embeddedness as paradox.” The Infor-mation Society.
+Ekbia. H. & Nardi, B. (2014). Heteromation and its discontents: The divi-
+sion of labor between humans and machines. First Monday.
+Ekbia, H.R., & Suri, V .R. (2013). Of dustbowl ballads and railroad rate
+tables: Erudite enactments in historical inquiry. Information & Culture:A Journal of History, 48(2), 260–278.
+El Emam, K. (2011). Methods for the de-identiﬁcation of electronic health
+records for genomic research. Genome Medicine, 3(4), 25.
+Elliott, M.S., & Kraemer, K.L. (Eds.). (2008). Computerization movements
+and technology diffusion: From mainframes to computing. Medford, NJ:Information Today.
+Facebook. (2012). Quarterly report pursuant to section 13 or 15(d) of the
+Securities Exchange Act of 1934. Retrieved from http://www.sec.gov/Archives/edgar/data/1326801/000119312512325997/d371464d10q.htm
+Fleishman, A. (2012). Signiﬁcant p-values in small samples. Allen Fleish-
+man Biostatistics [Blog post]. http://allenﬂeishmanbiostatistics.com/Articles/2012/01/13-p-values-in-small-samples/
+Floridi, L. (2012). Big Data and their epistemological challenge. Philoso-
+phy and Technology, 25(4), 435–437.
+Fogu, C. (2009). Digitalizing historical consciousness. History and Theory,
+48(2), 103–121.
+Forbes. (2013). The world’s billionaires list. Retrieved from http://
+www.forbes.com/billionaires/list/
+Fox, V . (2010, June 8). Google’s new indexing infrastructure “Caffeine”
+now live. Retrieved from http://searchengineland.com/googles-new-indexing-infrastructure-caffeine-now-live-43891
+Fuchs, C. (2010). Class, knowledge and new media. Media, Culture, and
+Society, 32(1), 141.
+Furner, J. (2004). Conceptual analysis: A method for understanding infor-
+mation as evidence, and evidence as information. Archival Science, 4,233–265.
+Galloway, A. (2011). Are some things unrepresentable? Theory, Culture &
+Society, 28(7-8), 85–102.
+Gardner, L. (2013, August 14). IBM and universities team up to close a
+“Big Data” skills gap. The Chronicle of Higher Education. Retrievedfrom http://chronicle.com/article/IBMUniversities-Team-Up/14 1111/
+Garﬁeld, E. (1963). New factors in the evaluation of scientiﬁc literature
+through citation indexing. American Documentation, 14(3), 195–201.
+Gaviria, A. (2008). When is information visualization art? Determining the
+critical criteria. Leonardo, 41(5), 479–482.
+Gelman, A. (2013a, August 8). Statistical signiﬁcance and the dangerous
+lure of certainty. Statistical modeling, causal inference, and social
+science [Blog post]. Retrieved from http://andrewgelman.com/2013/08/08/statistical-signiﬁcance-and-the-dangerous-lure-of-certainty/
+Gelman, A. (2013b, July 24). Too good to be true. Slate. Retrieved from
+http://www.slate.com/articles/health_and_science/science/2013/07/statistics_and_psychology_multiple_comparisons_give_spurious_results.single.html
+1542 JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+Gelman, A., & Stern, H. (2006). The difference between “signiﬁcant” and
+“not signiﬁcant” is not itself statistically signiﬁcant. The AmericanStatistician, 60, 328–331.
+Giere, R.N. (2006). Scientiﬁc perspectivism. Chicago: University of
+Chicago Press.
+Gitelman, L., & Jackson, V . (2013). Introduction. In L. Gitelman (Ed.),
+“Raw data” is an oxymoron (pp. 1–14). Cambridge, MA: MIT Press.
+Gliner, J.A., Leech, N.L., & Morgan, G.A. (2002). Problems with null
+hypothesis signiﬁcance testing (NHST): What do the textbooks say? TheJournal of Experimental Education, 71(1), 83–92.
+Gobble, M.M. (2013). Big Data: The next big thing in innovation.
+Research-Technology Management, 64–66.
+Goffman, E. (1974). Frame analysis: An essay on the organization of
+experience. London: Harper and Row.
+Gooding, P., Warwick, C., & Terras, M. (2012). The myth of the new: Mass
+digitization, distant reading and the future of the book. Paper presentedat the Digital Humanities 2012 conference, University of Hamburg,Germany. Retrieved from http://www.dh2012.uni-hamburg.de/conference/programme/abstracts/the-myth-of-the-new-mass-digitization-distant-reading-and-the-future-of-the-book/
+Goodman, S.N. (1999). Toward evidence-based medical statistics. 1: The
+p-value fallacy. Annals of Internal Medicine, 130, 995–1004.
+Goodman, S.N. (2008). A dirty dozen: Twelve p-value misconceptions.
+Seminars in Hematology, 45(3), 135–140.
+Granville, V . (2013, June 5). Correlation and r-squared for Big Data. ana-
+lyticbridge [Blog post]. Retrieved from http://www.analyticbridge.com/proﬁles/blogs/correlation-and-r-squared-for-big-data
+Hardt, M., & Negri, A. (2000). Empire. Cambridge, MA: Harvard Univer-
+sity Press.
+Harkin, J. (2013, March 1). “Big Data,” “Who owns the future?” and “To
+save everything, click here.” Financial Times. Retrieved from http://www.ft.com/cms/s/2/afc1c178-8045-11e2-96ba-00144feabdc0.html#axzz2MUYHSdUH
+Harris, D. (2013, March 4). The history of Hadoop: From 4 nodes to the
+future of data. Retrieved from http://gigaom.com/2013/03/04/the-history-of-hadoop-from-4-nodes-to-the-future-of-data/
+Heer, J., Bostock, M., & Ogievetsky, V . (2010). A tour through the visual-
+ization zoo. Communications of the ACM, 53(6), 59–67.
+Helles, R., & Jensen, K.B. (2013). Introduction to the special
+issue “Making data—Big data and beyond.” First Monday, 18(10).Retrieved from http://ﬁrstmonday.org/ojs/index.php/fm/article/view/4860
+Hey, T., Tansley, S., & Tolle, K. (Eds.). (2009). The fourth paradigm:
+Data-intensive scientiﬁc discovery. Redmond, WA: Microsoft Research.
+Hohl, M. (2011). From abstract to actual: Art and designer-like enquiries
+into data visualisation. Kybernetes, 40(7/8), 1038–1044.
+Horowitz, M. (2008, June 23). Visualizing Big Data: Bar charts for words.
+Wired. Retrieved from http://www.wired.com/science/discoveries/magazine/16-07/pb_visualizing
+Howe, D., Costanzo, M., Fey, P., Gojobori, T., Hannick, L., Hide, W., . . .
+(2008). Big Data: The future of biocuration. Nature, 455(7209), 47–50.
+Hume, D. (1993/1748). An enquiry concerning human understanding.
+Indianapolis, IN: Hacket Publishing.
+Ignatius, A. (2012). From the Editor: Big Data for skeptics. Harvard Busi-
+ness Review, 10. Retrieved from http://hbr.org/2012/10/big-data-for-skeptics/ar/1
+Inmon, W.H. (2000). Building the data warehouse: Getting started.
+Retrieved from http://inmoncif.com/inmoncif-old/www/library/whiteprs/ttbuild.pdf
+International Business Machines—IBM. (2013). IBM narrows big data
+skills gap by partnering with more than 1,000 global universities.(Press release). Retrieved from http://www-03.ibm.com/press/us/en/pressrelease/41733.wss#release
+Irizarry, R. (2013, August 1). The ROC curves of science. Simply Statistics
+[Blog post]. http://simplystatistics.org/2013/08/01/the-roc-curves-of-science/
+Jacobs, A. (2009). The pathologies of Big Data. Communications of the
+ACM, 52(8), 36–44.Jones, C.A., & Galison, P. (1998). Picturing science, producing art. New
+York: Routledge.
+Kaisler, S., Armour, F., Espinosa, J.A., & Money, W. (2013). Big Data:
+Issues and challenges moving forward. In Proceedings from the 46thHawaii International Conference on System Sciences (HICSS’46) (pp.995–1004). Piscataway, NJ: IEEE Computer Society.
+Kallinikos, J. (2013). The allure of big data. Mercury (3), 40–43Khan, I. (2012, November 12). Nowcasting: Big Data predicts the present
+[Blog post]. Retrieved from http://blogs.sap.com/innovation/big-data/nowcasting-big-data-predicts-present-020825
+Kling, R., & Iacono, S. (1995). Computerization movements and the mobi-
+lization of support for computerization (pp. 119–153). In S.L. Star (Ed.),Ecologies of knowledge: Work and politics in science and technology.Albany, NY: State University of New York Press.
+K.N.C. (2013, February 18). The thing, and not the thing. The Economist.
+Retrieved from http://www.economist.com/blogs/graphicdetail/2013/02/elusive-big-data
+Kostelnick, C. (2007). The visual rhetoric of data displays: The conundrum
+of clarity. IEEE Transactions on Professional Communication, 50(4),280–294.
+Kraska, T. (2013). Finding the needle in the Big Data systems haystack.
+IEEE Internet Computing, 17(1), 84–86.
+Lai, E. (2008, October 14). Teradata creates elite club for petabyte-plus data
+warehouse customers. Retrieved from http://www.computerworld.com/s/article/9117159/Teradata_creates_elite_club_for_petabyte_plus_data_warehouse_customers
+Laney, D. (2001). 3D data management: Controlling data volume, velocity,
+and variety. Retrieved from http://blogs.gartner.com/doug-laney/ﬁles/2012/01/ad949-3D-Data-Management-Controlling-Data-V olume-Velocity-and-Variety.pdf
+Laney, D. (2012, May 3). To Facebook, you’re worth $80.95. CIO Journal:
+Wall Street Journal Blogs. Retrieved from http://blogs.wsj.com/cio/2012/05/03/to-facebook-youre-worth-80-95/
+Lau, A., & Vande Moere, A. (2007). Towards a model of information
+aesthetic visualization. In Proceedings of the IEEE International Confer-ence on Information Visualisation (IV’07), Zurich, Switzerland(pp. 87–92). Piscataway, NJ: IEEE Computer Society.
+Layton, J. (2005). How Amazon works. Retrieved from http://
+money.howstuffworks.com/amazon1.htm
+Lin, T. (2013, October 3). Big Data is too big for scientists to handle alone.
+Wired Science. Retrieved from http://www.wired.com/wiredscience/2013/10/big-data-science/
+Lockwood, G. (2013, July 2). What “university-owned” supercomputers
+mean to me. Retrieved from http://glennklockwood.blogspot.com/2013/07/what-university-owned-supercomputers.html
+Lynch, C. (2008). How do your data grow? Nature, 455(7290), 28–29.Ma, K.-L., & Wang, C. (2009). Next generation visualization tech-
+nologies: Enabling discoveries at extreme scale. SciDag Review, 12,12–21.
+Markham, A.N. (2013). Undermining “data”: A critical examination of a
+core term in scientiﬁc inquiry. First Monday, 18(10).
+Mattioli, M. (forthcoming). Disclosing Big Data. Minnesota Law Review,
+99.
+Mayer-Schonberger, V ., & Cukier, K. (2013). Big Data: A revolution that
+will transform how we live, work, and think (1st ed.). Boston: HoughtonMifﬂin Harcourt.
+Merton, R.K. (1973). The sociology of science: Theoretical and empirical
+investigations. Chicago: University of Chicago Press.
+Metz, C. (2009, August 14). Google Caffeine: What it really is. Retrieved
+from http://www.theregister.co.uk/2009/08/14/google_caffeine_truth/
+Minelli, M., Chambers, M., & Dhiraj, A. (2013). Big Data, big analytics.
+Hoboken, NJ: John Wiley & Sons.
+Monmonier, M. (1996). How to lie with maps (2nd ed.). Chicago: Univer-
+sity of Chicago Press.
+Nafus, D., & Sherman, J. (under review). This one does not go up to eleven:
+The Quantiﬁed Self movement as an alternative big data practice.International Journal of Communication. Retrieved from: http://www.digital-ethnography.net/storage/NafusShermanQSDraft.pdf
+JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015 1543
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+Nash, V . (2013, September 19). Responsible research agendas for public
+policy in the era of big data. Policy and internet. Retrieved fromhttp://blogs.oii.ox.ac.uk/policy/responsible-research-agendas-for-public-policy-in-the-era-of-big-data/
+National Science Foundation (2012). Core techniques and technologies for
+advancing big data science & engineering (BIGDATA): Program solici-tation. Retrieved from http://www.nsf.gov/publications/pub_summ.jsp?ods_key =nsf12499
+Nieuwenhuis, S., Forstmann, B.U., & Wagenmakers, E.-J. (2011). Errone-
+ous analyses of interactions in neuroscience: A problem of signiﬁcance.Nature Neuroscience, 14(9), 1105–1107.
+Nunberg, G. (2010, December 16). Counting on Google Books. The
+Chronicle of Higher Education. Retrieved from http://chronicle.com/article/Counting-on-Google-Books/125735
+O’Reilly Media. (2011). Big Data now. Sebastopol, CA: O’Reilly Media.Ohm, P. (2010). Broken promises of privacy: Responding to the surprising
+failure of anonymization. UCLA Law Review, 57, 1701–1777.
+OSP. (2012). Obama administration unveils “Big Data” initiative:
+Announces $200 million in new R&D investments. Retrieved from http://www.whitehouse.gov/sites/default/ﬁles/microsites/ostp/big_data_press_release_ﬁnal_2.pdf
+Owens, B. (2011, August 3). Data mining given the go ahead in UK. Nature
+[Blog post]. Retrieved from http://blogs.nature.com/news/2011/08/data_mining_given_the_go_ahead.html
+Pajarola, R. (1998). Large scale terrain visualization using the restricted
+quadtree triangulation. In Proceedings of the Conference Visualiza-tion’98 (pp. 19–26). Piscataway, NJ: IEEE Computer Society.
+Pariser, E. (2012). The ﬁlter bubble: How the new personalized web is
+changing what we read and how we think. New York: Penguin Press.
+Parry, M. (2010, May 28). The humanities go Google. The Chronicle
+of Higher Education. Retrieved from http://chronicle.com/article/The-Humanities-Go-Google/65713/
+Purchase, H.C. (2002). Metrics for graph drawing aesthetics. Journal of
+Visual Language and Computing, 13(5), 501–516.
+Reichman, J.H., & Samuelson, P. (1997). Intellectual property rights in
+data? Vanderbilt Law Review, 50, 51–166.
+Ribes, D., & Jackson, S.J. (2013). DataBite Man: The work of sustaining a
+long-term study. In L. Gitelman (Ed.), “Raw data” is an oxymoron(pp. 147–166). Cambridge, MA: MIT Press.
+Riding the wave: How Europe can gain from the rising tide of scientiﬁc
+data: Final report of the High Level Expert Group on Scientiﬁc Data.(2010). Retrieved from http://cordis.europa.eu/fp7/ict/e-infrastructure/docs/hlg-sdi-report.pdf
+Risen, J. (2013, July 7). Privacy group to ask Supreme Court to stop
+N.S.A.’s phone spying program. The New York Times. Retrieved fromhttp://www.nytimes.com/2013/07/08/us/privacy-group-to-ask-supreme-court-to-stop-nsas-phone-spying-program.html
+Risen, J., & Lichtblau, E. (2013, June 8). How the U.S. uses technology to
+mine more data more quickly. The New York Times. Retrieved fromhttp://www.nytimes.com/2013/06/09/us/revelations-give-look-at-spy-agencys-wider-reach.html?pagewanted =all
+Rose, N., & Abi-Rached, J.M. (2013). Neuro: The new brain sciences and
+the management of the mind. Princeton, NJ: Princeton UniversityPress.
+Rotella, P. (2012, April 2). Is data the new oil? Forbes. Retrieved from
+http://www.forbes.com/sites/perryrotella/2012/04/02/is-data-the-new-oil/
+Savage, C., & Shear, M.D. (2013, August 9). President moves to ease
+worries on surveillance. The New York Times. Retrieved from http://www.nytimes.com/2013/08/10/us/politics/obama-news-conference.html?pagewanted =all
+Schelling, T.C. (1978). Micromotives and macrobehaviors. London: W.W.
+Norton & Company.
+Schöch, C. (2013, July 29). Big? Smart? Clean? Messy? Data in the
+humanities. Retrieved from http://dragonﬂy.hypotheses.org/443
+Schwartz, P.M., & Solove, D.J. (2011). The PII problem: Privacy and a new
+concept of personally identiﬁable information. NewYork University LawReview, 86, 1814–1894.Sennett, R. (2006). The culture of the new capitalism. New Haven, CT: Yale
+University Press.
+Shane, S. (2013, July 10). Poll shows complexity of debate on trade-offs
+in government spying programs. The New York Times. Retrievedfrom http://www.nytimes.com/2013/07/11/us/poll-shows-complexity-of-debate-on-trade-offs-in-government-spying-programs.html
+Shilton, K. (2012). Participatory personal data: An emerging research
+challenge for the information science. Journal of the American Societyfor Information Science & Technology, 63(10), 1905–1915.
+Simmons, J.P., Nelson, L.D., & Simonsohn, U. (2011). False-positive psy-
+chology: Undisclosed ﬂexibility in data collection and analysis allowspresenting anything as signiﬁcant. Psychological Science, 22(11), 1359–1366.
+Smythe, D.W. (1981). Dependency road: Communications, capitalism,
+consciousness and Canada. Norwood, NJ: Ablex Publishing.
+Solove, D.J. (2013). Introduction: Privacy self-management and the
+consent dilemma. Harvard Law Review, 126. Retrieved from http://www.harvardlawreview.org/issues/126/may13/Symposium_9475.php
+Spence, R. (2001). Information visualization. Harlow, UK: Addison-
+Wesley.
+Stodden, V ., Hurlin, C., & Perignon, C. (2012). RunMyCode.Org: A
+novel dissemination and collaboration platform for executingpublished computational results. Retrieved from http://ssrn.com/abstract=2147710
+Strasser, B.J. (2012). Data-driven sciences: From wonder cabinets to elec-
+tronic databases. Studies in History and Philosophy of Biological andBiomedical Sciences, 43(1), 85–87.
+Sturn, R. (2011, July 13). NASA Tournament Lab: Open innova-
+tion on-demand. http://www.whitehouse.gov/blog/2011/07/13/nasa-tournament-lab-open-innovation-demand
+Sugimoto, C.R., Ekbia, H., & Mattioli., M. (forthcoming). Big Data is not
+a monolith: Policies, practices, and problems. Cambridge, MA: MITPress.
+Sunyer, J. (2013, June 15) Big data meets the Bard. Financial Times.
+Retrieved from http://www.ft.com/intl/cms/s/2/fb67c556-d36e-11e2-b3ff-00144feab7de.html#axzz2cLuSZC8z
+Taleb, N.N. (2013, February 8). Beware the big errors of “Big Data“. Wired.
+Retrieved from http://www.wired.com/opinion/2013/02/big-data-means-big-errors-people/
+Tam, D. (2012, August 22). Facebook processes more than 500 TB of
+data daily. CNET. Retrieved from http://news.cnet.com/8301-1023_3-57498531-93/facebook-processes-more-than-500-tb-of-data-daily/
+Tene, O., & Polonetsky, J. (2012). Privacy in the age of Big Data: A time for
+big decisions. Stanford Law Review Online, 64, 63–69.
+Tenner, E. (2012, December 7). Buggy software: Achilles heel of Big-
+Data-powered science? The Atlantic. Retrieved from http://www.theatlantic.com/technology/archive/2012/12/buggy-software-achilles-heel-of-big-data-powered-science/265690/
+Terranova, T. (2000). Free labor: Producing culture for the digital economy.
+Social Text, 18(2), 33–58.
+The White House, Ofﬁce of Science and Technology Policy (2013). Obama
+administration unveils “Big Data” initiative. [Press release]. Retrievedfrom http://www.whitehouse.gov/sites/default/ﬁles/microsites/ostp/big_data_press_release_ﬁnal_2.pdf
+Thusoo, A., Shao, Z., Anthony, S., Borthakur, D., Jain, N., Sen Sarma, J.,
+. . . (2010). Data warehousing and analytics infrastructure at facebook. InProceedings of the 2010 international conference on Management ofdata—SIGMOD ’10 (p. 1013). New York: ACM Press.
+Trelles, O., Prins, P., Snir, M., & Jansen, R.C. (2011). Big Data, but are we
+ready? Nature Reviews Genetics, 12(3), 224–224.
+Trumpener, K. (2009). Paratext and genre system: A response to Franco
+Moretti. Critical Inquiry, 36(1), 159–171. Retrieved from http://www.journals.uchicago.edu.proxy.lib.fsu.edu/doi/abs/10.1086/606126
+Tucker, P. (2013). Has Big Data made anonymity impossible? MIT Tech-
+nology Review. Retrieved from http://www.technologyreview.com/news/514351/has-big-data-made-anonymity-impossible/
+Tufte, E.R. (1983). The visual display of quantitative information. Chesh-
+ire, CT: Graphics Press.
+1544 JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+Turner, J. (2011, January 12). Hadoop: What it is, how it works, and what
+it can do. Retrieved from http://strata.oreilly.com/2011/01/what-is-hadoop.html
+United States v. Jones. 132 S. Ct. 949, 565 U.S. (2012).Uprichard, E. (2012). Being stuck in (live) time: The sticky sociological
+imagination. The Sociological Review, 60(S1), 124–138.
+van Fraassen, B.C. (2008). Scientiﬁc representation: Paradoxes of perspec-
+tive. Oxford, UK: Oxford University Press.
+Vande Moere, A. (2005). Form follows data: The symbiosis between
+design & information visualization. In Proceedings of the Inter-national Conference on Computer-Aided Architectural Design(CAADFutures), Vienna, Austria (pp. 167–176). Dordrecht, Nether-lands: Springer.
+Varian, H. (2012, July 13). What is nowcasting? [Video ﬁle]. Retrieved
+from http://www.youtube.com/watch?v =uKu4Lh4VLR8
+Vis, F. (2013). A critical reﬂection on Big Data: Considering APIs,
+researchers and tools as data makers. First Monday, 18(10).
+Waldrop, M. (2008). Wikiomics. Nature, 455(7290), 22–25.Wardrip-Fruin, N. (2012, March 20). The prison-house of data. Inside
+Higher Ed. Retrieved from http://www.insidehighered.com/views/2012/03/20/essay-digital-humanities-data-problem
+Ware, C. (2013). Information visualization: Perception for design.
+Waltham, MA: Morgan Kaufmann.
+Warren, S.D., & Brandeis, L. (1890). The right to privacy. Harvard Law
+Review, 4, 193.
+Weber, M. (2002/1904). The Protestant ethic and the spirit of capitalism.
+New York: Penguin Books.
+Weinberg, A.M. (1961). Impact of large-scale science on the United States.
+Science, 134, 161–164.
+Weinberger, D. (2012). Too big to know: Rethinking knowledge now that
+the facts aren’t the facts, experts are everywhere, and the smartest personin the room is the room. New York: Basic Books.Weingart, S. (2012, January 23). Avoiding traps. the scottbot irregular [Blog
+post]. Retrieved from http://www.scottbot.net/HIAL/?p =8832
+White, M. (2011, November 9). Big data—Big challenges. Econtent.
+Retrieved from http://www.econtentmag.com/Articles/Column/Eureka/Big-Data-Big-Challenges-78530.htm
+White, T. (2012). Hadoop: The deﬁnitive guide. Sebastopol, CA: O’Reilly
+Media.
+Williford, C., & Henry, C. (2012). One culture: Computationally intensive
+research in the humanities and social sciences. Council on Library andInformation Resources. Retrieved from http://www.clir.org/pubs/reports/pub151
+Wilson, G.V . (1994, October 28). The history of the development of parallel
+computing. Retrieved from http://ei.cs.vt.edu/~history/Parallel.html
+Wing, J.M. (2006). Computational thinking. Communications of the ACM,
+49(3), 33–35.
+Woese, C.R. (2004). A new biology for a new century. Microbiology and
+Molecular Biology Reviews, 68(2), 173–186.
+Wong, P.C., Shen, H.W., & Chen, C. (2012). Top ten interaction challenges
+in extreme-scale visual analytics. In J. Dill, R. Earnshaw, D. Kasik, J.Vince, & P.C. Wong (Eds.) Expanding the frontiers of visual analyticsand visualization (pp. 197–207). London: Springer.
+World Economic Forum. (2013). Unlocking the value of personal data:
+From collection to usage. Retrieved from: http://www3.weforum.org/docs/WEF_IT_UnlockingValuePersonalData_CollectionUsage_Report_2013.pdf
+Zimmer, C. (2013, August 7). A family consents to a medical gift, 62 years
+later. The New York Times. Retrieved from http://www.nytimes.com/2013/08/08/science/after-decades-of-research-henrietta-lacks-family-is-asked-for-consent.html
+JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY—August 2015 1545
+DOI: 10.1002/asi
+ 23301643, 2015, 8, Downloaded from https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23294 by The Chinese University of Hong Kong, Wiley Online Library on [21/10/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
