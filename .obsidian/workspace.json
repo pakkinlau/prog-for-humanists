@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "slides/Unit 3/slide3c - Fine-tuning.md",
+                "file": "Recruit student helpers/email1.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "slides/Unit 3/slide3c - Fine-tuning.md",
+                "file": "Recruit student helpers/email1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "slides/Unit 3/slide3c - Fine-tuning.md",
+                "file": "Recruit student helpers/email1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "slides/Unit 3/slide3c - Fine-tuning.md"
+                "file": "Recruit student helpers/email1.md"
               }
             }
           }
@@ -148,9 +148,16 @@
   },
   "active": "4797c0672bbd16cc",
   "lastOpenFiles": [
+    "trash/$Final products/course structure.md",
+    "Recruit student helpers/email1.md",
+    "Untitled 1.md",
+    "Recruit student helpers",
+    "New folder",
+    "colabs/Unit 3a - Basics of machinel learning/04. Building various neural network.ipynb",
+    "colabs/Unit 3a - Basics of machinel learning/03. Improving performance.ipynb",
+    "slides/Unit 3/slide3c - Fine-tuning.md",
     "slides/Unit 3/slide3b - Embeddings in Machine Learning.md",
     "slides/Unit 3/slide3a - Neural network basics.md",
-    "slides/Unit 3/slide3c - Fine-tuning.md",
     "Pasted image 20231115061758.png",
     "Pasted image 20231115061738.png",
     "Pasted image 20231115060348.png",
@@ -165,10 +172,6 @@
     "colabs/Unit 3b - Understanding word embeddings/03. Contextual word embeddings.ipynb",
     "colabs/Unit 3b - Understanding word embeddings/02. Static word embeddings.ipynb",
     "colabs/Unit 1b - NLP and value extraction/Txt/sample.docx",
-    "colabs/Unit 1b - NLP and value extraction/Txt/neural_networks_and_deep_learning.txt",
-    "colabs/Unit 1b - NLP and value extraction/Txt/humanity_paper.txt",
-    "colabs/Unit 1b - NLP and value extraction/Txt/dilemma.txt",
-    "colabs/Unit 1b - NLP and value extraction/Txt",
     "Untitled.md",
     "Pasted image 20231114182323.png",
     "Pasted image 20231114182308.png",
@@ -190,7 +193,6 @@
     "Research sprints/Week 0 -- materials provided by prof McManus.md",
     "Research sprints/$Research reading sprints.md",
     "Meta/Log.md",
-    "Meta/pedagogy.md",
-    "Images/Pasted image 20230909143831.png.md"
+    "Meta/pedagogy.md"
   ]
 }
