@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Recruit student helpers/email1.md",
+                "file": "trash/$Final products/course structure.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "3d23fea3cb902be7",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Recruit student helpers/email1.md",
+                "file": "trash/$Final products/course structure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Recruit student helpers/email1.md",
+                "file": "trash/$Final products/course structure.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Recruit student helpers/email1.md"
+                "file": "trash/$Final products/course structure.md"
               }
             }
           }
@@ -148,51 +149,51 @@
   },
   "active": "4797c0672bbd16cc",
   "lastOpenFiles": [
-    "trash/$Final products/course structure.md",
+    "colabs/Unit 4d - Deployment",
+    "colabs/Unit 4a - Exploratory data analysis (EDA)",
+    "colabs/Unit 4a - Visualization/02. plotly.ipynb",
+    "colabs/Unit 4a - Visualization/02. plotly.IPYNB",
+    "colabs/Unit 4a - Visualization/azaSDASD.IPYNB",
+    "colabs/Unit 4a - Visualization/runs/Oct23_07-37-35_KinPC/events.out.tfevents.1698017855.KinPC",
+    "colabs/Unit 4a - Visualization/runs/Oct23_07-35-06_KinPC/events.out.tfevents.1698017706.KinPC",
+    "colabs/Unit 4a - Visualization/runs/Oct23_07-34-59_KinPC/events.out.tfevents.1698017699.KinPC",
+    "colabs/Unit 4a - Visualization/runs/Oct23_07-37-35_KinPC",
+    "colabs/Unit 4a - Visualization/runs/Oct23_07-35-06_KinPC",
+    "colabs/Unit 4a - Visualization/runs/Oct23_07-34-59_KinPC",
+    "colabs/Unit 4b - Streamlit/step5/README.md",
+    "colabs/Unit 4b - Streamlit/step5/Dashboard_Sample.png",
+    "colabs/Unit 4b - Streamlit/step4 - Copy/README.md",
+    "colabs/Unit 4b - Streamlit/step4 - Copy/Dashboard_Sample.png",
+    "colabs/Unit 4b - Streamlit/step1/Screenshot 2023-11-24 062614.png",
+    "colabs/Unit 4b - Streamlit/step1/Dashboard_Sample.png",
+    "colabs/Unit 4b - Streamlit/step1 - basic setup/Screenshot 2023-11-24 062614.png",
+    "colabs/Unit 4b - Streamlit/step1 - basic setup/Dashboard_Sample.png",
+    "colabs/Unit 4b - Streamlit/step4/README.md",
+    "colabs/Unit 4b - Streamlit/step4/Dashboard_Sample.png",
+    "colabs/Unit 4b - Streamlit/step3 - Copy/step3/README.md",
+    "colabs/Unit 4b - Streamlit/step3 - Copy/step3/Dashboard_Sample.png",
+    "colabs/Unit 4b - Streamlit/step3 - Copy/README.md",
+    "colabs/Unit 4b - Streamlit/step3 - Copy/Dashboard_Sample.png",
+    "colabs/Unit 4b - Streamlit/step2/Screenshot 2023-11-24 063036.png",
+    "colabs/Unit 4b - Streamlit/step2/README.md",
+    "colabs/Unit 4b - Streamlit/step1/step3/README.md",
+    "colabs/Unit 4b - Streamlit/step1/README.md",
+    "colabs/Unit 4b - Streamlit/step3/README.md",
+    "colabs/Unit 4b - Streamlit/streamlit-sales-dashboard-main/README.md",
+    "trash/$Final products/course objectives and learning outcomes.md",
+    "trash/$Final products/All teaching materials.md",
+    "trash/Book review - Introducing data science.md",
     "Recruit student helpers/email1.md",
+    "trash/$Final products/course structure.md",
     "Untitled 1.md",
-    "Recruit student helpers",
-    "New folder",
-    "colabs/Unit 3a - Basics of machinel learning/04. Building various neural network.ipynb",
-    "colabs/Unit 3a - Basics of machinel learning/03. Improving performance.ipynb",
     "slides/Unit 3/slide3c - Fine-tuning.md",
     "slides/Unit 3/slide3b - Embeddings in Machine Learning.md",
     "slides/Unit 3/slide3a - Neural network basics.md",
-    "Pasted image 20231115061758.png",
-    "Pasted image 20231115061738.png",
-    "Pasted image 20231115060348.png",
-    "Pasted image 20231115060140.png",
-    "Pasted image 20231115055614.png",
-    "Pasted image 20231115053611.png",
-    "Pasted image 20231115053347.png",
-    "Pasted image 20231115053251.png",
-    "colabs/Unit 3c -  Fine-tuning word embeddings/03. Fine-tuning for text classification tasks.ipynb.ipynb",
-    "colabs/Unit 3b - Understanding word embeddings/05. Evaluating word embedding expressiveness.ipynb",
-    "colabs/Unit 3b - Understanding word embeddings/04. Visualizing word embeddings.ipynb",
-    "colabs/Unit 3b - Understanding word embeddings/03. Contextual word embeddings.ipynb",
-    "colabs/Unit 3b - Understanding word embeddings/02. Static word embeddings.ipynb",
-    "colabs/Unit 1b - NLP and value extraction/Txt/sample.docx",
     "Untitled.md",
-    "Pasted image 20231114182323.png",
-    "Pasted image 20231114182308.png",
     "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
     "$Final products/course structure.md",
     "colabs/wikiart-image-dataset/wikiart-image-dataset/README.md",
     "colabs/wikiart-image-dataset/README.md",
-    "Research sprints/Week 2 - The scope of the course.md",
-    "Meta/Project breakdown.md",
-    "Book review - Introducing data science.md",
-    "README.md",
-    "$Final products/course objectives and learning outcomes.md",
-    "Resources/from cuhk/a list of resources from cuhk.md",
-    "Research sprints/Week 1 -- Possible related materials.md",
-    "Resources/from internet/RA - digital history - online resources.md",
-    "Meta/weekly reporting template.md",
-    "Meta/style and tone for the course materials.md",
-    "Meta/desired qualities the making good output of this job position.md",
-    "Research sprints/Week 0 -- materials provided by prof McManus.md",
-    "Research sprints/$Research reading sprints.md",
-    "Meta/Log.md",
-    "Meta/pedagogy.md"
+    "Research sprints/Week 2 - The scope of the course.md"
   ]
 }
