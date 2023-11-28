@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "trash/$Final products/course structure.md",
+                "file": "slides/Unit 1/slide 1a - data analysis python introduction.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "3d23fea3cb902be7",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "trash/$Final products/course structure.md",
+                "file": "slides/Unit 1/slide 1a - data analysis python introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "trash/$Final products/course structure.md",
+                "file": "slides/Unit 1/slide 1a - data analysis python introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "trash/$Final products/course structure.md"
+                "file": "slides/Unit 1/slide 1a - data analysis python introduction.md"
               }
             }
           }
@@ -149,6 +148,8 @@
   },
   "active": "4797c0672bbd16cc",
   "lastOpenFiles": [
+    "trash/$Final products/course structure.md",
+    "slides/Unit 1/slide 1a - data analysis python introduction.md",
     "colabs/Unit 4d - Deployment",
     "colabs/Unit 4a - Exploratory data analysis (EDA)",
     "colabs/Unit 4a - Visualization/02. plotly.ipynb",
@@ -159,7 +160,6 @@
     "colabs/Unit 4a - Visualization/runs/Oct23_07-34-59_KinPC/events.out.tfevents.1698017699.KinPC",
     "colabs/Unit 4a - Visualization/runs/Oct23_07-37-35_KinPC",
     "colabs/Unit 4a - Visualization/runs/Oct23_07-35-06_KinPC",
-    "colabs/Unit 4a - Visualization/runs/Oct23_07-34-59_KinPC",
     "colabs/Unit 4b - Streamlit/step5/README.md",
     "colabs/Unit 4b - Streamlit/step5/Dashboard_Sample.png",
     "colabs/Unit 4b - Streamlit/step4 - Copy/README.md",
@@ -184,7 +184,6 @@
     "trash/$Final products/All teaching materials.md",
     "trash/Book review - Introducing data science.md",
     "Recruit student helpers/email1.md",
-    "trash/$Final products/course structure.md",
     "Untitled 1.md",
     "slides/Unit 3/slide3c - Fine-tuning.md",
     "slides/Unit 3/slide3b - Embeddings in Machine Learning.md",
