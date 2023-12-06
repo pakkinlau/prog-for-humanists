@@ -148,6 +148,14 @@
   },
   "active": "4797c0672bbd16cc",
   "lastOpenFiles": [
+    "trash/$Final products/course objectives and learning outcomes.md",
+    "trash/$Final products/All teaching materials.md",
+    "Resources/HIST4702.md",
+    "Resources/from prof. Mcmanus/Python for Humanists textbook_essential.pdf",
+    "Resources/from internet/RA - digital history - online resources.md",
+    "Resources/from internet/introducing-data-science-machine-learning-python.pdf",
+    "Resources/from cuhk/a list of resources from cuhk.md",
+    "trash/$Final products/course structure.md",
     "colabs/Unit 4d - Deployment",
     "colabs/Unit 4a - Exploratory data analysis (EDA)",
     "colabs/Unit 4a - Visualization/02. plotly.ipynb",
@@ -156,9 +164,6 @@
     "colabs/Unit 4a - Visualization/runs/Oct23_07-37-35_KinPC/events.out.tfevents.1698017855.KinPC",
     "colabs/Unit 4a - Visualization/runs/Oct23_07-35-06_KinPC/events.out.tfevents.1698017706.KinPC",
     "colabs/Unit 4a - Visualization/runs/Oct23_07-34-59_KinPC/events.out.tfevents.1698017699.KinPC",
-    "colabs/Unit 4a - Visualization/runs/Oct23_07-37-35_KinPC",
-    "colabs/Unit 4a - Visualization/runs/Oct23_07-35-06_KinPC",
-    "colabs/Unit 4a - Visualization/runs/Oct23_07-34-59_KinPC",
     "colabs/Unit 4b - Streamlit/step5/README.md",
     "colabs/Unit 4b - Streamlit/step5/Dashboard_Sample.png",
     "colabs/Unit 4b - Streamlit/step4 - Copy/README.md",
@@ -179,11 +184,8 @@
     "colabs/Unit 4b - Streamlit/step1/README.md",
     "colabs/Unit 4b - Streamlit/step3/README.md",
     "colabs/Unit 4b - Streamlit/streamlit-sales-dashboard-main/README.md",
-    "trash/$Final products/course objectives and learning outcomes.md",
-    "trash/$Final products/All teaching materials.md",
     "trash/Book review - Introducing data science.md",
     "Recruit student helpers/email1.md",
-    "trash/$Final products/course structure.md",
     "Untitled 1.md",
     "slides/Unit 3/slide3c - Fine-tuning.md",
     "slides/Unit 3/slide3b - Embeddings in Machine Learning.md",
@@ -191,8 +193,6 @@
     "Untitled.md",
     "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
     "$Final products/course structure.md",
-    "colabs/wikiart-image-dataset/wikiart-image-dataset/README.md",
-    "colabs/wikiart-image-dataset/README.md",
-    "Research sprints/Week 2 - The scope of the course.md"
+    "colabs/wikiart-image-dataset/wikiart-image-dataset/README.md"
   ]
 }
