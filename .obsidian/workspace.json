@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "31fd353dcd90f79e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Setting up course website/My steps.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -78,12 +90,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "3d23fea3cb902be7",
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "slides/Unit 1/slide 1a - mentalities of programming learning.md",
+                "file": "Setting up course website/My steps.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "slides/Unit 1/slide 1a - mentalities of programming learning.md",
+                "file": "Setting up course website/My steps.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "slides/Unit 1/slide 1a - mentalities of programming learning.md"
+                "file": "Setting up course website/My steps.md"
               }
             }
           }
@@ -160,10 +172,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "398b5bb4cd98814c",
+  "active": "31fd353dcd90f79e",
   "lastOpenFiles": [
-    "slides/Unit 1/slide 1b - data analysis python introduction.md",
+    "Untitled 2.md",
+    "Setting up course website/My steps.md",
     "slides/Unit 1/slide 1a - mentalities of programming learning.md",
+    "Setting up course website",
+    "slides/Unit 1/slide 1b - data analysis python introduction.md",
     "slide 1a - mentalities of programming learning.md",
     "slides/Unit 1/$Introduction.md",
     "trash/$Final products/course structure.md",
@@ -176,7 +191,6 @@
     "colabs/Unit 4a - Visualization/runs/Oct23_07-35-06_KinPC/events.out.tfevents.1698017706.KinPC",
     "colabs/Unit 4a - Visualization/runs/Oct23_07-34-59_KinPC/events.out.tfevents.1698017699.KinPC",
     "colabs/Unit 4a - Visualization/runs/Oct23_07-37-35_KinPC",
-    "colabs/Unit 4a - Visualization/runs/Oct23_07-35-06_KinPC",
     "colabs/Unit 4b - Streamlit/step5/README.md",
     "colabs/Unit 4b - Streamlit/step5/Dashboard_Sample.png",
     "colabs/Unit 4b - Streamlit/step4 - Copy/README.md",
@@ -205,8 +219,6 @@
     "slides/Unit 3/slide3c - Fine-tuning.md",
     "slides/Unit 3/slide3b - Embeddings in Machine Learning.md",
     "slides/Unit 3/slide3a - Neural network basics.md",
-    "Untitled.md",
-    "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
-    "$Final products/course structure.md"
+    "Untitled.md"
   ]
 }
