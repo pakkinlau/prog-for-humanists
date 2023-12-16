@@ -1,3 +1,11 @@
+
+
+Reference / Readings:
+- Python for beginners: https://learn.microsoft.com/en-us/training/paths/beginner-python/
+- Python for data analysis: https://wesmckinney.com/book/numpy-basics
+
+
+---
 # Course - Programming for humanist
 
 #### Knowledge 1: Read as little documentation as possible
@@ -7,6 +15,7 @@
 	- Programming documentation and learning do not necessarily follow a linear path. Unlike traditional reading, understanding programming can often be a more recursive process.
 	- This non-linear approach allows programmers to dive into any part of the code or documentation and understand components in isolation before seeing how they integrate into the larger picture.
 	- **Advantage**: Programmers can often infer the meaning and functionality of code segments without needing to comprehend the entire codebase first.
+	- When you feel being overwhelmed, try to draw some mind maps or diagrams to help you identify relationships between keywords, objects or methods 
 #### Knowledge 2: Leading your mind with what you want to do, not by what is given from the package/book
 - High-order thinking:
 	- Drawing flowcharts, mind maps, status, 

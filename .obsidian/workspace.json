@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -82,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "3d23fea3cb902be7",
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "slides/Unit 1/slide 1b - data analysis python introduction.md",
+                "file": "slides/Unit 1/slide 1a - mentalities of programming learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "slides/Unit 1/slide 1b - data analysis python introduction.md",
+                "file": "slides/Unit 1/slide 1a - mentalities of programming learning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "slides/Unit 1/slide 1b - data analysis python introduction.md"
+                "file": "slides/Unit 1/slide 1a - mentalities of programming learning.md"
               }
             }
           }
@@ -160,10 +160,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4797c0672bbd16cc",
+  "active": "398b5bb4cd98814c",
   "lastOpenFiles": [
-    "slides/Unit 1/slide 1a - mentalities of programming learning.md",
     "slides/Unit 1/slide 1b - data analysis python introduction.md",
+    "slides/Unit 1/slide 1a - mentalities of programming learning.md",
     "slide 1a - mentalities of programming learning.md",
     "slides/Unit 1/$Introduction.md",
     "trash/$Final products/course structure.md",

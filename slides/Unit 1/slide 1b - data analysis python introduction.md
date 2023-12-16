@@ -37,3 +37,5 @@ Exercise 2:
 - Try to summarize the snippet and decompose it into multiple steps
 - Create a Jupyter notebook that test-running and showcasing the code running result of each module
 - Put the "model" you have written in exercise 1 back into the Jupyter notebook. 
+
+---
