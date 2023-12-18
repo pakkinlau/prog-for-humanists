@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "trash/$Final products/course structure.md",
+                "file": "slides/Unit 1/slide 1b - data analysis python introduction.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "398b5bb4cd98814c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "slides/Unit 1/slide 1a - mentalities of programming learning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "31fd353dcd90f79e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "slides/Unit 2/slide 2a.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "trash/$Final products/course structure.md",
+                "file": "slides/Unit 2/slide 2a.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "trash/$Final products/course structure.md",
+                "file": "slides/Unit 2/slide 2a.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "trash/$Final products/course structure.md"
+                "file": "slides/Unit 2/slide 2a.md"
               }
             }
           }
@@ -146,15 +171,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4797c0672bbd16cc",
+  "active": "31fd353dcd90f79e",
   "lastOpenFiles": [
-    "trash/$Final products/course objectives and learning outcomes.md",
-    "trash/$Final products/All teaching materials.md",
-    "Resources/HIST4702.md",
-    "Resources/from prof. Mcmanus/Python for Humanists textbook_essential.pdf",
-    "Resources/from internet/RA - digital history - online resources.md",
-    "Resources/from internet/introducing-data-science-machine-learning-python.pdf",
-    "Resources/from cuhk/a list of resources from cuhk.md",
+    "Pasted image 20231217145720.png",
+    "Setting up course website/setting up the environment for using jekyll website templates.md",
+    "slides/Unit 2/slide 2a.md",
+    "slides/Unit 1/slide 1b - data analysis python introduction.md",
+    "slides/Unit 1/slide 1a - mentalities of programming learning.md",
+    "Pasted image 20231217020056.png",
+    "Pasted image 20231217020050.png",
+    "Untitled 2.md",
+    "Setting up course website",
+    "slide 1a - mentalities of programming learning.md",
+    "slides/Unit 1/$Introduction.md",
     "trash/$Final products/course structure.md",
     "colabs/Unit 4d - Deployment",
     "colabs/Unit 4a - Exploratory data analysis (EDA)",
@@ -164,6 +193,7 @@
     "colabs/Unit 4a - Visualization/runs/Oct23_07-37-35_KinPC/events.out.tfevents.1698017855.KinPC",
     "colabs/Unit 4a - Visualization/runs/Oct23_07-35-06_KinPC/events.out.tfevents.1698017706.KinPC",
     "colabs/Unit 4a - Visualization/runs/Oct23_07-34-59_KinPC/events.out.tfevents.1698017699.KinPC",
+    "colabs/Unit 4a - Visualization/runs/Oct23_07-37-35_KinPC",
     "colabs/Unit 4b - Streamlit/step5/README.md",
     "colabs/Unit 4b - Streamlit/step5/Dashboard_Sample.png",
     "colabs/Unit 4b - Streamlit/step4 - Copy/README.md",
@@ -177,8 +207,6 @@
     "colabs/Unit 4b - Streamlit/step3 - Copy/step3/README.md",
     "colabs/Unit 4b - Streamlit/step3 - Copy/step3/Dashboard_Sample.png",
     "colabs/Unit 4b - Streamlit/step3 - Copy/README.md",
-    "colabs/Unit 4b - Streamlit/step3 - Copy/Dashboard_Sample.png",
-    "colabs/Unit 4b - Streamlit/step2/Screenshot 2023-11-24 063036.png",
     "colabs/Unit 4b - Streamlit/step2/README.md",
     "colabs/Unit 4b - Streamlit/step1/step3/README.md",
     "colabs/Unit 4b - Streamlit/step1/README.md",
@@ -188,11 +216,6 @@
     "Recruit student helpers/email1.md",
     "Untitled 1.md",
     "slides/Unit 3/slide3c - Fine-tuning.md",
-    "slides/Unit 3/slide3b - Embeddings in Machine Learning.md",
-    "slides/Unit 3/slide3a - Neural network basics.md",
-    "Untitled.md",
-    "Research sprints/Week 3 -- Creating a draft of part 1 of the course.md",
-    "$Final products/course structure.md",
-    "colabs/wikiart-image-dataset/wikiart-image-dataset/README.md"
+    "slides/Unit 3/slide3b - Embeddings in Machine Learning.md"
   ]
 }
