@@ -1,3 +1,7 @@
-cherry picking approach: 
-- Learn how to work with documentation with vast functionality 
-	- Instead of finding subsetting a range of material that can build one thing, students should be able to 
+
+
+- Course content:
+- Unit 1: 
+- Unit 2: 
+- Unit 3: 
+- Unit 4: 

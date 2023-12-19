@@ -1,14 +1,18 @@
 
 Updated: Outline of the course
 
-### Course: Programming for humanist
+### Course: HIST4701 Programming for humanist
+
+### Introduction 
+
+This course provides a comprehensive introduction to Python programming, data science, and deployment using popular frameworks and tools. Students will gain a solid foundation in Python programming, develop their programming thinking skills, explore data manipulation and analysis with MongoDB, dive into machine learning techniques, understand natural language processing (NLP) concepts, and learn how to deploy their applications with Streamlit.
 ### Brief breakdown of the course
 
 - Introduction (week 1, 0% in the group project)
 - Accessing, handling and transformation of data (25% of the content)
 - Populating and managing data with some database schemas (25% of the content)
-- Machine learning (25% of the content)
-- Analysis and visualization from data (25% of the content)
+- Machine learning and fine-tuning of word embeddings (25% of the content)
+- Visualization from data and project deployment with Streamlit (25% of the content)
 
 ---
 
