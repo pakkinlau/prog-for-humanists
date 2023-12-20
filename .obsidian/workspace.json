@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "slides/Unit 3/slide3c - Fine-tuning.md",
+                "file": "slides/Unit 3/slide3a - Neural network basics.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "slides/Unit 3/slide3c - Fine-tuning.md",
+                "file": "slides/Unit 3/slide3a - Neural network basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "slides/Unit 3/slide3c - Fine-tuning.md",
+                "file": "slides/Unit 3/slide3a - Neural network basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "slides/Unit 3/slide3c - Fine-tuning.md"
+                "file": "slides/Unit 3/slide3a - Neural network basics.md"
               }
             }
           }
@@ -161,12 +161,13 @@
   },
   "active": "46a96adc3d3eada7",
   "lastOpenFiles": [
-    "slides/Unit 3/slide3b - Embeddings in Machine Learning.md",
-    "slides/Unit 3/slide3a - Neural network basics.md",
     "slides/Unit 2/slide 2a.md",
     "slides/Unit 1/slide 1a - mentalities of programming learning.md",
-    "slides/Unit 1/slide 1b - data analysis python introduction.md",
     "Setting up course website/setting up the environment for using jekyll website templates.md",
+    "slides/Unit 1/slide 1b - data analysis python introduction.md",
+    "slides/Unit 3/slide3c - Fine-tuning.md",
+    "slides/Unit 3/slide3b - Embeddings in Machine Learning.md",
+    "slides/Unit 3/slide3a - Neural network basics.md",
     "trash/$Final products/course structure.md",
     "trash/$Final products/course objectives and learning outcomes.md",
     "trash/$Final products/All teaching materials.md",
@@ -205,7 +206,6 @@
     "colabs/Unit 4b - Streamlit/step1/README.md",
     "colabs/Unit 4b - Streamlit/step3/README.md",
     "colabs/Unit 4b - Streamlit/streamlit-sales-dashboard-main/README.md",
-    "trash/Book review - Introducing data science.md",
-    "Recruit student helpers/email1.md"
+    "trash/Book review - Introducing data science.md"
   ]
 }

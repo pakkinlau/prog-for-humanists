@@ -3,15 +3,15 @@ Reference:
 
 Database
 - Why learning database?
-	- Efficient data management:
-		- Our memories are fallible, and relying on them alone can lead to important information being forgotten or lost.
-		- Database is a way to ensure our dataset can be effectively retrieved by indexing, querying and aggregating. 
-	- Streamlined data interaction:
-		- When programming script interacts with raw datasets with no indexing. The process are slow. 
-		- By leveraging indexing, querying, and aggregating capabilities, individuals can extract valuable insights from large datasets.
-	- Data Consistency and Integrity:
-		- Maintaining data consistency and integrity is crucial for any organization. Inconsistencies and errors in data can lead to flawed analysis, decision-making, and operational inefficiencies.
-		- Databases provide mechanisms such as data constraints, relationships, and transactions to ensure data accuracy and reliability. By learning about databases, individuals acquire the knowledge to enforce data integrity rules, establish relationships.
+- Efficient data management:
+	- Our memories are fallible, and relying on them alone can lead to important information being forgotten or lost.
+	- Database is a way to ensure our dataset can be effectively retrieved by indexing, querying and aggregating. 
+- Streamlined data interaction:
+	- When programming script interacts with raw datasets with no indexing. The process are slow. 
+	- By leveraging indexing, querying, and aggregating capabilities, individuals can extract valuable insights from large datasets.
+- Data Consistency and Integrity:
+	- Maintaining data consistency and integrity is crucial for any organization. Inconsistencies and errors in data can lead to flawed analysis, decision-making, and operational inefficiencies.
+	- Databases provide mechanisms such as data constraints, relationships, and transactions to ensure data accuracy and reliability. By learning about databases, individuals acquire the knowledge to enforce data integrity rules, establish relationships.
 
 ![](../../Pasted%20image%2020231217145720.png)
 
@@ -30,6 +30,7 @@ MongoDB
 	- Flexible schema
 	- Object mapping:
 		- Documents easily map to objects. And objects are the most frequently used data structure in the most popular programming languages. This allow developers to rapidly develop their app in intuitive way.
+
 - Why choosing mongoDB?
 	- Flexibility with Polymorphic Data
 		- MongoDB is designed to handle polymorphic data, which means it can accommodate different data structures and formats within the same database collection. This flexibility is particularly useful in scenarios where data may vary across documents or where schema evolution is frequent.
@@ -43,9 +44,8 @@ Documents
 
 Document model:
 - Similar to dictionaries in python, using key-value pairs to store information. 
-- Tabular data model (in SQL)
-	- Related data is split across multiple records and tables 
 - Document data model
+	- Different to Tabular data model (in SQL), in which related data is split across multiple records and tables 
 	- Related data is contained in a single, rich document
 	- The main difference is that column names are appearing in each documents, allowing for greater flexibility in having document with different shapes (or, having different fields)
 ```
