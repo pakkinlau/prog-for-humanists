@@ -1,6 +1,9 @@
 1. Select a template you want 
 	- From github: https://github.com/alshedivat/al-folio
-	- 
+
+#### Method 1: Use docker to setup the environment
+
+#### Method 2: Install Jekyll and Ruby in the PC
 1. Install dependency Jekyll
 	1. "**Ruby+Devkit**"
 		- Ruby: a programming language

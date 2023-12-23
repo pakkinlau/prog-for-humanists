@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "2a534754380efc97",
+        "id": "8280930868b10b3a",
         "type": "tabs",
         "children": [
           {
-            "id": "4797c0672bbd16cc",
+            "id": "9b62d287d323953e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "slides/Unit 1/slide 1b - data analysis python introduction.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "398b5bb4cd98814c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "slides/Unit 1/slide 1a - mentalities of programming learning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "31fd353dcd90f79e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "slides/Unit 2/slide 2a.md",
+                "file": "Setting up course website/setting up the environment for using jekyll website templates.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "slides/Unit 2/slide 2a.md",
+                "file": "Setting up course website/setting up the environment for using jekyll website templates.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "slides/Unit 2/slide 2a.md",
+                "file": "Setting up course website/setting up the environment for using jekyll website templates.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "slides/Unit 2/slide 2a.md"
+                "file": "Setting up course website/setting up the environment for using jekyll website templates.md"
               }
             }
           }
@@ -171,11 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "31fd353dcd90f79e",
+  "active": "9b62d287d323953e",
   "lastOpenFiles": [
+    "trash/$Final products/course structure.md",
+    "trash/$Final products/course objectives and learning outcomes.md",
+    "slides/Unit 2/slide 2a.md",
     "Pasted image 20231217145720.png",
     "Setting up course website/setting up the environment for using jekyll website templates.md",
-    "slides/Unit 2/slide 2a.md",
     "slides/Unit 1/slide 1b - data analysis python introduction.md",
     "slides/Unit 1/slide 1a - mentalities of programming learning.md",
     "Pasted image 20231217020056.png",
@@ -184,7 +161,6 @@
     "Setting up course website",
     "slide 1a - mentalities of programming learning.md",
     "slides/Unit 1/$Introduction.md",
-    "trash/$Final products/course structure.md",
     "colabs/Unit 4d - Deployment",
     "colabs/Unit 4a - Exploratory data analysis (EDA)",
     "colabs/Unit 4a - Visualization/02. plotly.ipynb",
@@ -205,7 +181,6 @@
     "colabs/Unit 4b - Streamlit/step4/README.md",
     "colabs/Unit 4b - Streamlit/step4/Dashboard_Sample.png",
     "colabs/Unit 4b - Streamlit/step3 - Copy/step3/README.md",
-    "colabs/Unit 4b - Streamlit/step3 - Copy/step3/Dashboard_Sample.png",
     "colabs/Unit 4b - Streamlit/step3 - Copy/README.md",
     "colabs/Unit 4b - Streamlit/step2/README.md",
     "colabs/Unit 4b - Streamlit/step1/step3/README.md",
