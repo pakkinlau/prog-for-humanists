@@ -1,38 +1,14 @@
 {
   "main": {
-    "id": "d29e4696d9261902",
+    "id": "ce9d8cd50ca57949",
     "type": "split",
     "children": [
       {
-        "id": "8280930868b10b3a",
+        "id": "c79abc5d56704b03",
         "type": "tabs",
         "children": [
           {
-            "id": "9b62d287d323953e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "slides/Unit 1/slide 1b - data analysis python introduction.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "398b5bb4cd98814c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "slides/Unit 1/slide 1a - mentalities of programming learning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "31fd353dcd90f79e",
+            "id": "27d0beb131d2541a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -43,22 +19,21 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "319edb5ccfeb5845",
+    "id": "0c5dbea8953a41ae",
     "type": "split",
     "children": [
       {
-        "id": "3034c044675283e9",
+        "id": "718436bf0bb08ac3",
         "type": "tabs",
         "children": [
           {
-            "id": "bdd8f96ce295b200",
+            "id": "e9bf4cf0dbee2308",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -68,7 +43,7 @@
             }
           },
           {
-            "id": "f6ba8ae153739731",
+            "id": "c814078f96844020",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -76,14 +51,14 @@
                 "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
             }
           },
           {
-            "id": "0769cacb605e80d9",
+            "id": "e355ff08fcce9008",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -95,18 +70,17 @@
     ],
     "direction": "horizontal",
     "width": 300
-    "width": 300
   },
   "right": {
-    "id": "3d23fea3cb902be7",
+    "id": "761db46675d50756",
     "type": "split",
     "children": [
       {
-        "id": "4583530b5d88d1bd",
+        "id": "9d5b5cac3a48d08b",
         "type": "tabs",
         "children": [
           {
-            "id": "5b2f87d5b78d7725",
+            "id": "1ccb9d7fe6349fd1",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -123,7 +97,7 @@
             }
           },
           {
-            "id": "6f8bddafe8d538ea",
+            "id": "e1096e6d3b225962",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -135,7 +109,7 @@
             }
           },
           {
-            "id": "1f538e864e168baa",
+            "id": "0dfddc4f28913a89",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -146,7 +120,7 @@
             }
           },
           {
-            "id": "3024e9a8c8ea05b1",
+            "id": "88d6e3dfccd9babf",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -172,54 +146,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "31fd353dcd90f79e",
+  "active": "e9bf4cf0dbee2308",
   "lastOpenFiles": [
-    "Pasted image 20231217145720.png",
-    "Setting up course website/setting up the environment for using jekyll website templates.md",
-    "slides/Unit 1/slide 1b - data analysis python introduction.md",
-    "slides/Unit 3/slide3c - Fine-tuning.md",
-    "slides/Unit 3/slide3b - Embeddings in Machine Learning.md",
-    "slides/Unit 3/slide3a - Neural network basics.md",
     "trash/$Final products/course structure.md",
-    "trash/$Final products/course objectives and learning outcomes.md",
-    "trash/$Final products/All teaching materials.md",
-    "Untitled.md",
-    "README.md",
-    "slides/Unit 1/$Introduction.md",
-    "Pasted image 20231114174001.png",
-    "Pasted image 20231114182308.png",
-    "Pasted image 20231217145720.png",
-    "Pasted image 20231217020056.png",
-    "Pasted image 20231217020050.png",
-    "Untitled 2.md",
-    "Setting up course website",
-    "slide 1a - mentalities of programming learning.md",
-    "slides/Unit 1/$Introduction.md",
-    "trash/$Final products/course structure.md",
-    "colabs/Unit 4d - Deployment",
-    "colabs/Unit 4a - Exploratory data analysis (EDA)",
-    "colabs/Unit 4a - Visualization/02. plotly.ipynb",
-    "colabs/Unit 4a - Visualization/02. plotly.IPYNB",
-    "colabs/Unit 4a - Visualization/azaSDASD.IPYNB",
-    "colabs/Unit 4a - Visualization/runs/Oct23_07-37-35_KinPC/events.out.tfevents.1698017855.KinPC",
-    "colabs/Unit 4a - Visualization/runs/Oct23_07-35-06_KinPC/events.out.tfevents.1698017706.KinPC",
-    "colabs/Unit 4a - Visualization/runs/Oct23_07-34-59_KinPC/events.out.tfevents.1698017699.KinPC",
-    "colabs/Unit 4a - Visualization/runs/Oct23_07-37-35_KinPC",
-    "colabs/Unit 4b - Streamlit/step5/README.md",
-    "colabs/Unit 4b - Streamlit/step5/Dashboard_Sample.png",
-    "colabs/Unit 4b - Streamlit/step4 - Copy/README.md",
-    "colabs/Unit 4b - Streamlit/step4 - Copy/Dashboard_Sample.png",
-    "colabs/Unit 4b - Streamlit/step1/Screenshot 2023-11-24 062614.png",
-    "colabs/Unit 4b - Streamlit/step1/Dashboard_Sample.png",
-    "colabs/Unit 4b - Streamlit/step1 - basic setup/Screenshot 2023-11-24 062614.png",
-    "colabs/Unit 4b - Streamlit/step4/README.md",
-    "colabs/Unit 4b - Streamlit/step3 - Copy/step3/README.md",
-    "colabs/Unit 4b - Streamlit/step3 - Copy/README.md",
-    "colabs/Unit 4b - Streamlit/step2/README.md",
-    "colabs/Unit 4b - Streamlit/step1/step3/README.md",
-    "colabs/Unit 4b - Streamlit/step1/README.md",
-    "colabs/Unit 4b - Streamlit/step3/README.md",
-    "colabs/Unit 4b - Streamlit/streamlit-sales-dashboard-main/README.md",
-    "trash/Book review - Introducing data science.md"
+    "slides/Unit 1/MongoDB.md"
   ]
 }
