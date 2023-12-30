@@ -4,35 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "2a534754380efc97",
+        "id": "8280930868b10b3a",
         "type": "tabs",
         "children": [
           {
-            "id": "4797c0672bbd16cc",
+            "id": "9b62d287d323953e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "trash/$Final products/course structure.md",
+                "file": "slides/Unit 1/slide 1b - data analysis python introduction.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "46a96adc3d3eada7",
+            "id": "398b5bb4cd98814c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "slides/Unit 3/slide3a - Neural network basics.md",
+                "file": "slides/Unit 1/slide 1a - mentalities of programming learning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "31fd353dcd90f79e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "slides/Unit 2/slide 2a.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "slides/Unit 3/slide3a - Neural network basics.md",
+                "file": "slides/Unit 2/slide 2a.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "slides/Unit 3/slide3a - Neural network basics.md",
+                "file": "slides/Unit 2/slide 2a.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "slides/Unit 3/slide3a - Neural network basics.md"
+                "file": "slides/Unit 2/slide 2a.md"
               }
             }
           }
@@ -160,10 +172,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "46a96adc3d3eada7",
+  "active": "31fd353dcd90f79e",
   "lastOpenFiles": [
-    "slides/Unit 2/slide 2a.md",
-    "slides/Unit 1/slide 1a - mentalities of programming learning.md",
+    "Pasted image 20231217145720.png",
     "Setting up course website/setting up the environment for using jekyll website templates.md",
     "slides/Unit 1/slide 1b - data analysis python introduction.md",
     "slides/Unit 3/slide3c - Fine-tuning.md",
@@ -183,6 +194,8 @@
     "Untitled 2.md",
     "Setting up course website",
     "slide 1a - mentalities of programming learning.md",
+    "slides/Unit 1/$Introduction.md",
+    "trash/$Final products/course structure.md",
     "colabs/Unit 4d - Deployment",
     "colabs/Unit 4a - Exploratory data analysis (EDA)",
     "colabs/Unit 4a - Visualization/02. plotly.ipynb",
