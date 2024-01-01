@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "mongoDB",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -146,9 +147,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e9bf4cf0dbee2308",
+  "active": "c814078f96844020",
   "lastOpenFiles": [
-    "trash/$Final products/course structure.md",
-    "slides/Unit 1/MongoDB.md"
+    "tempCodeRunnerFile.js",
+    "slides/Unit 1/MongoDB.md",
+    "slides/Unit 2/slide 2a.md",
+    "trash/$Final products/course structure.md"
   ]
 }
