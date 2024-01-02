@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "slides/Unit 2/slide 2a.md",
+                "file": "slides/$Objectives/Objectives of each unit.md",
                 "mode": "source",
                 "source": false
               }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "slides/Unit 2/slide 2a.md",
+                "file": "slides/$Objectives/Objectives of each unit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "slides/Unit 2/slide 2a.md",
+                "file": "slides/$Objectives/Objectives of each unit.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "slides/Unit 2/slide 2a.md"
+                "file": "slides/$Objectives/Objectives of each unit.md"
               }
             }
           }
@@ -149,19 +148,30 @@
   },
   "active": "27d0beb131d2541a",
   "lastOpenFiles": [
-    "colabs/Unit 1d - Data Transformation/02. Dataframe cleaning and transform.ipynb",
-    "colabs/Unit 1d - Data Transformation/01. Dataframe extraction.ipynb",
-    "colabs/Unit 1d - Data Transformation",
-    "colabs/Unit 1c - Structuerd data/02. JSON, dictionary.ipynb",
-    "colabs/Unit 1c - Structuerd data/02.  JSON, dictionary.ipynb",
-    "colabs/Unit 1c - Structuerd data/01. Multiple formats of data.ipynb",
-    "colabs/Unit 1c - Structuerd data/02. Data transformation.ipynb",
-    "colabs/Unit 1c - Structuerd data/01.  JSON, dictionary.ipynb",
-    "colabs/Unit 1c - Structuerd data/04. PySpark.ipynb",
-    "colabs/Unit 1c - Structuerd data/03. CSV, pyarrow, parquet.ipynb",
-    "trash/Table of content.ipynb",
-    "slides/Unit 1/MongoDB.md",
+    "colabs/Unit 2c - aggregation framework and vector search in mongoDB/03. Vector search.ipynb",
+    "colabs/Unit 2c - aggregation framework and vector search in mongoDB/02. Vector indexing.ipynb",
+    "colabs/Unit 2c - aggregation framework and vector search in mongoDB/01. Five useful aggregation frameworks.ipynb",
+    "colabs/Unit 2c - aggregation framework and vector search in mongoDB",
+    "colabs/Unit 2b - Data modeling and database schema design in mongoDB/04. Schema versioning.ipynb",
+    "colabs/Unit 2b - Data modeling and database schema design in mongoDB/03. Data modeling.ipynb",
+    "colabs/Unit 2b - Data modeling and database schema design in mongoDB/02. Ensuring data consistency with schema.ipynb",
+    "colabs/Unit 2b - Data modeling and database schema design in mongoDB/01. MongoDB indexes.ipynb",
+    "colabs/Unit 2b - Data modeling and database schema design in mongoDB",
+    "colabs/Unit 1a - Processing unstructured data and revisiting programming paradigms/Pdf/humanity_paper.pdf",
+    "colabs/Unit 1a - Processing unstructured data and revisiting programming paradigms/Txt/sample.docx",
+    "colabs/Unit 1a - Processing unstructured data and revisiting programming paradigms/Image/handwritting_malala(full).jpg",
+    "colabs/Unit 1a - Processing unstructured data and revisiting programming paradigms/Image/handwritting_malala(crop).jpg",
+    "colabs/Unit 1a - Processing unstructured data and revisiting programming paradigms/Image/cover.jpg",
+    "colabs/Unit 1a - Processing unstructured data and revisiting programming paradigms/Image/6.jpg",
+    "colabs/Unit 1a - Processing unstructured data and revisiting programming paradigms/Image/5.jpg",
+    "colabs/Unit 1a - Processing unstructured data and revisiting programming paradigms/Image/4.jpg",
+    "colabs/Unit 1a - Processing unstructured data and revisiting programming paradigms/Image/3.jpg",
+    "colabs/Unit 1a - Processing unstructured data and revisiting programming paradigms/Image/2.jpg",
+    "colabs/Unit 1a - Processing unstructured data and revisiting programming paradigms/Image/1.jpg",
+    "colabs/Unit 1a - Processing unstructured data and programming paradigms/Image/handwritting_malala(full).jpg",
     "slides/Unit 2/slide 2a.md",
+    "slides/$Objectives/Objectives of each unit.md",
+    "slides/Unit 1/MongoDB.md",
     "trash/$Final products/course structure.md"
   ]
 }
