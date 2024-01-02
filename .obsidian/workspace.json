@@ -147,8 +147,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c814078f96844020",
+  "active": "27d0beb131d2541a",
   "lastOpenFiles": [
+    "colabs/Unit 1d - Data Transformation/02. Dataframe cleaning and transform.ipynb",
+    "colabs/Unit 1d - Data Transformation/01. Dataframe extraction.ipynb",
+    "colabs/Unit 1d - Data Transformation",
     "colabs/Unit 1c - Structuerd data/02. JSON, dictionary.ipynb",
     "colabs/Unit 1c - Structuerd data/02.  JSON, dictionary.ipynb",
     "colabs/Unit 1c - Structuerd data/01. Multiple formats of data.ipynb",
@@ -157,9 +160,6 @@
     "colabs/Unit 1c - Structuerd data/04. PySpark.ipynb",
     "colabs/Unit 1c - Structuerd data/03. CSV, pyarrow, parquet.ipynb",
     "trash/Table of content.ipynb",
-    "trash/convert_image.py",
-    "trash/convert_all_notebook_images.py",
-    "colabs/Unit 4a - Exploratory data analysis (EDA)/02. Discover patterns in python.ipynb",
     "slides/Unit 1/MongoDB.md",
     "slides/Unit 2/slide 2a.md",
     "trash/$Final products/course structure.md"
